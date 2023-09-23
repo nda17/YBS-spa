@@ -1,0 +1,90 @@
+.cookie-popup-wrap {
+	position: fixed;
+	bottom: 0.3125rem;
+	right: -62.5rem;
+	width: 90%;
+	background: #ffffff;
+	border-radius: 0.75rem;
+	padding: 0.9375rem 1.5625rem 1.375rem;
+	transition: right 0.5s ease;
+	box-shadow: -1rem 0rem 2.375rem 1.125rem rgba(0, 0, 0, 0.31) inset;
+	z-index: 9999999999;
+}
+
+.cookie-popup-wrap.show {
+	right: 0;
+	left: 0;
+	bottom: 0.3125rem;
+	margin: auto;
+}
+
+.cookie-popup-wrap header {
+	display: flex;
+	align-items: center;
+	column-gap: 0.9375rem;
+}
+
+header i {
+	color: #4070f4;
+	font-size: 2rem;
+}
+
+header h2 {
+	display: flex;
+	color: #4070f4;
+	font-weight: 500;
+	align-items: center;
+	margin: 0;
+}
+
+.cookie-popup-wrap .data {
+	margin-top: 1rem;
+}
+
+.cookie-popup-wrap .data p {
+	color: #333333;
+	font-size: 1rem;
+}
+
+.data p a {
+	color: #4070f4;
+	text-decoration: none;
+}
+
+.data p a:hover {
+	text-decoration: underline;
+}
+
+.cookie-popup-wrap .buttons-cookie {
+	margin-top: 1rem;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.buttons-cookie .button-cookie-popup {
+	border: none;
+	color: #ffffff;
+	padding: 0.5rem 0;
+	border-radius: 0.25rem;
+	background: #4070f4;
+	cursor: pointer;
+	width: calc(100% / 2 - 0.625rem);
+	transition: all 0.4s ease;
+}
+
+.buttons-cookie #acceptBtn:hover {
+	background-color: #034bf1;
+}
+
+#declineBtn {
+	border: 0.125rem solid #4070f4;
+	background-color: #ffffff;
+	color: #4070f4;
+}
+
+#declineBtn:hover {
+	background-color: #4070f4;
+	color: #ffffff;
+}

@@ -1,0 +1,350 @@
+/* Устройства Small (устройства с горизонтальной ориентацией от 576px) */
+@media (min-width: 576px) {
+	.title {
+		font-size: 1.7rem !important;
+	}
+
+	.section-nav__menu-link-wrap-icon-footer {
+		height: 1.4rem !important;
+		margin-right: 1.2rem !important;
+	}
+
+	.cookie-popup-wrap.show {
+		right: 1.1rem !important;
+		bottom: 3.125rem !important;
+		left: inherit !important;
+		margin: inherit !important;
+	}
+	.cookie-popup-wrap {
+		width: 100% !important;
+		max-width: 21.5625rem !important;
+		bottom: 3.125rem !important;
+	}
+
+	.mainTitle__down-subtitle-span {
+		top: 40.4% !important;
+	}
+
+	.wrapper-card-block {
+		max-width: 18rem !important;
+	}
+
+	.card .cover.item-b {
+		background-image: url('../../images/images-card.webp') !important;
+		background-position: right !important;
+	}
+
+	.card .cover.item-c {
+		background-image: url('../../images/images-card2.webp') !important;
+		background-position: left !important;
+	}
+
+	.card .cover.item-d {
+		background-image: url('../../images/images-card2.webp') !important;
+		background-position: right !important;
+	}
+
+	.card .cover.item-f {
+		background-image: url('../../images/images-card.webp') !important;
+		background-position: right !important;
+	}
+
+	.card .cover.item-g {
+		background-image: url('../../images/images-card2.webp') !important;
+		background-position: left !important;
+	}
+
+	.card .cover.item-h {
+		background-image: url('../../images/images-card2.webp') !important;
+		background-position: right !important;
+	}
+
+	.card .cover.item-j {
+		background-image: url('../../images/images-card.webp') !important;
+		background-position: right !important;
+	}
+
+	.card .cover.item-k {
+		background-image: url('../../images/images-card2.webp') !important;
+		background-position: left !important;
+	}
+
+	.card .cover.item-l {
+		background-image: url('../../images/images-card2.webp') !important;
+		background-position: right !important;
+	}
+
+	.card .cover.item-n {
+		background-image: url('../../images/images-card.webp') !important;
+		background-position: right !important;
+	}
+
+	.card .cover.item-o {
+		background-image: url('../../images/images-card2.webp') !important;
+		background-position: left !important;
+	}
+
+	.card .cover.item-p {
+		background-image: url('../../images/images-card2.webp') !important;
+		background-position: right !important;
+	}
+}
+
+/* Устройства Medium (планшеты, 768 пикселей и выше) */
+@media (min-width: 768px) {
+
+	.title {
+		font-size: 1.5rem !important;
+	}
+
+	.mainTitleText {
+		font-size: 2.5rem !important;
+		width: 18.5ch !important;
+	}
+
+	.section-nav {
+		padding: 1.2rem 3.625rem !important;
+		height: 9rem !important;
+	}
+
+	.menuToggle {
+		top: 4.5rem !important;
+		right: 3.6rem !important;
+	}
+
+	.slide-menu {
+		min-width: 16.5625rem !important;
+		padding-top: 20.625rem !important;
+	}
+
+	.logo-menu {
+		top: 12.5rem !important;
+	}
+
+	.section-nav__block-logo {
+		width: 8rem !important;
+		height: 8rem !important;
+		top: auto !important;
+		left: 3.0625rem !important;
+	}
+
+	.section-nav__logo-slogan {
+		width: 10rem !important;
+		position: absolute !important;
+		left: -1rem !important;
+	}
+
+	.sloganAuthorText {
+		font-size: 1.4rem !important;
+	}
+
+	.btnToHeader {
+		display: none !important;
+		visibility: hidden !important;
+		opacity: 0 !important;
+	}
+
+	.video-block-bottom {
+		height: 20rem !important;
+	}
+
+	.card .cover.item-b {
+		background-position: center !important;
+	}
+
+	.card .cover.item-c {
+		background-image: url('../../images/images-card.webp') !important;
+		background-position: right !important;
+	}
+
+	.card .cover.item-d {
+		background-image: url('../../images/images-card2.webp') !important;
+		background-position: left !important;
+	}
+
+	.card .cover.item-e {
+		background-image: url('../../images/images-card2.webp') !important;
+		background-position: center !important;
+	}
+
+	.card .cover.item-f {
+		background-image: url('../../images/images-card2.webp') !important;
+		background-position: right !important;
+	}
+
+	.card .cover.item-g {
+		background-image: url('../../images/images-card.webp') !important;
+		background-position: left !important;
+	}
+
+	.card .cover.item-h {
+		background-image: url('../../images/images-card.webp') !important;
+		background-position: center !important;
+	}
+
+	.card .cover.item-i {
+		background-position: right !important;
+	}
+
+	.card .cover.item-j {
+		background-image: url('../../images/images-card2.webp') !important;
+		background-position: left !important;
+	}
+
+	.card .cover.item-k {
+		background-image: url('../../images/images-card2.webp') !important;
+		background-position: center !important;
+	}
+
+	.card .cover.item-l {
+		background-image: url('../../images/images-card2.webp') !important;
+		background-position: right !important;
+	}
+
+	.card .cover.item-n {
+		background-position: center !important;
+	}
+
+	.card .cover.item-o {
+		background-image: url('../../images/images-card.webp') !important;
+		background-position: right !important;
+	}
+
+	.card .cover.item-p {
+		background-position: center !important;
+	}
+
+	.section-nav__block-logo-footer {
+		width: 6rem !important;
+		height: 6rem !important;
+	}
+
+	.section-nav__logo-slogan-footer {
+		font-size: 0.65rem !important;
+	}
+
+	.section-nav__menu-link-icon-footer {
+		height: 1.4rem !important;
+	}
+}
+
+/* Устройства Large (настольные компьютеры, 992 пикселей и выше) */
+@media (min-width: 992px) {
+	.GrTextAlignRight {
+		display: none;
+	}
+
+	.title {
+		font-size: 1.65rem !important;
+	}
+
+	.mainTitleText {
+		font-size: 2.9rem !important;
+		pointer-events: visible !important;
+	}
+
+	.mainTitle__down-subtitle {
+		width: 80% !important;
+	}
+
+	.section-nav__menu-list {
+		display: flex !important;
+	}
+
+	.menuToggle,
+	.slide-menu-wrap {
+		display: none !important;
+	}
+
+	.slideBtnLanguage,
+	.slideBtnColorTheme {
+		margin: 0 !important;
+	}
+
+	.video-block-bottom {
+		height: 23rem !important;
+	}
+
+	.sloganText {
+		font-size: 1.39rem !important;
+		white-space: nowrap !important; /* не переносить текст на другую строку */
+	}
+		
+}
+
+/* Устройства X-Large (большие настольные компьютеры, 1200 пикселей и выше) */
+@media (min-width: 1200px) {
+	.video-block-bottom {
+		height: 25rem !important;
+	}
+
+	.card .cover.item-a {
+		background-image: url('../../images/images-card2.webp') !important;
+		background-position: right !important;
+	}
+
+	.card .cover.item-b {
+		background-image: url('../../images/images-card2.webp') !important;
+		background-position: left !important;
+	}
+
+	.card .cover.item-c {
+		background-image: url('../../images/images-card2.webp') !important;
+		background-position: right !important;
+	}
+
+	.card .cover.item-d {
+		background-image: url('../../images/images-card2.webp') !important;
+		background-position: left !important;
+	}
+
+	.card .cover.item-e {
+		background-image: url('../../images/images-card.webp') !important;
+		background-position: right !important;
+	}
+
+	.card .cover.item-f {
+		background-image: url('../../images/images-card.webp') !important;
+		background-position: left !important;
+	}
+
+	.card .cover.item-g {
+		background-image: url('../../images/images-card.webp') !important;
+		background-position: right !important;
+	}
+
+	.card .cover.item-h {
+		background-image: url('../../images/images-card.webp') !important;
+		background-position: left !important;
+	}
+
+	.card .cover.item-i {
+		background-image: url('../../images/images-card2.webp') !important;
+		background-position: right !important;
+	}
+
+	.card .cover.item-k {
+		background-position: right !important;
+	}
+
+	.card .cover.item-l {
+		background-position: left !important;
+	}
+
+	.card .cover.item-m {
+		background-position: right !important;
+	}
+
+	.card .cover.item-n {
+		background-position: left !important;
+	}
+
+	.card .cover.item-p {
+		background-image: url('../../images/images-card.webp') !important;
+		background-position: left !important;
+	}
+}
+
+/* Устройства XX-Large (большие настольные компьютеры, 1400 пикселей и выше) */
+@media (min-width: 1400px) {
+}

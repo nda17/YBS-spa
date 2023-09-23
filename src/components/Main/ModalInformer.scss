@@ -1,0 +1,27 @@
+.modal-ModalInformer {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    width: 17rem;
+    background-color: #000000;
+    color: #f5deb3;
+    opacity: .0;
+    height: 10rem;
+    border-radius: 0.625rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all 1.2s;
+    visibility: hidden;
+    z-index: 10;
+}
+
+.modal-ModalInformer-open {
+    opacity: .9;
+    visibility: visible;
+}
