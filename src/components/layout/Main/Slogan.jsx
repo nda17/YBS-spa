@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import styles from './Slogan.scss';
-import '../../assets/styles/media-queries.scss'
+import './Slogan.scss';
+import '../../../assets/styles/media-queries.scss'
 
 
 const Slogan = () => {

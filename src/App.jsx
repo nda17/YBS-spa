@@ -5,9 +5,9 @@ import { ServicesPage } from './pages/ServicesPage'
 import { ContactsPage } from './pages/ContactsPage'
 import { CalculatePricePage } from './pages/CalculatePricePage'
 import { NotFoundPage } from './pages/NotFoundPage'
-import { Layout } from './components/Layout'
+import { Layout } from './components/layout/Layout'
 import './assets/styles/index.scss'
-import './assets/styles/fonts.scss'
+import './assets/fonts/fonts.scss'
 
 const App = () => {
 	return (

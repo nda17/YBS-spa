@@ -1,10 +1,9 @@
-import { useNavigate } from 'react-router-dom'
+import { ButtonGoBack } from '../components/ui/buttons/ButtonGoBack'
 import { useState, useEffect } from 'react'
+import { CookiePopup } from '../components/layout/Main/CookiePopup'
 
 const ContactsPage = () => {
 	const [show, setShow] = useState(false)
-	const navigate = useNavigate()
-	const goBack = () => navigate(-1)
 	useEffect(() => {
 		const textElement = document.querySelector('.title')
 		setTimeout(() => {
@@ -14,10 +13,9 @@ const ContactsPage = () => {
 	}, [show])
 	return (
 		<div className='page'>
+			<ButtonGoBack />
 			<h3 className='title'>СТРАНИЦА В РАЗРАБОТКЕ</h3>
-			<button className='btnGoBack' onClick={goBack}>
-				Назад
-			</button>
+			<CookiePopup />
 		</div>
 	)
 }

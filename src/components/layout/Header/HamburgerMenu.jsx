@@ -1,15 +1,15 @@
-import { useToggle } from '../../hooks/useToggle';
-import { MobileNavigationMenu } from './MobileNavigationMenu';
-import { GrTextAlignRight } from 'react-icons/gr';
+import { useToggle } from '../../../hooks/useToggle'
+import { MobileNavigationMenu } from './MobileNavigationMenu'
+import { GrTextAlignRight } from 'react-icons/gr'
 import { HiOutlineChevronDown } from 'react-icons/hi2'
-import styles from './HamburgerMenu.scss';
-import '../../assets/styles/media-queries.scss'
+import './HamburgerMenu.scss'
+import '../../../assets/styles/media-queries.scss'
 
 const HamburgerMenu = () => {
-	const [isVisible, setVisible] = useToggle(true);
+	const [isVisible, setVisible] = useToggle(true)
 	const handleOpenHamburger = () => {
-		setVisible(!isVisible);
-	};
+		setVisible(!isVisible)
+	}
 	return (
 		<div>
 			<a onClick={() => handleOpenHamburger()}>
@@ -25,6 +25,6 @@ const HamburgerMenu = () => {
 			/>
 		</div>
 	)
-};
+}
 
-export { HamburgerMenu };
+export { HamburgerMenu }

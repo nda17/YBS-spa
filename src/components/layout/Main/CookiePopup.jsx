@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import styles from './CookiePopup.scss';
-import '../../assets/styles/media-queries.scss'
+import './CookiePopup.scss';
+import '../../../assets/styles/media-queries.scss'
 
 function CookiePopup() {
 	const [addClass, setAddClass] = useState(false);

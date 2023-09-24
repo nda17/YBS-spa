@@ -1,33 +1,32 @@
-import { useEffect } from 'react';
-import { CustomLink } from '../CustomLink';
-import LogoSvg from '../../images/YBS-white.svg';
-import PhoneSvg from '../../icons/link-icon/phone-white.svg';
-import WhatsAppSvg from '../../icons/link-icon/wa-white.svg';
-import TelegramSvg from '../../icons/link-icon/tg-white.svg';
-import BehanceSvg from '../../icons/link-icon/be-white.svg';
-import './NavigationMenu.scss';
-import '../../assets/styles/media-queries.scss'
-import { HamburgerMenu } from './HamburgerMenu';
+import { useEffect } from 'react'
+import { CustomLink } from '../../ui/links/CustomLink'
+import LogoSvg from '../../../public/images/YBS-white.svg'
+import PhoneSvg from '../../../public/icons/link-icon/phone-white.svg'
+import WhatsAppSvg from '../../../public/icons/link-icon/wa-white.svg'
+import TelegramSvg from '../../../public/icons/link-icon/tg-white.svg'
+import BehanceSvg from '../../../public/icons/link-icon/be-white.svg'
+import './NavigationMenu.scss'
+import '../../../assets/styles/media-queries.scss'
+import { HamburgerMenu } from './HamburgerMenu'
 
 const NavigationMenu = () => {
 	useEffect(() => {
 		//Animation logo
-		let count = 0;
+		let count = 0
 		setInterval(function () {
-			count === 360 ? (count = 0) : count--;
+			count === 360 ? (count = 0) : count--
 			document.querySelector(
 				'.section-nav__logo-item'
-			).style.transform = `rotate3d(1, 1, 1, ${count}deg)`;
-		}, 40);
-	}, []);
+			).style.transform = `rotate3d(1, 1, 1, ${count}deg)`
+		}, 40)
+	}, [])
 	useEffect(() => {
 		//Animation icons
 		setInterval(function () {
-			document.querySelector('.section-nav__menu-link-icon').style.scale =
-				'1.2';
-			document.querySelector('.section-nav__menu-link-icon').style.scale = '1';
-		}, 200);
-	}, []);
+			document.querySelector('.section-nav__menu-link-icon').style.scale = '1.2'
+			document.querySelector('.section-nav__menu-link-icon').style.scale = '1'
+		}, 200)
+	}, [])
 	return (
 		<nav className='row section-nav'>
 			<div className='section-nav-wrap col-12'>
@@ -90,6 +89,6 @@ const NavigationMenu = () => {
 			</div>
 		</nav>
 	)
-};
+}
 
-export { NavigationMenu };
+export { NavigationMenu }

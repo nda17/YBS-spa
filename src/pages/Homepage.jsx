@@ -1,9 +1,6 @@
-import { MainTitle } from '../components/Main/MainTitle'
-import { Slogan } from '../components/Main/Slogan'
-import { CookiePopup } from '../components/Main/CookiePopup'
-
-
-
+import { MainTitle } from '../components/layout/Main/MainTitle'
+import { Slogan } from '../components/layout/Main/Slogan'
+import { CookiePopup } from '../components/layout/Main/CookiePopup'
 
 const Homepage = () => {
 	return (

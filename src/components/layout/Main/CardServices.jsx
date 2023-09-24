@@ -1,22 +1,22 @@
 import { useState, useEffect } from 'react'
 import './CardServices.scss'
-import '../../assets/styles/media-queries.scss'
-import spa from '../../icons/card-icon/spa-white.svg'
-import mpa from '../../icons/card-icon/mpa-white.svg'
-import service from '../../icons/card-icon/service-white.svg'
-import eCommerce from '../../icons/card-icon/e-commerce-white.svg'
-import speed from '../../icons/card-icon/speed-white.svg'
-import school from '../../icons/card-icon/school-white.svg'
-import webinar from '../../icons/card-icon/webinar-white.svg'
-import crm from '../../icons/card-icon/crm-white.svg'
-import payment from '../../icons/card-icon/payment-white.svg'
-import funnel from '../../icons/card-icon/funnel-white.svg'
-import bot from '../../icons/card-icon/bot-white.svg'
-import marketing from '../../icons/card-icon/marketing-white.svg'
-import analytic from '../../icons/card-icon/analytics-white.svg'
-import sales from '../../icons/card-icon/sales-white.svg'
-import call from '../../icons/card-icon/call-white.svg'
-import other from '../../icons/card-icon/other-white.svg'
+import '../../../assets/styles/media-queries.scss'
+import spa from '../../../public/icons/card-icon/spa-white.svg'
+import mpa from '../../../public/icons/card-icon/mpa-white.svg'
+import service from '../../../public/icons/card-icon/service-white.svg'
+import eCommerce from '../../../public/icons/card-icon/e-commerce-white.svg'
+import speed from '../../../public/icons/card-icon/speed-white.svg'
+import school from '../../../public/icons/card-icon/school-white.svg'
+import webinar from '../../../public/icons/card-icon/webinar-white.svg'
+import crm from '../../../public/icons/card-icon/crm-white.svg'
+import payment from '../../../public/icons/card-icon/payment-white.svg'
+import funnel from '../../../public/icons/card-icon/funnel-white.svg'
+import bot from '../../../public/icons/card-icon/bot-white.svg'
+import marketing from '../../../public/icons/card-icon/marketing-white.svg'
+import analytic from '../../../public/icons/card-icon/analytics-white.svg'
+import sales from '../../../public/icons/card-icon/sales-white.svg'
+import call from '../../../public/icons/card-icon/call-white.svg'
+import other from '../../../public/icons/card-icon/other-white.svg'
 
 const CardServices = () => {
 	const [show, setShow] = useState(false)
@@ -387,11 +387,7 @@ const CardServices = () => {
 										заказу.
 									</span>
 									<br />
-									<br />
-									<span className='card-text-d-c'>
-										Такой сайт позволяет выбрать товар, а оплатить и забрать его
-										можно в реальной торговой точке.
-									</span>
+
 								</p>
 							</div>
 						</div>

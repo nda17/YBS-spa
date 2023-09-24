@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import style from './ModalInformer.scss';
-import '../../assets/styles/media-queries.scss'
+import './ModalInformer.scss';
+import '../../../assets/styles/media-queries.scss'
 
 const ModalInformer = () => {
 	return (

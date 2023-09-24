@@ -1,33 +1,26 @@
 import { useEffect } from 'react';
-import LogoSvg from '../../images/YBS-white.svg';
-import PhoneSvg from '../../icons/link-icon/phone-white.svg';
-import WhatsAppSvg from '../../icons/link-icon/wa-white.svg';
-import TelegramSvg from '../../icons/link-icon/tg-white.svg';
-import BehanceSvg from '../../icons/link-icon/be-white.svg';
-import GithubSvg from '../../icons/link-icon/gh-white.svg';
+import LogoSvg from '../../../public/images/YBS-white.svg';
+import PhoneSvg from '../../../public/icons/link-icon/phone-white.svg'
+import WhatsAppSvg from '../../../public/icons/link-icon/wa-white.svg'
+import TelegramSvg from '../../../public/icons/link-icon/tg-white.svg'
+import BehanceSvg from '../../../public/icons/link-icon/be-white.svg'
+import GithubSvg from '../../../public/icons/link-icon/gh-white.svg'
 import styles from './Footer.scss';
-import '../../assets/styles/media-queries.scss';
+import '../../../assets/styles/media-queries.scss';
 
 const Footer = () => {
 	useEffect(() => {
-		const onEntry = (entry) => {
-			entry.forEach(change => {
-				if (change.isIntersecting) {
-					change.target.classList.add('element-show');
-				}
-			}, []);
-		}
-		let options = {
-			threshold: [0],
-		};
-		let observer = new IntersectionObserver(onEntry, options);
-		let elements = document.querySelectorAll('.element-animation');
-		for (let elm of elements) {
-			observer.observe(elm);
-		}
-	});
+		//Animation logo
+		let count = 0
+		setInterval(function () {
+			count === 360 ? (count = 0) : count--
+			document.querySelector(
+				'.section-nav__logo-item-footer'
+			).style.transform = `rotate(${count}deg)`
+		}, 40)
+	}, [])
 	return (
-		<nav className='row section-nav-footer element-animation'>
+		<nav className='row section-nav-footer'>
 			<div className='section-nav-wrap-footer col-12'>
 				<a
 					className='section-nav__block-logo-footer'

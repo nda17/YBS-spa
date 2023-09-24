@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import styles from './MainTitle.scss';
-import '../../assets/styles/media-queries.scss'
+import './MainTitle.scss';
+import '../../../assets/styles/media-queries.scss'
 import { VideoTop } from './VideoTop';
 
 const MainTitle = () => {

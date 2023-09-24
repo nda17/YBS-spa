@@ -1,13 +1,13 @@
 import { useRef } from 'react'
-import { CustomLink } from '../CustomLink'
-import { useClickOutside } from '../../hooks/useClickOutside'
+import { CustomLink } from '../../ui/links/CustomLink'
+import { useClickOutside } from '../../../hooks/useClickOutside'
 import './MobileNavigationMenu.scss'
-import '../../assets/styles/media-queries.scss'
-import LogoSvg from '../../images/YBS-white.svg'
-import PhoneSvg from '../../icons/link-icon/phone-white.svg'
-import WhatsAppSvg from '../../icons/link-icon/wa-white.svg'
-import TelegramSvg from '../../icons/link-icon/tg-white.svg'
-import BehanceSvg from '../../icons/link-icon/be-white.svg'
+import '../../../assets/styles/media-queries.scss'
+import LogoSvg from '../../../public/images/YBS-white.svg'
+import PhoneSvg from '../../../public/icons/link-icon/phone-white.svg'
+import WhatsAppSvg from '../../../public/icons/link-icon/wa-white.svg'
+import TelegramSvg from '../../../public/icons/link-icon/tg-white.svg'
+import BehanceSvg from '../../../public/icons/link-icon/be-white.svg'
 
 const MobileNavigationMenu = props => {
 	const { isVisible, handleOpenHamburger = Function.prototype } = props //Состояние показан бургер или стрелка (открыто меню или нет), функция закрытия мобильного меню

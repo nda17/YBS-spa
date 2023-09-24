@@ -1,15 +1,13 @@
-import { useNavigate } from 'react-router-dom'
-import { FormMain } from '../components/Main/FormMain'
+import { FormMain } from '../components/layout/Main/FormMain'
+import { ButtonGoBack } from '../components/ui/buttons/ButtonGoBack'
+import { CookiePopup } from '../components/layout/Main/CookiePopup'
 
 const CalculatePricePage = () => {
-	const navigate = useNavigate()
-	const goBack = () => navigate(-1)
 	return (
 		<div className='page'>
+			<ButtonGoBack />
 			<FormMain />
-			<button className='btnGoBack' onClick={goBack}>
-				Назад
-			</button>
+			<CookiePopup />
 		</div>
 	)
 }

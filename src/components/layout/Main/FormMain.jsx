@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { VideoBottom } from './VideoBottom';
 import { ModalInformer } from './ModalInformer';
-import styles from './FormMain.scss';
-import '../../assets/styles/media-queries.scss'
+import './FormMain.scss';
+import '../../../assets/styles/media-queries.scss'
 
 const FormMain = () => {
 	//Блок с калькулятором цен на услуги:

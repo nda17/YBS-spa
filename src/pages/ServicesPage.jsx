@@ -1,15 +1,13 @@
-import { useNavigate } from 'react-router-dom'
-import { CardServices } from '../components/Main/CardServices'
+import { ButtonGoBack } from '../components/ui/buttons/ButtonGoBack'
+import { CardServices } from '../components/layout/Main/CardServices'
+import { CookiePopup } from '../components/layout/Main/CookiePopup'
 
 const ServicesPage = () => {
-	const navigate = useNavigate()
-	const goBack = () => navigate(-1)
 	return (
 		<div className='page'>
+			<ButtonGoBack />
 			<CardServices />
-			<button className='btnGoBack' onClick={goBack}>
-				Назад
-			</button>
+			<CookiePopup />
 		</div>
 	)
 }

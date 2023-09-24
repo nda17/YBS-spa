@@ -1,7 +1,7 @@
-import style from './VideoTop.scss'
-import '../../assets/styles/media-queries.scss'
-import videomp4 from '../../video/video-building-1.mp4'
-import videowebm from '../../video/video-building-2.webm'
+import './VideoTop.scss'
+import '../../../assets/styles/media-queries.scss'
+import videomp4 from '../../../public/video/video-building-1.mp4'
+import videowebm from '../../../public/video/video-building-2.webm'
 
 const VideoTop = () => {
 	return (

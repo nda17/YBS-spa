@@ -1,5 +1,5 @@
 import { Link, useMatch } from 'react-router-dom'
-import styles from './CustomLink.scss'
+import './CustomLink.scss'
 
 const CustomLink = ({ children, to, ...props }) => {
 	const match = useMatch(to)
