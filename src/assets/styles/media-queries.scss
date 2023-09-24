@@ -93,13 +93,24 @@
 /* Устройства Medium (планшеты, 768 пикселей и выше) */
 @media (min-width: 768px) {
 
+	.section-nav-footer {
+		min-height: 6rem !important;
+	}
+
+	.section-nav__block-logo-footer {
+		left: 1.5rem !important;
+	}
+
+	.section-nav__block-logo-footer {
+		top: 0.6rem !important;
+	}
+
 	.title {
 		font-size: 1.5rem !important;
 	}
 
 	.mainTitleText {
 		font-size: 2.5rem !important;
-		width: 18.5ch !important;
 	}
 
 	.section-nav {

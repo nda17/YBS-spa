@@ -193,11 +193,10 @@
 	text-align: center;
 }
 .card .cover .price {
-	font-weight: 200;
+	font-weight: 600;
 	position: absolute;
 	top: 15%;
 	right: 15%;
-	color: white;
 	transform-style: preserve-3d;
 	transition: ease all 1.5s;
 	z-index: 4;
@@ -266,13 +265,13 @@
 }
 
 .moreInfo {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	bottom: 9.3%;
-	left: 2%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 9.3%;
+    left: 4%;
 }
 
 .iconMoreInfo {
@@ -343,18 +342,18 @@
 ////
 
 .interactiveIconUp {
-	position: absolute;	
+    position: absolute;
     z-index: 999999999;
-    top: -22rem;
-    left: -11%;
+    top: -22.2rem;
+    left: -13.4%;
     width: 50%;
 }
 
 .interactiveIconDown {
 	position: absolute;
 	z-index: 999999999;
-	top: -1.8rem;
-	left: 14.3%;
+	top: -1.9rem;
+	left: 12%;
 	width: 26%;
 }
 

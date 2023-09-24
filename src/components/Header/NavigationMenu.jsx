@@ -53,10 +53,6 @@ const NavigationMenu = () => {
 							<CustomLink to='/contacts'>Контакты</CustomLink>
 						</li>
 					</ul>
-					{/* <div className='section-nav__checkboxBtn'>
-						<ButtonColorTheme />
-						<ButtonLanguage />
-					</div> */}
 					<li className='section-nav__menu-link section-nav__menu-link-wrap-icon'>
 						<a href='tel:+79990860186'>
 							<img
