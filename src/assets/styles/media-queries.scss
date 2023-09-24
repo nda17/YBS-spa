@@ -92,7 +92,6 @@
 
 /* Устройства Medium (планшеты, 768 пикселей и выше) */
 @media (min-width: 768px) {
-
 	.section-nav-footer {
 		min-height: 6rem !important;
 	}
@@ -116,6 +115,11 @@
 	.section-nav {
 		padding: 1.2rem 3.625rem !important;
 		height: 9rem !important;
+	}
+
+	.btnGoBack {
+		top: -3.7rem !important;
+		right: 3.6rem !important;
 	}
 
 	.menuToggle {
@@ -147,12 +151,6 @@
 
 	.sloganAuthorText {
 		font-size: 1.4rem !important;
-	}
-
-	.btnToHeader {
-		display: none !important;
-		visibility: hidden !important;
-		opacity: 0 !important;
 	}
 
 	.video-block-bottom {
@@ -267,6 +265,11 @@
 		display: none !important;
 	}
 
+	.btnGoBack {
+		top: -2.95rem !important;
+		right: 3.5rem !important;
+	}
+
 	.slideBtnLanguage,
 	.slideBtnColorTheme {
 		margin: 0 !important;
@@ -280,7 +283,6 @@
 		font-size: 1.39rem !important;
 		white-space: nowrap !important; /* не переносить текст на другую строку */
 	}
-		
 }
 
 /* Устройства X-Large (большие настольные компьютеры, 1200 пикселей и выше) */
