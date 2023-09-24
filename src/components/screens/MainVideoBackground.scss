@@ -1,17 +1,17 @@
-.bg-video-form {
-	padding: 0;
+.bgMainVideo {
+	z-index: -1;
 	position: absolute;
-	top: 0;
-	left: 0;
 	width: 100%;
+	left: 0;
+	right: 0;
 	height: 100%;
-	background: linear-gradient(63deg, #000000 0.6%, rgba(0, 0, 0, 0) 100%);
-	border-radius: 0.75rem;
-	z-index: 99999999;
 	object-fit: cover;
+	padding: 0;
+	border-radius: 0 0 0.75rem 0.75rem;
+	z-index: 888888;
 }
 
-.bg-gradient-filter-form {
+.bgGradientFilter {
 	padding: 0;
 	position: absolute;
 	top: 0;
@@ -20,5 +20,5 @@
 	height: 100%;
 	background: linear-gradient(63deg, #000000 0.6%, rgba(0, 0, 0, 0) 100%);
 	border-radius: 0.75rem;
-	z-index: 999999999;
+	z-index: 999999;
 }

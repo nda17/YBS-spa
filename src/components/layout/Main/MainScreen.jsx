@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import './MainTitle.scss';
+import './MainScreen.scss';
 import '../../../assets/styles/media-queries.scss'
-import { VideoTop } from './VideoTop';
+import { MainVideoBackground } from '../../screens/MainVideoBackground'; 
 
-const MainTitle = () => {
+const MainScreen = () => {
 	const [title, setTitle] = useState('В век стремительного развития IT-технологий, электронной коммерции, каждое предприятие нуждается в сайте или веб-приложении для своей компании.');
 	const subtitle = 'Тот самый сайт, который будет делать ваш бизнес успешным.';
 	
@@ -35,19 +35,17 @@ const MainTitle = () => {
 	}, []);
 	return (
 		<article className='row image-block'>
-			<VideoTop />
+			<MainVideoBackground />
 			<div className='col-12 mainTitle'>
 				<h3 className='mainTitle__up-subtitle'>
 					Digital агентство полного цикла
 				</h3>
-				<h1 className='mainTitleText'>
-					Your Business Site
-				</h1>
+				<h1 className='mainTitleText'>Your Business Site</h1>
 				<h3 className='mainTitle__down-subtitle'>{title}</h3>
 				<h3 className='mainTitle__down-subtitle-span'>{subtitle}</h3>
 			</div>
 		</article>
-	);
+	)
 }
 
-export { MainTitle };
+export { MainScreen }

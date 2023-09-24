@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { VideoBottom } from './VideoBottom';
-import { ModalInformer } from './ModalInformer';
+import { FormVideoBackground } from '../../screens/FormVideoBackground';
+import { AlertForm } from '../../ui/alerts/AlertForm';
 import './FormMain.scss';
 import '../../../assets/styles/media-queries.scss'
 
@@ -189,29 +189,29 @@ const FormMain = () => {
 			})
 				.then(response => {
 					if (response.ok) {
-						const modal = document.querySelector('.modal-ModalInformer')
+						const modal = document.querySelector('.alertForm')
 						modal.innerText = 'Заявка отправлена.'
-						modal.classList.add('modal-ModalInformer-open')
+						modal.classList.add('alertFormOpen')
 						formCalc.reset()
 						document.querySelector('.form-control-username').style.outline =
 							'none'
 						document.querySelector('.form-control-email').style.outline = 'none'
 						document.querySelector('.form-control-tel').style.outline = 'none'
 						setTimeout(
-							() => modal.classList.remove('modal-ModalInformer-open'),
+							() => modal.classList.remove('alertFormOpen'),
 							2800
 						)
 					} else {
-						const modal = document.querySelector('.modal-ModalInformer')
+						const modal = document.querySelector('.alertForm')
 						modal.innerText = 'Ошибка 404 (Not found), попробуйте позже.'
-						modal.classList.add('modal-ModalInformer-open')
+						modal.classList.add('alertFormOpen')
 						formCalc.reset()
 						document.querySelector('.form-control-username').style.outline =
 							'none'
 						document.querySelector('.form-control-email').style.outline = 'none'
 						document.querySelector('.form-control-tel').style.outline = 'none'
 						setTimeout(
-							() => modal.classList.remove('modal-ModalInformer-open'),
+							() => modal.classList.remove('alertFormOpen'),
 							2800
 						)
 					}
@@ -234,9 +234,9 @@ const FormMain = () => {
 				заявку. Мы свяжемся с вами!
 			</h3>
 			<article className='row main-form-block formWrapper container-lg'>
-				<VideoBottom />
+				<FormVideoBackground />
 				<div className='col-lg-7 col-md-9 col-sm-10 col-xs-12 service-calc'>
-					<ModalInformer />
+					<AlertForm />
 					<form className='form-calc' onSubmit={handleSubmit}>
 						<div className='accordion' id='accordionExample'>
 							<div className='accordion-item'>
@@ -670,7 +670,7 @@ const FormMain = () => {
 				</div>
 			</article>
 		</>
-	);
+	)
 }
 
 export { FormMain };
