@@ -1,0 +1,47 @@
+{
+	"headerHome": {
+		"home": "Home"
+	},
+	"headerAbout": {
+		"about": "About us"
+	},
+	"headerServices": {
+		"services": "Services"
+	},
+	"headerCalculation": {
+		"calculation": "Cost calculation"
+	},
+	"headerContacts": {
+		"contacts": "Services"
+	},
+	"mainScreen": {
+		"title": "Full cycle digital agency"
+	},
+
+
+
+    
+	"mainScreenSloganFirst": {
+		"title": "In the age of rapid development of IT technologies and e-commerce, every enterprise needs a website or web application for their company."
+	},
+
+	"mainScreenSloganSecond": {
+		"title": "The website is the face of the company, an irreplaceable employee working 24/7."
+	},
+
+	"mainScreenSloganThird": {
+		"title": "We will create a website for you that will earn."
+	},
+	"mainScreenSloganFourth": {
+		"title": "The very site that will make your business successful."
+	},
+
+
+
+
+
+
+	"cardTitle": {
+		"title": "What do we do and what can we do for you ?"
+	}
+}
