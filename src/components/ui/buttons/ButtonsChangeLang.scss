@@ -1,8 +1,6 @@
 .buttonChangeLangWrap {
-    display: flex;
-    position: absolute;
-    top: 29.8rem;
-    right: 9.26rem;
+    padding-top: 0.6rem;
+    display: flex ;
 }
 
 .buttonChangeLang {
@@ -12,7 +10,7 @@
     font-weight: 900;
     font-size: 0.75rem;
     line-height: 1rem;
-    margin: 0.2rem;
+    margin-right: 0.5rem;
     border-radius: 5rem;
     border: 1px solid #000000;
 }

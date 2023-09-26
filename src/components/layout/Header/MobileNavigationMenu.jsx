@@ -13,9 +13,9 @@ import BehanceSvg from '../../../public/icons/link-icon/be-white.svg'
 
 const MobileNavigationMenu = props => {
 	const { t, i18n } = useTranslation()
-	const { isVisible, handleOpenHamburger = Function.prototype } = props //Состояние показан бургер или стрелка (открыто меню или нет), функция закрытия мобильного меню
+	const { isVisible, handleOpenHamburger = Function.prototype } = props //Состояние показан бургер или стрелка (открыто мобильное меню или нет), функция закрытия мобильного меню
 	const mobileMenuRef = useRef(null)
-	useClickOutside(mobileMenuRef, () => handleOpenHamburger()) //Закрытие меню при клике вне его блока
+	useClickOutside(mobileMenuRef, () => handleOpenHamburger()) //Закрытие мобильного меню при клике вне его блока
 	return (
 		!isVisible && (
 			<article className='slide-menu-wrap' ref={mobileMenuRef}>

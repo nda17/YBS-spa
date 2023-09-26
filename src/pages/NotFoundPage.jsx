@@ -8,7 +8,7 @@ const NotFoundPage = () => {
 			<p className='titleNotFound'>
 				ERROR: 404 - Not found!
 				<br />
-				Эта страница не существует.
+				Страница не существует.
 				<br />
 				Перейти на <Link to='/'>ГЛАВНУЮ СТРАНЦУ</Link>
 			</p>

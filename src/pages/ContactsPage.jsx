@@ -14,7 +14,7 @@ const ContactsPage = () => {
 	return (
 		<div className='page'>
 			<ButtonGoBack />
-			<h3 className='title'>СТРАНИЦА В РАЗРАБОТКЕ</h3>
+			<h3 className='title'>PAGE UNDER DEVELOPMENT</h3>
 			<CookiePopup />
 		</div>
 	)
