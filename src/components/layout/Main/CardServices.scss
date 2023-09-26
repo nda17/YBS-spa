@@ -18,6 +18,15 @@
 	user-select: none;
 	max-width: 18rem;
 }
+
+.card-text-f {
+	font-size: 0.9rem !important;
+}
+
+.price {
+    padding-top: 2rem;
+
+}
 .card:hover .cover {
 	transform: rotateX(0deg) rotateY(-180deg);
 }

@@ -5,9 +5,9 @@ import WhatsAppSvg from '../../../public/icons/link-icon/wa-white.svg'
 import TelegramSvg from '../../../public/icons/link-icon/tg-white.svg'
 import BehanceSvg from '../../../public/icons/link-icon/be-white.svg'
 import GithubSvg from '../../../public/icons/link-icon/gh-white.svg'
-import styles from './Footer.scss';
+import './Footer.scss';
 import '../../../assets/styles/media-queries.scss';
-
+const currentYear = new Date().getFullYear()
 const Footer = () => {
 	useEffect(() => {
 		//Animation logo
@@ -33,8 +33,9 @@ const Footer = () => {
 						alt='Logo'
 					/>
 					<p className='section-nav__logo-slogan-footer'>
-						2023 All rights reserved
+						{`2023 - ${new Date().getFullYear()}`}
 					</p>
+					<p className='section-nav__logo-slogan-footer'>All rights reserved</p>
 				</a>
 				<ul
 					className='section-nav__menu-list section-nav__menu-list-footer'
@@ -88,7 +89,7 @@ const Footer = () => {
 				</ul>
 			</div>
 		</nav>
-	);
+	)
 }
 
 export { Footer };

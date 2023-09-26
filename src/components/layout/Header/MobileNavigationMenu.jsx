@@ -1,6 +1,8 @@
+import { useTranslation } from 'react-i18next'
 import { useRef } from 'react'
 import { CustomLink } from '../../ui/links/CustomLink'
 import { useClickOutside } from '../../../hooks/useClickOutside'
+import { ButtonsChangeLang } from '../../ui/buttons/ButtonsChangeLang'
 import './MobileNavigationMenu.scss'
 import '../../../assets/styles/media-queries.scss'
 import LogoSvg from '../../../public/images/YBS-white.svg'
@@ -10,6 +12,7 @@ import TelegramSvg from '../../../public/icons/link-icon/tg-white.svg'
 import BehanceSvg from '../../../public/icons/link-icon/be-white.svg'
 
 const MobileNavigationMenu = props => {
+	const { t, i18n } = useTranslation()
 	const { isVisible, handleOpenHamburger = Function.prototype } = props //Состояние показан бургер или стрелка (открыто меню или нет), функция закрытия мобильного меню
 	const mobileMenuRef = useRef(null)
 	useClickOutside(mobileMenuRef, () => handleOpenHamburger()) //Закрытие меню при клике вне его блока
@@ -25,14 +28,14 @@ const MobileNavigationMenu = props => {
 								className='mobileCustomLink'
 								onClick={() => handleOpenHamburger()}
 							>
-								Главная
+								{t('headerHome.home')}
 							</CustomLink>
 							<CustomLink
 								to='/about'
 								className='mobileCustomLink'
 								onClick={() => handleOpenHamburger()}
 							>
-								О нас
+								{t('headerAbout.about')}
 							</CustomLink>
 						</li>
 					</ul>
@@ -43,25 +46,26 @@ const MobileNavigationMenu = props => {
 								className='mobileCustomLink'
 								onClick={() => handleOpenHamburger()}
 							>
-								Наши услуги
+								{t('headerServices.services')}
 							</CustomLink>
 							<CustomLink
 								to='/calculate'
 								className='mobileCustomLink'
 								onClick={() => handleOpenHamburger()}
 							>
-								Рассчитать стоимость
+								{t('headerCalculation.calculation')}
 							</CustomLink>
 							<CustomLink
 								to='/contacts'
 								className='mobileCustomLink'
 								onClick={() => handleOpenHamburger()}
 							>
-								Контакты
+								{t('headerContacts.contacts')}
 							</CustomLink>
 						</li>
 					</ul>
-					<li className='section-nav__menu-link section-nav__menu-link-wrap-icon section-nav__menu-link-wrap-icon-mobile'>
+					<ButtonsChangeLang />
+					<div className='section-nav__menu-link section-nav__menu-link-wrap-icon section-nav__menu-link-wrap-icon-mobile'>
 						<a href='tel:+79990860186'>
 							<img
 								className='section-nav__menu-link-icon section-nav__menu-link-wrap-icon-phone section-nav__menu-link-icon-mobile'
@@ -94,7 +98,7 @@ const MobileNavigationMenu = props => {
 								onClick={() => handleOpenHamburger()}
 							/>
 						</a>
-					</li>
+					</div>
 				</ul>
 			</article>
 		)

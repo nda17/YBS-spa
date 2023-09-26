@@ -1,30 +1,28 @@
-import { useState, useEffect } from 'react';
-import './CookiePopup.scss';
+import { useTranslation } from 'react-i18next'
+import { useState, useEffect } from 'react'
+import './CookiePopup.scss'
 import '../../../assets/styles/media-queries.scss'
 
 function CookiePopup() {
-	const [addClass, setAddClass] = useState(false);
-
+	const { t, i18n } = useTranslation()
+	const [addClass, setAddClass] = useState(false)
 	useEffect(() => {
-		executeCodes();
-	}, []);
-
+		executeCodes()
+	}, [])
 	const executeCodes = () => {
 		if (document.cookie.includes('cookieYbsSite')) {
-			return;
+			return
 		} else {
-			setAddClass(true);
+			setAddClass(true)
 		}
-	};
-
+	}
 	const acceptBtnClick = () => {
-		document.cookie = 'cookieBy= cookieYbsSite; max-age=' + 60 * 60 * 24 * 365;
-		setAddClass(false);
-	};
-
+		document.cookie = 'cookieBy= cookieYbsSite; max-age=' + 60 * 60 * 24 * 365
+		setAddClass(false)
+	}
 	const declineBtnClick = () => {
-		setAddClass(false);
-	};
+		setAddClass(false)
+	}
 	return (
 		<div className={`cookie-popup-wrap ${addClass ? 'show' : ''}`}>
 			<header className='header-popup-cookie'>
@@ -32,12 +30,7 @@ function CookiePopup() {
 				<h2>Cookies Consent</h2>
 			</header>
 			<div className='data'>
-				<p>
-					Мы используем cookie-файлы, чтобы получить статистику, с целью
-					персонализации сервисов и предложений. Продолжая пользоваться сайтом
-					без изменения настроек, вы даёте согласие на использование
-					cookie-файлов.
-				</p>
+				<p>{t('coockieAlert.text')}</p>
 			</div>
 			<div className='buttons-cookie'>
 				<button
@@ -45,18 +38,18 @@ function CookiePopup() {
 					className='button-cookie-popup'
 					id='acceptBtn'
 				>
-					Принять
+					<p>{t('coockieAlertAccept.text')}</p>
 				</button>
 				<button
 					onClick={declineBtnClick}
 					className='button-cookie-popup'
 					id='declineBtn'
 				>
-					Закрыть
+					<p>{t('coockieAlertClose.text')}</p>
 				</button>
 			</div>
 		</div>
-	);
+	)
 }
 
-export { CookiePopup };
+export { CookiePopup }

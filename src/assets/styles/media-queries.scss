@@ -21,12 +21,12 @@
 		bottom: 3.125rem !important;
 	}
 
-	.mainTitle__down-subtitle-span {
-		top: 40.4% !important;
+	.mainScreenSloganThird {
+    	top: 4.7rem !important;
 	}
 
-	.mainTitleText {
-		width: 21ch !important;
+	.mainScreenSloganFourth {
+    	top: 6.2rem !important;
 	}
 
 	.wrapper-card-block {
@@ -117,6 +117,14 @@
 		font-size: 2.5rem !important;
 	}
 
+	.mainScreenSloganThird {
+    	top: 6.2rem !important;
+	}
+
+	.mainScreenSloganFourth {
+    	top: 7.8rem !important;
+	}
+
 	.section-nav {
 		padding: 1.2rem 3.625rem !important;
 		height: 9rem !important;
@@ -125,6 +133,10 @@
 	.btnGoBack {
 		top: -3.7rem !important;
 		right: 3.6rem !important;
+	}
+
+	.buttonChangeLangWrap {
+		top: 31.8rem !important;
 	}
 
 	.menuToggle {
@@ -258,10 +270,6 @@
 		pointer-events: visible !important;
 	}
 
-	.mainTitle__down-subtitle {
-		width: 80% !important;
-	}
-
 	.section-nav__menu-list {
 		display: flex !important;
 	}
@@ -269,6 +277,11 @@
 	.menuToggle,
 	.slide-menu-wrap {
 		display: none !important;
+	}
+
+	.buttonChangeLangWrap {
+		top: 1rem !important;
+		right: 1rem !important;
 	}
 
 	.btnGoBack {

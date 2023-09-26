@@ -1,38 +1,35 @@
-import { useState, useEffect } from 'react';
-import './MainScreen.scss';
+import { useTranslation } from 'react-i18next'
+import { useEffect } from 'react'
+import './MainScreen.scss'
 import '../../../assets/styles/media-queries.scss'
-import { MainVideoBackground } from '../../screens/MainVideoBackground'; 
+import { MainVideoBackground } from '../../screens/MainVideoBackground'
 
 const MainScreen = () => {
-	const [title, setTitle] = useState('В век стремительного развития IT-технологий, электронной коммерции, каждое предприятие нуждается в сайте или веб-приложении для своей компании.');
-	const subtitle = 'Тот самый сайт, который будет делать ваш бизнес успешным.';
-	
+	const { t, i18n } = useTranslation()
 	useEffect(() => {
-		const title = document.querySelector('.mainTitle__down-subtitle');
-		title.style.opacity = '1';
+		const sloganFirst = document.querySelector('.mainScreenSloganFirst')
+		const sloganSecond = document.querySelector('.mainScreenSloganSecond')
+		const sloganThird = document.querySelector('.mainScreenSloganThird')
+		const sloganFourth = document.querySelector('.mainScreenSloganFourth')
 		setTimeout(() => {
-			title.style.opacity = '0';
-		}, 2100);
-		setTimeout(() => {
-			title.style.opacity = '1';
-			setTitle('Сайт - это лицо как лицо компании, так и незаменимый сотрудник, который работает 24/7.');
+			sloganFirst.style.opacity = '1'
 			setTimeout(() => {
-				title.style.opacity = '0';
-			}, 2100);
-		}, 4400);
-		setTimeout(() => {
-			title.style.opacity = '1';
-			setTitle('Наша задача создать идеальный сайт, который подойдет именно вам и вашей целевой аудитории.');
-		}, 8800);
-		setTimeout(() => {
-			setTitle('Мы создадим вам сайт, который будет зарабатывать.');
+				sloganFirst.style.opacity = '0'
+			}, 2200)
 			setTimeout(() => {
-				document.querySelector('.mainTitle__down-subtitle-span') ?
-				document.querySelector('.mainTitle__down-subtitle-span').style.opacity = '1' : null
-
-			}, 2000);
-		}, 8800);
-	}, []);
+				sloganSecond.style.opacity = '1'
+				setTimeout(() => {
+					sloganSecond.style.opacity = '0'
+				}, 2200)
+			}, 2200)
+			setTimeout(() => {
+				sloganThird.style.opacity = '1'
+			}, 4200)
+			setTimeout(() => {
+				sloganFourth.style.opacity = '1'
+			}, 6200)
+		}, 800)
+	}, [])
 	return (
 		<article className='row image-block'>
 			<MainVideoBackground />
@@ -41,8 +38,18 @@ const MainScreen = () => {
 					Digital агентство полного цикла
 				</h3>
 				<h1 className='mainTitleText'>Your Business Site</h1>
-				<h3 className='mainTitle__down-subtitle'>{title}</h3>
-				<h3 className='mainTitle__down-subtitle-span'>{subtitle}</h3>
+				<p className='mainScreenSloganFirst'>
+					{t('mainScreenSloganFirst.title')}
+				</p>
+				<p className='mainScreenSloganSecond'>
+					{t('mainScreenSloganSecond.title')}
+				</p>
+				<p className='mainScreenSloganThird'>
+					{t('mainScreenSloganThird.title')}
+				</p>
+				<p className='mainScreenSloganFourth'>
+					{t('mainScreenSloganFourth.title')}
+				</p>
 			</div>
 		</article>
 	)

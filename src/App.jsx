@@ -1,3 +1,6 @@
+import { Suspense } from 'react'
+
+
 import { Routes, Route } from 'react-router-dom'
 import { Homepage } from './pages/Homepage'
 import { AboutPage } from './pages/AboutPage'
@@ -12,18 +15,21 @@ import './assets/fonts/fonts.scss'
 const App = () => {
 	return (
 		<>
-			<Routes>
-				<Route path='/' element={<Layout />}>
-					<Route index element={<Homepage />} />
-					<Route path='about' element={<AboutPage />} />
-					<Route path='services' element={<ServicesPage />} />
-					<Route path='calculate' element={<CalculatePricePage />} />
-					<Route path='contacts' element={<ContactsPage />} />
-					<Route path='*' element={<NotFoundPage />} />
-				</Route>
-			</Routes>
+			<Suspense fallback='...Loading'>
+				<Routes>
+					<Route path='/' element={<Layout />}>
+						<Route index element={<Homepage />} />
+						<Route path='about' element={<AboutPage />} />
+						<Route path='services' element={<ServicesPage />} />
+						<Route path='calculate' element={<CalculatePricePage />} />
+						<Route path='contacts' element={<ContactsPage />} />
+						<Route path='*' element={<NotFoundPage />} />
+					</Route>
+				</Routes>
+			</Suspense>
 		</>
 	)
 }
+
 
 export { App }

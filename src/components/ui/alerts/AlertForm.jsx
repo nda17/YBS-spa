@@ -5,7 +5,8 @@ import '../../../assets/styles/media-queries.scss'
 const AlertForm = () => {
 	return (
 		<article className='alertForm'>
-			<h2>YBS</h2>
+			<p className='alertFormRu'>YBS</p>
+			<p className='alertFormEn'></p>
 		</article>
 	)
 }

@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import { useState, useEffect } from 'react'
 import './CardServices.scss'
 import '../../../assets/styles/media-queries.scss'
@@ -19,6 +20,7 @@ import call from '../../../public/icons/card-icon/call-white.svg'
 import other from '../../../public/icons/card-icon/other-white.svg'
 
 const CardServices = () => {
+	const { t, i18n } = useTranslation()
 	const [show, setShow] = useState(false)
 	useEffect(() => {
 		const textElement = document.querySelector('.title')
@@ -46,16 +48,14 @@ const CardServices = () => {
 	}, [])
 	return (
 		<>
-			<h3 className='title'>Чeм мы занимаемся и что можем сделать для вас?</h3>
+			<h3 className='title'>{t('cardTitle.title')}</h3>
 			<article className='row cardServicesWrapper' id='cards-service-link'>
 				<div className='wrapper-card-block col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-6'>
 					<div className='card cardWrapper'>
 						<div className='cover item-a'>
-							<span className='price price-a'>от 15000 ₽</span>
+							<span className='price price-a'>{t('cardPriceA.price')}</span>
 							<img src={spa} alt='Pictures cards' className='card-icon' />
-							<h1 className='card-title-a'>
-								Лендинги, одностраничные сайты, веб-приложения SPA
-							</h1>
+							<h1 className='card-title-a'>{t('cardTextA.text')}</h1>
 							<div className='moreInfo'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -89,7 +89,7 @@ const CardServices = () => {
 									</g>
 								</svg>
 								&nbsp;
-								<p className='textMoreInfo'>Подробнее</p>
+								<p className='textMoreInfo'>{t('cardMoreInfo.text')}</p>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
 									viewBox='0 0 160 160'
@@ -123,14 +123,7 @@ const CardServices = () => {
 								</svg>
 							</div>
 							<div className='card-back'>
-								<p className='card-text-a'>
-									Создадим сайт визитку или лендинг вашего продукта. Всё коротко
-									и по делу на одной странице. Как на Tilda так и на стеке:
-									HTML/БЭМ, CSS/SCSS/SASS, Pixel Perfect, Vue, JavaScript,
-									Typescript, Coffescript, React JS, React Native, Bootstrap,
-									TailWind, Webpack, Gulp, GIT, Photoshop, Illustrator, After
-									Effects, Figma и другие.
-								</p>
+								<p className='card-text-a'>{t('cardTextBackSideA.text')}</p>
 							</div>
 						</div>
 					</div>
@@ -138,11 +131,9 @@ const CardServices = () => {
 				<div className='wrapper-card-block col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12'>
 					<div className='card cardWrapper'>
 						<div className='cover item-b'>
-							<span className='price price-b'>от 25000 ₽</span>
+							<span className='price price-b'>{t('cardPriceB.price')}</span>
 							<img src={mpa} alt='Pictures card' className='card-icon' />
-							<h1 className='card-title-b'>
-								Многостраничные сайты, веб-приложения MPA и PWA{' '}
-							</h1>
+							<h1 className='card-title-b'>{t('cardTextB.text')}</h1>
 							<div className='moreInfo'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -176,7 +167,7 @@ const CardServices = () => {
 									</g>
 								</svg>
 								&nbsp;
-								<p className='textMoreInfo'>Подробнее</p>
+								<p className='textMoreInfo'>{t('cardMoreInfo.text')}</p>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
 									viewBox='0 0 160 160'
@@ -210,10 +201,7 @@ const CardServices = () => {
 								</svg>
 							</div>
 							<div className='card-back'>
-								<p className='card-text-b'>
-									Сайты и веб-приложения для серьезных компаний, с возможностью
-									реализовать масштабируемые проекты под любые задачи.
-								</p>
+								<p className='card-text-b'>{t('cardTextBackSideB.text')}</p>
 							</div>
 						</div>
 					</div>
@@ -221,9 +209,9 @@ const CardServices = () => {
 				<div className='wrapper-card-block col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12'>
 					<div className='card cardWrapper'>
 						<div className='cover item-c'>
-							<span className='price price-c'>от 7000 ₽</span>
+							<span className='price price-c'>{t('cardPriceC.price')}</span>
 							<img src={service} alt='Pictures card' className='card-icon' />
-							<h1 className='card-title-c'>Сопровождение сайтов</h1>
+							<h1 className='card-title-c'>{t('cardTextC.text')}</h1>
 							<div className='moreInfo'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -257,7 +245,7 @@ const CardServices = () => {
 									</g>
 								</svg>
 								&nbsp;
-								<p className='textMoreInfo'>Подробнее</p>
+								<p className='textMoreInfo'>{t('cardMoreInfo.text')}</p>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
 									viewBox='0 0 160 160'
@@ -291,10 +279,7 @@ const CardServices = () => {
 								</svg>
 							</div>
 							<div className='card-back'>
-								<p className='card-text-c'>
-									Возьмём на себя всю работу по сопровождению, обновлению и
-									поддержанию вашего сайта.
-								</p>
+								<p className='card-text-c'>{t('cardTextBackSideC.text')}</p>
 							</div>
 						</div>
 					</div>
@@ -302,11 +287,9 @@ const CardServices = () => {
 				<div className='wrapper-card-block col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12'>
 					<div className='card cardWrapper'>
 						<div className='cover item-d'>
-							<span className='price price-d'>от 35000 ₽</span>
+							<span className='price price-d'>{t('cardPriceD.price')}</span>
 							<img src={eCommerce} alt='Pictures card' className='card-icon' />
-							<h1 className='card-title-d'>
-								Интернет-магазины и Интернет-витрины
-							</h1>
+							<h1 className='card-title-d'>{t('cardTextD.text')}</h1>
 							<div className='moreInfo'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -340,7 +323,7 @@ const CardServices = () => {
 									</g>
 								</svg>
 								&nbsp;
-								<p className='textMoreInfo'>Подробнее</p>
+								<p className='textMoreInfo'>{t('cardMoreInfo.text')}</p>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
 									viewBox='0 0 160 160'
@@ -376,18 +359,14 @@ const CardServices = () => {
 							<div className='card-back'>
 								<p className='card-text-d'>
 									<span className='card-text-d-a'>
-										Создание полноценных интернет-магазинов с товарами, услугами
-										или создание интернет-витрин.
+										{t('cardTextBackSideD-A.text')}
 									</span>
 									<br />
 									<br />
 									<span className='card-text-d-b'>
-										Витриной называется рекламный каталог, в котором есть
-										подробная информация про каждую позицию товара, доступного к
-										заказу.
+										{t('cardTextBackSideD-B.text')}
 									</span>
 									<br />
-
 								</p>
 							</div>
 						</div>
@@ -396,9 +375,9 @@ const CardServices = () => {
 				<div className='wrapper-card-block col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12'>
 					<div className='card cardWrapper'>
 						<div className='cover item-e'>
-							<span className='price price-e'>от 30000 ₽</span>
+							<span className='price price-e'>{t('cardPriceE.price')}</span>
 							<img src={speed} alt='Pictures card' className='card-icon' />
-							<h1 className='card-title-e'>Оптимизация сайтов</h1>
+							<h1 className='card-title-e'>{t('cardTextE.text')}</h1>
 							<div className='moreInfo'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -432,7 +411,7 @@ const CardServices = () => {
 									</g>
 								</svg>
 								&nbsp;
-								<p className='textMoreInfo'>Подробнее</p>
+								<p className='textMoreInfo'>{t('cardMoreInfo.text')}</p>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
 									viewBox='0 0 160 160'
@@ -467,21 +446,23 @@ const CardServices = () => {
 							</div>
 							<div className='card-back'>
 								<p className='card-text-e'>
-									<span className='card-text-e-a'>SEO оптимизация.</span>
+									<span className='card-text-e-a'>
+										{t('cardTextBackSideE-A.text')}
+									</span>
 									<br />
 									<br />
 									<span className='card-text-e-b'>
-										Составление ТЗ. Аудит сайтa.
+										{t('cardTextBackSideE-B.text')}
 									</span>
 									<br />
 									<br />
 									<span className='card-text-e-c'>
-										Внедрение доступностии семантики.
+										{t('cardTextBackSideE-C.text')}
 									</span>
 									<br />
 									<br />
 									<span className='card-text-e-d'>
-										Перенос сайта с одной платформы на другую.
+										{t('cardTextBackSideE-D.text')}
 									</span>
 								</p>
 							</div>
@@ -491,11 +472,9 @@ const CardServices = () => {
 				<div className='wrapper-card-block col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12'>
 					<div className='card cardWrapper'>
 						<div className='cover item-f'>
-							<span className='price price-f'>от 120000 ₽</span>
+							<span className='price price-f'>{t('cardPriceF.price')}</span>
 							<img src={school} alt='Pictures card' className='card-icon' />
-							<h1 className='card-title-f'>
-								Запуск и сопровождение Онлайн школ
-							</h1>
+							<h1 className='card-title-f'>{t('cardTextF.text')}</h1>
 							<div className='moreInfo'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -529,7 +508,7 @@ const CardServices = () => {
 									</g>
 								</svg>
 								&nbsp;
-								<p className='textMoreInfo'>Подробнее</p>
+								<p className='textMoreInfo'>{t('cardMoreInfo.text')}</p>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
 									viewBox='0 0 160 160'
@@ -565,31 +544,27 @@ const CardServices = () => {
 							<div className='card-back'>
 								<p className='big-text card-text-f'>
 									<span className='card-text-f-a'>
-										Создание и настройка сущностей курса: тренингов, уроков и
-										заданий на платформе GetCourse.
+										{t('cardTextBackSideF-A.text')}
 									</span>
 									<br />
 									<br />
 									<span className='card-text-f-b'>
-										Создание, настройка и проведение вебинаров на платформе
-										Bizon365.
+										{t('cardTextBackSideF-B.text')}
 									</span>
 									<br />
 									<br />
 									<span className='card-text-f-c'>
-										Создание и настройка автовебинаров.
+										{t('cardTextBackSideF-C.text')}
 									</span>
 									<br />
 									<br />
 									<span className='card-text-f-d'>
-										Настройка amoCRM. Синхронизация amoCRM с Bizon365 и
-										GetCourse.
+										{t('cardTextBackSideF-D.text')}
 									</span>
 									<br />
 									<br />
 									<span className='card-text-f-e'>
-										Подключение WhatsApp к amoCRM. Установка онлайн-телефонии с
-										Sipuni.
+										{t('cardTextBackSideF-E.text')}
 									</span>
 								</p>
 							</div>
@@ -599,9 +574,9 @@ const CardServices = () => {
 				<div className='wrapper-card-block col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12'>
 					<div className='card cardWrapper'>
 						<div className='cover item-g'>
-							<span className='price price-g'>от 20000 ₽</span>
+							<span className='price price-g'>{t('cardPriceG.price')}</span>
 							<img src={webinar} alt='Pictures card' className='card-icon' />
-							<h1 className='card-title-g'>Вебинары</h1>
+							<h1 className='card-title-g'>{t('cardTextG.text')}</h1>
 							<div className='moreInfo'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -635,7 +610,7 @@ const CardServices = () => {
 									</g>
 								</svg>
 								&nbsp;
-								<p className='textMoreInfo'>Подробнее</p>
+								<p className='textMoreInfo'>{t('cardMoreInfo.text')}</p>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
 									viewBox='0 0 160 160'
@@ -669,10 +644,7 @@ const CardServices = () => {
 								</svg>
 							</div>
 							<div className='card-back'>
-								<p className='card-text-g'>
-									Создание, настройка и проведение вебинаров на платформе,
-									настройка автовебинаров.
-								</p>
+								<p className='card-text-g'>{t('cardTextBackSideG.text')}</p>
 							</div>
 						</div>
 					</div>
@@ -680,9 +652,9 @@ const CardServices = () => {
 				<div className='wrapper-card-block col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12'>
 					<div className='card cardWrapper'>
 						<div className='cover item-h'>
-							<span className='price price-h'>от 2000 ₽</span>
+							<span className='price price-h'>{t('cardPriceH.price')}</span>
 							<img src={crm} alt='Pictures card' className='card-icon' />
-							<h1 className='card-title-h'>CRM-системы</h1>
+							<h1 className='card-title-h'>{t('cardTextH.text')}</h1>
 							<div className='moreInfo'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -716,7 +688,7 @@ const CardServices = () => {
 									</g>
 								</svg>
 								&nbsp;
-								<p className='textMoreInfo'>Подробнее</p>
+								<p className='textMoreInfo'>{t('cardMoreInfo.text')}</p>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
 									viewBox='0 0 160 160'
@@ -750,10 +722,7 @@ const CardServices = () => {
 								</svg>
 							</div>
 							<div className='card-back'>
-								<p className='card-text-h'>
-									Внедрение CRM-систем. Подключение мессенджеров к СRM.
-									Интеграция онлайн-телефонии.
-								</p>
+								<p className='card-text-h'>{t('cardTextBackSideH.text')}</p>
 							</div>
 						</div>
 					</div>
@@ -761,9 +730,9 @@ const CardServices = () => {
 				<div className='wrapper-card-block col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12'>
 					<div className='card cardWrapper'>
 						<div className='cover item-i'>
-							<span className='price price-i'>от 2000 ₽</span>
+							<span className='price price-i'>{t('cardPriceI.price')}</span>
 							<img src={payment} alt='Pictures card' className='card-icon' />
-							<h1 className='card-title-i'>Интеграция платежных систем</h1>
+							<h1 className='card-title-i'>{t('cardTextI.text')}</h1>
 							<div className='moreInfo'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -797,7 +766,7 @@ const CardServices = () => {
 									</g>
 								</svg>
 								&nbsp;
-								<p className='textMoreInfo'>Подробнее</p>
+								<p className='textMoreInfo'>{t('cardMoreInfo.text')}</p>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
 									viewBox='0 0 160 160'
@@ -831,10 +800,7 @@ const CardServices = () => {
 								</svg>
 							</div>
 							<div className='card-back'>
-								<p className='card-text-i'>
-									Платежные системы: интеграция платежных систем на сайт, для
-									удобной онлайн оплаты.
-								</p>
+								<p className='card-text-i'>{t('cardTextBackSideI.text')}</p>
 							</div>
 						</div>
 					</div>
@@ -842,9 +808,9 @@ const CardServices = () => {
 				<div className='wrapper-card-block col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12'>
 					<div className='card cardWrapper'>
 						<div className='cover item-j'>
-							<span className='price price-j'>от 70000 ₽</span>
+							<span className='price price-j'>{t('cardPriceJ.price')}</span>
 							<img src={funnel} alt='Pictures card' className='card-icon' />
-							<h1 className='card-title-j'>Автоматизация воронок</h1>
+							<h1 className='card-title-j'>{t('cardTextJ.text')}</h1>
 							<div className='moreInfo'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -878,7 +844,7 @@ const CardServices = () => {
 									</g>
 								</svg>
 								&nbsp;
-								<p className='textMoreInfo'>Подробнее</p>
+								<p className='textMoreInfo'>{t('cardMoreInfo.text')}</p>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
 									viewBox='0 0 160 160'
@@ -914,19 +880,17 @@ const CardServices = () => {
 							<div className='card-back'>
 								<p className='card-text-j'>
 									<span className='card-text-j-a'>
-										Создание карты Движения Покупателя и реализация ее в
-										воронке.
+										{t('cardTextBackSideJ-A.text')}
 									</span>
 									<br />
 									<br />
 									<span className='card-text-j-b'>
-										Создание и настройка SMS-рассылки. Создание и настройка
-										автозвонков.
+										{t('cardTextBackSideJ-B.text')}
 									</span>
 									<br />
 									<br />
 									<span className='card-text-j-c'>
-										Реализация воронки в чат-ботах.
+										{t('cardTextBackSideJ-C.text')}
 									</span>
 								</p>
 							</div>
@@ -936,9 +900,9 @@ const CardServices = () => {
 				<div className='wrapper-card-block col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12'>
 					<div className='card cardWrapper'>
 						<div className='cover item-k'>
-							<span className='price price-k'>от 8000 ₽</span>
+							<span className='price price-k'>{t('cardPriceK.price')}</span>
 							<img src={bot} alt='Pictures card' className='card-icon' />
-							<h1 className='card-title-k'>Чат-боты</h1>
+							<h1 className='card-title-k'>{t('cardTextK.text')}</h1>
 							<div className='moreInfo'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -972,7 +936,7 @@ const CardServices = () => {
 									</g>
 								</svg>
 								&nbsp;
-								<p className='textMoreInfo'>Подробнее</p>
+								<p className='textMoreInfo'>{t('cardMoreInfo.text')}</p>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
 									viewBox='0 0 160 160'
@@ -1006,10 +970,7 @@ const CardServices = () => {
 								</svg>
 							</div>
 							<div className='card-back'>
-								<p className='card-text-k'>
-									Создание и настройка чат ботов, интеграция настройка связи
-									через What's App, Telegram, VK.
-								</p>
+								<p className='card-text-k'>{t('cardTextBackSideK.text')}</p>
 							</div>
 						</div>
 					</div>
@@ -1017,9 +978,9 @@ const CardServices = () => {
 				<div className='wrapper-card-block col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12'>
 					<div className='card cardWrapper'>
 						<div className='cover item-l'>
-							<span className='price price-l'>от 3000 ₽</span>
+							<span className='price price-l'>{t('cardPriceL.price')}</span>
 							<img src={marketing} alt='Pictures card' className='card-icon' />
-							<h1 className='card-title-l'>Маркетинговые услуги</h1>
+							<h1 className='card-title-l'>{t('cardTextL.text')}</h1>
 							<div className='moreInfo'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -1053,7 +1014,7 @@ const CardServices = () => {
 									</g>
 								</svg>
 								&nbsp;
-								<p className='textMoreInfo'>Подробнее</p>
+								<p className='textMoreInfo'>{t('cardMoreInfo.text')}</p>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
 									viewBox='0 0 160 160'
@@ -1089,23 +1050,22 @@ const CardServices = () => {
 							<div className='card-back'>
 								<p className='card-text-l'>
 									<span className='card-text-l-a'>
-										Написание продающего текста.
+										{t('cardTextBackSideL-A.text')}
 									</span>
 									<br />
 									<br />
 									<span className='card-text-l-b'>
-										Разработка и внедрение маркетинговых мероприятий, подходящих
-										под ваш сегмент и вашу деятельность.
+										{t('cardTextBackSideL-B.text')}
 									</span>
 									<br />
 									<br />
 									<span className='card-text-l-c'>
-										Мониторинг конкурентов, конкурентный анализ.
+										{t('cardTextBackSideL-C.text')}
 									</span>
 									<br />
 									<br />
 									<span className='card-text-l-d'>
-										Работа с блогерами и лидерами мнений.
+										{t('cardTextBackSideL-D.text')}
 									</span>
 								</p>
 							</div>
@@ -1115,9 +1075,9 @@ const CardServices = () => {
 				<div className='wrapper-card-block col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12'>
 					<div className='card cardWrapper'>
 						<div className='cover item-m'>
-							<span className='price price-m'>от 7000 ₽</span>
+							<span className='price price-m'>{t('cardPriceM.price')}</span>
 							<img src={analytic} alt='Pictures card' className='card-icon' />
-							<h1 className='card-title-m'>Аналитика и стратегия</h1>
+							<h1 className='card-title-m'>{t('cardTextM.text')}</h1>
 							<div className='moreInfo'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -1151,7 +1111,7 @@ const CardServices = () => {
 									</g>
 								</svg>
 								&nbsp;
-								<p className='textMoreInfo'>Подробнее</p>
+								<p className='textMoreInfo'>{t('cardMoreInfo.text')}</p>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
 									viewBox='0 0 160 160'
@@ -1185,10 +1145,7 @@ const CardServices = () => {
 								</svg>
 							</div>
 							<div className='card-back'>
-								<p className='card-text-m'>
-									SWOT анализ, ABC анализ, разработка и применение антикризисных
-									мероприятий.
-								</p>
+								<p className='card-text-m'>{t('cardTextBackSideM.text')}</p>
 							</div>
 						</div>
 					</div>
@@ -1196,9 +1153,9 @@ const CardServices = () => {
 				<div className='wrapper-card-block col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12'>
 					<div className='card cardWrapper'>
 						<div className='cover item-n'>
-							<span className='price price-n'>от 70000 ₽</span>
+							<span className='price price-n'>{t('cardPriceN.price')}</span>
 							<img src={sales} alt='Pictures card' className='card-icon' />
-							<h1 className='card-title-n'>Работа с отделом продаж</h1>
+							<h1 className='card-title-n'>{t('cardTextN.text')}</h1>
 							<div className='moreInfo'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -1232,7 +1189,7 @@ const CardServices = () => {
 									</g>
 								</svg>
 								&nbsp;
-								<p className='textMoreInfo'>Подробнее</p>
+								<p className='textMoreInfo'>{t('cardMoreInfo.text')}</p>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
 									viewBox='0 0 160 160'
@@ -1268,13 +1225,12 @@ const CardServices = () => {
 							<div className='card-back'>
 								<p className='card-text-n'>
 									<span className='card-text-n-a'>
-										Создание отдела продаж, повышение конверсий, увеличение доли
-										рынка, повышение квалификации и компетенции отдела продаж.
+										{t('cardTextBackSideN-A.text')}
 									</span>
 									<br />
 									<br />
 									<span className='card-text-n-b'>
-										Создание и увеличение воронки клиентов.
+										{t('cardTextBackSideN-B.text')}
 									</span>
 								</p>
 							</div>
@@ -1284,9 +1240,9 @@ const CardServices = () => {
 				<div className='wrapper-card-block col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12'>
 					<div className='card cardWrapper'>
 						<div className='cover item-o'>
-							<span className='price price-o'>от 80000 ₽</span>
+							<span className='price price-o'>{t('cardPriceO.price')}</span>
 							<img src={call} alt='Pictures card' className='card-icon' />
-							<h1 className='card-title-o'>Call - центр</h1>
+							<h1 className='card-title-o'>{t('cardTextO.text')}</h1>
 							<div className='moreInfo'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -1320,7 +1276,7 @@ const CardServices = () => {
 									</g>
 								</svg>
 								&nbsp;
-								<p className='textMoreInfo'>Подробнее</p>
+								<p className='textMoreInfo'>{t('cardMoreInfo.text')}</p>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
 									viewBox='0 0 160 160'
@@ -1354,10 +1310,7 @@ const CardServices = () => {
 								</svg>
 							</div>
 							<div className='card-back'>
-								<p className='card-text-o'>
-									Обзвон потенциальной базы холодных клиентов, рассылка КП,
-									создание воронки клиентов.
-								</p>
+								<p className='card-text-o'>{t('cardTextBackSideO.text')}</p>
 							</div>
 						</div>
 					</div>
@@ -1365,9 +1318,9 @@ const CardServices = () => {
 				<div className='wrapper-card-block col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12'>
 					<div className='card cardWrapper'>
 						<div className='cover item-p'>
-							<span className='price price-p'>от 3000 ₽</span>
+							<span className='price price-p'>{t('cardPriceP.price')}</span>
 							<img src={other} alt='Pictures card' className='card-icon' />
-							<h1 className='card-title-p'>Дополнительные услуги</h1>
+							<h1 className='card-title-p'>{t('cardTextP.text')}</h1>
 							<div className='moreInfo'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -1401,7 +1354,7 @@ const CardServices = () => {
 									</g>
 								</svg>
 								&nbsp;
-								<p className='textMoreInfo'>Подробнее</p>
+								<p className='textMoreInfo'>{t('cardMoreInfo.text')}</p>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
 									viewBox='0 0 160 160'
@@ -1437,13 +1390,12 @@ const CardServices = () => {
 							<div className='card-back'>
 								<p className='card-text-p'>
 									<span className='card-text-p-a'>
-										Продажа, установка и настройка лицензионного программного
-										обеспечения.
+										{t('cardTextBackSideP-A.text')}
 									</span>
 									<br />
 									<br />
 									<span className='card-text-p-b'>
-										Настройка, оптимизация и модернизация вашего оборудования.
+										{t('cardTextBackSideP-B.text')}
 									</span>
 								</p>
 							</div>

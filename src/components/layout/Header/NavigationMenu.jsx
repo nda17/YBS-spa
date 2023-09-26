@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import { useEffect } from 'react'
 import { CustomLink } from '../../ui/links/CustomLink'
 import LogoSvg from '../../../public/images/YBS-white.svg'
@@ -8,8 +9,10 @@ import BehanceSvg from '../../../public/icons/link-icon/be-white.svg'
 import './NavigationMenu.scss'
 import '../../../assets/styles/media-queries.scss'
 import { HamburgerMenu } from './HamburgerMenu'
+import { ButtonsChangeLang } from '../../ui/buttons/ButtonsChangeLang' 
 
 const NavigationMenu = () => {
+	const { t, i18n } = useTranslation()
 	useEffect(() => {
 		//Animation logo
 		let count = 0
@@ -41,18 +44,24 @@ const NavigationMenu = () => {
 				<div className='section-nav__menu-list'>
 					<ul className='CustomLinkBlock'>
 						<li className='CustomLinkWrapper'>
-							<CustomLink to='/'>Главная</CustomLink>
-							<CustomLink to='/about'>О нас</CustomLink>
+							<CustomLink to='/'>{t('headerHome.home')}</CustomLink>
+							<CustomLink to='/about'>{t('headerAbout.about')}</CustomLink>
 						</li>
 					</ul>
 					<ul className='CustomLinkBlock'>
 						<li className='CustomLinkWrapper'>
-							<CustomLink to='/services'>Наши услуги</CustomLink>
-							<CustomLink to='/calculate'>Рассчитать стоимость</CustomLink>
-							<CustomLink to='/contacts'>Контакты</CustomLink>
+							<CustomLink to='/services'>
+								{t('headerServices.services')}
+							</CustomLink>
+							<CustomLink to='/calculate'>
+								{t('headerCalculation.calculation')}
+							</CustomLink>
+							<CustomLink to='/contacts'>
+								{t('headerContacts.contacts')}
+							</CustomLink>
 						</li>
 					</ul>
-					<li className='section-nav__menu-link section-nav__menu-link-wrap-icon'>
+					<div className='section-nav__menu-link section-nav__menu-link-wrap-icon'>
 						<a href='tel:+79990860186'>
 							<img
 								className='section-nav__menu-link-icon section-nav__menu-link-wrap-icon-phone'
@@ -67,8 +76,8 @@ const NavigationMenu = () => {
 								alt='Behance link'
 							/>
 						</a>
-					</li>
-					<li className='section-nav__menu-link section-nav__menu-link-wrap-icon'>
+					</div>
+					<div className='section-nav__menu-link section-nav__menu-link-wrap-icon'>
 						<a href='https://api.whatsapp.com/send/?phone=79990860186&text=%D0%A5%D0%BE%D1%87%D1%83+%D1%83+%D0%B2%D0%B0%D1%81+%D1%81%D0%B0%D0%B9%D1%82%21&type=phone_number&app_absent=0'>
 							<img
 								className='section-nav__menu-link-icon section-nav__menu-link-wrap-icon-whatsapp'
@@ -83,7 +92,8 @@ const NavigationMenu = () => {
 								alt='Telegram link'
 							/>
 						</a>
-					</li>
+					</div>
+					<ButtonsChangeLang />
 				</div>
 				<HamburgerMenu />
 			</div>
