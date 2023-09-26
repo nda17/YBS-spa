@@ -8,14 +8,14 @@ i18n.use(Backend).use(LanguageDetector).use(initReactI18next).init({
 	defaultLocale: 'ru',
 	fallbackLng: 'en',
 	//Development server paths
-	// backend: {
-	// 	loadPath: 'src/locales/{{lng}}/translation.json'
-	// }
-	//Hosting paths
 	backend: {
-		loadPath:
-			'locales/{{lng}}/translation.json'
+		loadPath: 'src/locales/{{lng}}/translation.json'
 	}
+	//Hosting paths
+	// backend: {
+	// 	loadPath:
+	// 		'locales/{{lng}}/translation.json'
+	// }
 })
 
 export { i18n }

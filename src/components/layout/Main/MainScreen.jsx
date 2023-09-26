@@ -34,8 +34,8 @@ const MainScreen = () => {
 		<article className='row image-block'>
 			<MainVideoBackground />
 			<div className='col-12 mainTitle'>
-				<h3 className='mainTitle__up-subtitle'>
-					Digital агентство полного цикла
+				<h3 className='mainTitleSloganCompany'>
+					{t('mainScreenSlogan.title')}
 				</h3>
 				<h1 className='mainTitleText'>Your Business Site</h1>
 				<p className='mainScreenSloganFirst'>
