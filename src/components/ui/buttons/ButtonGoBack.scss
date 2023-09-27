@@ -1,15 +1,14 @@
 .btnGoBack {
-	background: tomato;
+    background: tomato;
     padding: 0.2rem 0.5rem;
     position: sticky;
-    top: 94%;
+    bottom: 1.3rem;
     left: 73%;
-	opacity: 0.7;
-	border-radius: 1.1rem;
-	z-index: 9999999999;
-	border: 1px solid black;
-	font-weight: 600;
+    opacity: 0.7;
+    border-radius: 1.1rem;
+    z-index: 9999999999;
+    border: 1px solid black;
+    font-weight: 600;
     color: #ffffff;
-	filter: drop-shadow(0 0.25rem 0.25rem rgba(0,0,0,.25));
+    filter: drop-shadow(0 0.25rem 0.25rem rgba(0, 0, 0, 0.25));
 }
-
