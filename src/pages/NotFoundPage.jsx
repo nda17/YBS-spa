@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const NotFoundPage = () => {
 	return (
-		<div className='page'>
+		<>
 			<ButtonGoBack />
 			<p className='titleNotFound'>
 				ERROR: 404 - Not found!
@@ -12,7 +12,7 @@ const NotFoundPage = () => {
 				<br />
 				Перейти на <Link to='/'>ГЛАВНУЮ СТРАНЦУ</Link>
 			</p>
-		</div>
+		</>
 	)
 }
 

@@ -1,5 +1,3 @@
-import { CookiePopup } from '../components/ui/modal/CookiePopup'
-import { ButtonGoBack } from '../components/ui/buttons/ButtonGoBack'
 import { useState, useEffect } from 'react'
 
 const ContactsPage = () => {
@@ -12,11 +10,9 @@ const ContactsPage = () => {
 		}, 1000)
 	}, [show])
 	return (
-		<div className='page'>
-			<CookiePopup />
-			<ButtonGoBack />
+		<>
 			<h3 className='title'>PAGE UNDER DEVELOPMENT</h3>
-		</div>
+		</>
 	)
 }
 
