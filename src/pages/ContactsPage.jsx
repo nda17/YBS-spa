@@ -1,3 +1,4 @@
+import { ButtonGoBack } from '../components/ui/buttons/ButtonGoBack'
 import { useState, useEffect } from 'react'
 
 const ContactsPage = () => {
@@ -12,6 +13,7 @@ const ContactsPage = () => {
 	return (
 		<>
 			<h3 className='title'>PAGE UNDER DEVELOPMENT</h3>
+			<ButtonGoBack />
 		</>
 	)
 }
