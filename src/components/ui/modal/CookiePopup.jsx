@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { useState, useEffect } from 'react'
+import { BiSolidCookie } from 'react-icons/bi'
 import './CookiePopup.scss'
-import '../../../assets/styles/media-queries.scss'
 
 function CookiePopup() {
 	const { t, i18n } = useTranslation()
@@ -17,7 +17,9 @@ function CookiePopup() {
 		}
 	}
 	const acceptBtnClick = () => {
-		document.cookie = 'cookieBy= cookieYbsSite; max-age=' + 60 * 60 * 24 * 365
+		document.cookie =
+			'cookieBy= cookieYbsSite; SameSite=Lax;  max-age=' +
+			60 * 60 * 24 * 365
 		setAddClass(false)
 	}
 	const declineBtnClick = () => {
@@ -26,8 +28,8 @@ function CookiePopup() {
 	return (
 		<div className={`cookie-popup-wrap ${addClass ? 'show' : ''}`}>
 			<header className='header-popup-cookie'>
-				<i className='bx bx-cookie'></i>
-				<h2>Cookies Consent</h2>
+				<BiSolidCookie className='coockiesIcon' />
+				<h2 className='coockiesTitleText'>Cookies Consent</h2>
 			</header>
 			<div className='data'>
 				<p>{t('coockieAlert.text')}</p>

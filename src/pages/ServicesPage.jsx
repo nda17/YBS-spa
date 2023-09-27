@@ -1,13 +1,13 @@
+import { CookiePopup } from '../components/ui/modal/CookiePopup'
 import { ButtonGoBack } from '../components/ui/buttons/ButtonGoBack'
 import { CardServices } from '../components/layout/Main/CardServices'
-import { CookiePopup } from '../components/layout/Main/CookiePopup'
 
 const ServicesPage = () => {
 	return (
 		<div className='page'>
+			<CookiePopup />
 			<ButtonGoBack />
 			<CardServices />
-			<CookiePopup />
 		</div>
 	)
 }

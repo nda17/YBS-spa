@@ -66,6 +66,13 @@ const Footer = () => {
 								alt='Telegram icon'
 							/>
 						</a>
+						<a href='https://github.com/nda17' className='footerIconLink'>
+							<img
+								className='footerLinkIcon iconGithub'
+								src={GithubSvg}
+								alt='Github icon'
+							/>
+						</a>
 					</div>
 				</div>
 			</nav>

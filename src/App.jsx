@@ -15,7 +15,7 @@ import './assets/fonts/fonts.scss'
 const App = () => {
 	return (
 		<>
-			<Suspense fallback='...Loading'>
+			<Suspense fallback='Loading'>
 				<Routes>
 					<Route path='/' element={<Layout />}>
 						<Route index element={<Homepage />} />

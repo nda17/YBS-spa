@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { useState, useEffect } from 'react'
 import { FormVideoBackground } from '../../screens/FormVideoBackground'
-import { AlertForm } from '../../ui/alerts/AlertForm'
+import { AlertForm } from '../../ui/modal/AlertForm'
 import './FormMain.scss'
 import '../../../assets/styles/media-queries.scss'
 

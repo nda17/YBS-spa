@@ -1,27 +1,39 @@
 .cookie-popup-wrap {
+	opacity: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	position: fixed;
-	bottom: 0.3125rem;
-	right: -62.5rem;
-	width: 90%;
+	top: 0;
+	bottom: 0;
+	right: -100rem;
+	left: 0;
+	margin: auto;
+    height: 16.7rem;
+	width: 19rem;
 	background: #ffffff;
 	border-radius: 0.75rem;
-	padding: 0.9375rem 1.5625rem 1.375rem;
-	transition: right 0.5s ease;
+	padding: 0.9375rem 1.5625rem;
+	transition: right 1s ease;
 	box-shadow: -1rem 0rem 2.375rem 1.125rem rgba(0, 0, 0, 0.31) inset;
 	z-index: 9999999999;
 }
 
 .cookie-popup-wrap.show {
+	opacity: 1;
 	right: 0;
 	left: 0;
-	bottom: 0.3125rem;
+	bottom: 10%;
 	margin: auto;
 }
 
 .cookie-popup-wrap header {
-	display: flex;
-	align-items: center;
-	column-gap: 0.9375rem;
+    display: flex;
+    align-items: center;
+    column-gap: 0.2rem;
+    position: absolute;
+    top: 1rem;
+    left: 3.9rem;
 }
 
 header i {
@@ -46,14 +58,24 @@ header h2 {
 	font-size: 1rem;
 }
 
-.data p a {
+.coockiesIcon {
+	fill: #dd850b;
+    width: 2rem;
+    height: 2rem;
+}
+
+.coockiesTitleText {
+	font-weight: 900;
+}
+
+/* .data p a {
 	color: #4070f4;
 	text-decoration: none;
 }
 
 .data p a:hover {
 	text-decoration: underline;
-}
+} */
 
 .cookie-popup-wrap .buttons-cookie {
 	margin-top: 1rem;
@@ -70,7 +92,7 @@ header h2 {
 	border-radius: 0.25rem;
 	background: #4070f4;
 	cursor: pointer;
-	width: calc(100% / 2 - 0.625rem);
+	width: 7.5rem;
 	transition: all 0.4s ease;
 }
 

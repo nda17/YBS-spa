@@ -59,7 +59,9 @@
 				dataLayer.push(arguments)
 			}
 			gtag('js', new Date())
-			gtag('config', 'G-DGKPY8SHVV')
+			gtag('config', 'G-DGKPY8SHVV', {
+				cookie_flags: 'max-age=7200;secure;samesite=Lax'
+			})
 		</script>
 		<!-- /Google tag (gtag.js) -->
 	</head>

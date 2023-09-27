@@ -15,7 +15,7 @@ padding: 0rem 1.1rem 0.18rem 1.1rem;
 }
 
 .footerIconWrap {
-	width: 8.797rem;
+	width: 11.797rem;
 	height: 3.8rem;
 	display: flex;
 	justify-content: space-between;
@@ -95,6 +95,10 @@ padding: 0rem 1.1rem 0.18rem 1.1rem;
 
 .iconTelegram {
 	animation: pulse-icons 1.2s linear infinite;
+}
+
+.iconGithub {
+	animation: pulse-icons 1.7s linear infinite;
 }
 
 //Animation keyframes
