@@ -12,7 +12,7 @@ const HamburgerMenu = () => {
 	}
 	return (
 		<div>
-			<a onClick={() => handleOpenHamburger()} >
+			<a onClick={() => handleOpenHamburger()}>
 				{isVisible ? (
 					<GrTextAlignRight className='GrTextAlignRight' />
 				) : (

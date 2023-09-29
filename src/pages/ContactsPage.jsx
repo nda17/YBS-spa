@@ -20,4 +20,4 @@ const ContactsPage = () => {
 
 export { ContactsPage }
 
-//////////////////////useState, useEffect ПЕРЕМЕСТИТЬ В КОМПОНЕНТ
+//FIXME:useState, useEffect ПЕРЕМЕСТИТЬ В КОМПОНЕНТ

@@ -177,9 +177,9 @@ const FormMain = () => {
 				}
 			})
 				.then(response => {
-						const modal = document.querySelector('.alertForm')
-						const modalRu = document.querySelector('.alertFormRu')
-						const modalEn = document.querySelector('.alertFormEn')
+					const modal = document.querySelector('.alertForm')
+					const modalRu = document.querySelector('.alertFormRu')
+					const modalEn = document.querySelector('.alertFormEn')
 					if (response.ok) {
 						modalRu.innerText = 'Заявка отправлена.'
 						modalEn.innerText = 'Application sent.'

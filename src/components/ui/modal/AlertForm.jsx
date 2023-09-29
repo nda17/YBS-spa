@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
-import './AlertForm.scss';
+import { useEffect } from 'react'
+import './AlertForm.scss'
 import '../../../assets/styles/media-queries.scss'
 
 const AlertForm = () => {

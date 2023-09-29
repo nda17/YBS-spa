@@ -70,12 +70,6 @@ body {
 	padding: 0;
 }
 
-////????????????????????????????
-.page {
-	position: relative;
-	height: 100vh;
-}
-
 //404 page font
 .titleNotFound {
 	color: #da1111;
@@ -94,19 +88,12 @@ body {
 ////
 
 .main {
-	/* display: flex; */
-	/* flex-direction: column;
+	/* display: flex;
+	flex-direction: column;
 	justify-content: center; */
 	flex: 1 1 auto;
 	border-left: 3px solid #181818;
 	border-right: 3px solid #181818;
-
-
-	//FIXME: стили использовались на блоке page, удалить?
-	//
-	/* position: relative; */
-	/* height: 100vh;  */
-	//
 }
 
 //Fix header and footer, scroll inside main
@@ -130,11 +117,3 @@ main {
 	scrollbar-width: none; /* Firefox */
 }
 ////
-
-.homepageContent {
-	/* height: 100%;
-	display: flex;
-    flex-direction: column;
-    justify-content: center; */
-	/* padding-top: 10rem; */
-}

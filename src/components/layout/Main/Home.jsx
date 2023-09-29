@@ -62,10 +62,10 @@ const Home = () => {
 				</div>
 			</article>
 			<article className='homePageSloganBlock'>
-					<h2 className='sloganWrapper'>
-						<p className='sloganText'>{t('sloganText.text')}</p>
-						<p className='sloganAuthorText'>Henry Ford</p>
-					</h2>
+				<h2 className='sloganWrapper'>
+					<p className='sloganText'>{t('sloganText.text')}</p>
+					<p className='sloganAuthorText'>Henry Ford</p>
+				</h2>
 			</article>
 		</>
 	)

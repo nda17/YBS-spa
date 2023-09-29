@@ -2,9 +2,7 @@ import { Home } from '../components/layout/Main/Home'
 
 const HomePage = () => {
 	return (
-		<div className='homepageContent'>
 			<Home />
-		</div>
 	)
 }
 

@@ -1,9 +1,9 @@
 .main-form-block {
-    margin: 0 auto -3.9rem auto;
+	margin: 0 auto -3.9rem auto;
 	display: flex;
 	justify-content: center;
 	position: relative;
-    margin-bottom: -2.8rem !important;
+	margin-bottom: -2.8rem !important;
 }
 
 .final-price {
@@ -76,7 +76,7 @@
 	line-height: 1.9rem;
 	transition: all 3s;
 	margin-bottom: 2.8125rem;
-	padding: 2.5rem 0.7rem 0rem 0.7rem
+	padding: 2.5rem 0.7rem 0rem 0.7rem;
 }
 
 //Animation Intersection-observer
@@ -91,4 +91,3 @@
 	transform: translateY(0%);
 }
 ////
-

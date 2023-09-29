@@ -1,4 +1,3 @@
-/* Устройства Small (устройства с горизонтальной ориентацией от 576px) */
 @media (min-width: 576px) {
 	.title {
 		font-size: 1.7rem !important;
@@ -11,10 +10,6 @@
 
 	.mainScreenSloganFourth {
 		top: 5rem !important;
-	}
-
-	.wrapper-card-block {
-		max-width: 18rem !important;
 	}
 
 	.card .cover.item-b {
@@ -83,7 +78,7 @@
 	}
 
 	.footerLinkIcon {
-		width: 100%;
+		width: 100% !important;
 		height: 1.45rem !important;
 	}
 
@@ -101,7 +96,6 @@
 	}
 }
 
-/* Устройства Medium (планшеты, 768 пикселей и выше) */
 @media (min-width: 768px) {
 	.HiOutlineChevronDown {
 		top: -13.2rem !important;
@@ -117,13 +111,8 @@
 		font-size: 2.5rem !important;
 	}
 
-	/* .homepageContent {
-		padding-top: 10rem !important;
-	} */
-
 	.mobileMenu {
-		position: relative;
-    	width: 17rem !important;
+		width: 17rem !important;
 		padding-bottom: 2.3rem !important;
 	}
 
@@ -157,17 +146,8 @@
 		top: 31.8rem !important;
 	}
 
-	.menuToggle {
-		top: 4.5rem !important;
-		right: 3.6rem !important;
-	}
-
 	.sloganAuthorText {
 		font-size: 1.4rem !important;
-	}
-
-	.video-block-bottom {
-		height: 20rem !important;
 	}
 
 	.card .cover.item-b {
@@ -237,10 +217,9 @@
 	}
 }
 
-/* Устройства Large (настольные компьютеры, 992 пикселей и выше) */
 @media (min-width: 992px) {
 	.GrTextAlignRight {
-		display: none;
+		display: none !important;
 	}
 
 	.title {
@@ -248,7 +227,7 @@
 	}
 
 	.homePageVideoBlock {
-		height: 40rem;
+		height: 40rem !important;
 	}
 
 	.mainTitleText {
@@ -283,11 +262,6 @@
 		top: 7rem !important;
 	}
 
-	.menuToggle,
-	.slide-menu-wrap {
-		display: none !important;
-	}
-
 	.buttonChangeLangWrap {
 		top: 1rem !important;
 		right: 1rem !important;
@@ -298,22 +272,13 @@
 		margin: 0 !important;
 	}
 
-	.video-block-bottom {
-		height: 23rem !important;
-	}
-
 	.sloganText {
 		font-size: 1.39rem !important;
-		white-space: nowrap !important; /* не переносить текст на другую строку */
+		white-space: nowrap !important;
 	}
 }
 
-/* Устройства X-Large (большие настольные компьютеры, 1200 пикселей и выше) */
 @media (min-width: 1200px) {
-	.video-block-bottom {
-		height: 25rem !important;
-	}
-
 	.mainTitleText {
 		width: 18.4ch !important;
 	}
@@ -385,9 +350,8 @@
 	}
 }
 
-/* Устройства XX-Large (большие настольные компьютеры, 1400 пикселей и выше) */
 @media (min-width: 1400px) {
 	.mainTitleText {
-		width: 18.5ch !important;
+		width: 18.1ch !important;
 	}
 }

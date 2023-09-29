@@ -1,6 +1,4 @@
 import { Suspense } from 'react'
-
-
 import { Routes, Route } from 'react-router-dom'
 import { HomePage } from './pages/HomePage'
 import { AboutPage } from './pages/AboutPage'
@@ -30,6 +28,5 @@ const App = () => {
 		</>
 	)
 }
-
 
 export { App }

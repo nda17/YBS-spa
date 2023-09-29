@@ -7,8 +7,9 @@ import BehanceSvg from '../../../public/icons/link-icon/be-white.svg'
 import GithubSvg from '../../../public/icons/link-icon/gh-white.svg'
 import './Footer.scss'
 import '../../../assets/styles/media-queries.scss'
-const currentYear = new Date().getFullYear()
+
 const Footer = () => {
+	const currentYear = new Date().getFullYear()
 	useEffect(() => {
 		//Animation logo
 		let count = 0
@@ -28,9 +29,7 @@ const Footer = () => {
 							<img className='footerLogoIcon' src={LogoSvg} alt='Logo' />
 						</a>
 						<div className='footerInfoTextWrap'>
-							<p className='footerInfoTextFirst'>
-								{`2023 - ${new Date().getFullYear()}`}
-							</p>
+							<p className='footerInfoTextFirst'>{`2023 - ${currentYear}`}</p>
 							<p className='footerInfoTextSecond'>All rights reserved</p>
 						</div>
 					</div>

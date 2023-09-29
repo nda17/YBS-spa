@@ -24,8 +24,7 @@
 }
 
 .price {
-    padding-top: 2rem;
-
+	padding-top: 2rem;
 }
 .card:hover .cover {
 	transform: rotateX(0deg) rotateY(-180deg);
@@ -274,13 +273,13 @@
 }
 
 .moreInfo {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 9.3%;
-    left: 4%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	bottom: 9.3%;
+	left: 4%;
 }
 
 .iconMoreInfo {
@@ -351,11 +350,11 @@
 ////
 
 .interactiveIconUp {
-    position: absolute;
-    z-index: 999999999;
-    top: -22.2rem;
-    left: -13.4%;
-    width: 50%;
+	position: absolute;
+	z-index: 999999999;
+	top: -22.2rem;
+	left: -13.4%;
+	width: 50%;
 }
 
 .interactiveIconDown {

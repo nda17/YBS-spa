@@ -8,10 +8,7 @@
 .headerNav {
 	padding: 0rem 1.1rem;
 	box-sizing: content-box;
-	//TODO:
-	/* min-height: 4rem; */
 	height: 4rem;
-	//
 	background: #181818;
 	position: relative;
 	z-index: 9999999999;
@@ -29,7 +26,7 @@
 }
 
 .headerLogoIcon {
-    width: 3rem;
+	width: 3rem;
 	height: 3rem;
 }
 
@@ -58,28 +55,25 @@
 
 .headerIconLinkContent {
 	width: 1.45rem;
-    height: 1.45rem;
+	height: 1.45rem;
 }
 
 .headerCompanyNameText {
-	color: rgb(184, 134, 11);;
+	color: rgb(184, 134, 11);
 	font-size: 0.9rem;
 	font-weight: 500;
 	text-align: center;
-    position: absolute;
-    left: 4.7rem;
+	position: absolute;
+	left: 4.7rem;
 	position: absolute;
 	top: 1.6rem;
 	left: 4.6rem;
 }
 
-.buttonChangeLang,
-.CustomLink,
 .headerCompanyNameText {
 	transition: all 0.4s;
 	&:hover {
-	color: #f5deb3;
-	transform: scale(0.98);
+		color: #f5deb3;
 	}
 }
 
@@ -88,8 +82,8 @@
 }
 
 .CustomLink {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 	position: relative;
 }
 

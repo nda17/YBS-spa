@@ -18,8 +18,7 @@ function CookiePopup() {
 	}
 	const acceptBtnClick = () => {
 		document.cookie =
-			'cookieBy= cookieYbsSite; SameSite=Lax;  max-age=' +
-			60 * 60 * 24 * 365
+			'cookieBy= cookieYbsSite; SameSite=Lax;  max-age=' + 60 * 60 * 24 * 365
 		setAddClass(false)
 	}
 	const declineBtnClick = () => {

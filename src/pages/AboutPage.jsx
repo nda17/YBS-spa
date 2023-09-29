@@ -22,4 +22,4 @@ const AboutPage = () => {
 
 export { AboutPage }
 
-//////////////////////useState, useEffect ПЕРЕМЕСТИТЬ В КОМПОНЕНТ
+//FIXME:useState, useEffect ПЕРЕМЕСТИТЬ В КОМПОНЕНТ

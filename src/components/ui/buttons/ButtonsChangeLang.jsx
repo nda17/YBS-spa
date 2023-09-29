@@ -1,12 +1,12 @@
 import './ButtonsChangeLang.scss'
 import i18n from 'i18next'
 
-const locales = {
-	en: { title: 'EN' },
-	ru: { title: 'RU' }
-}
 
 const ButtonsChangeLang = () => {
+	const locales = {
+		en: { title: 'EN' },
+		ru: { title: 'RU' }
+	}
 	return (
 		<ul className='buttonChangeLangWrap'>
 			{Object.keys(locales).map(locale => (
