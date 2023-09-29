@@ -62,7 +62,7 @@ const Header = () => {
 						<div className='headerIconWrap'>
 							<a href='tel:+79990860186' className='headerIconLink'>
 								<img
-									className='headerLinkIcon iconPhone'
+									className='headerIconLinkContent iconPhone'
 									src={PhoneSvg}
 									alt='Phone icon'
 								/>
@@ -72,7 +72,7 @@ const Header = () => {
 								className='headerIconLink'
 							>
 								<img
-									className='headerLinkIcon iconBehance'
+									className='headerIconLinkContent iconBehance'
 									src={BehanceSvg}
 									alt='Behance icon'
 								/>
@@ -82,14 +82,14 @@ const Header = () => {
 								className='headerIconLink'
 							>
 								<img
-									className='headerLinkIcon iconWhatsapp'
+									className='headerIconLinkContent iconWhatsapp'
 									src={WhatsAppSvg}
 									alt='WhatsApp icon'
 								/>
 							</a>
 							<a href='https://t.me/ybs_one' className='headerIconLink'>
 								<img
-									className='headerLinkIcon iconTelegram'
+									className='headerIconLinkContent iconTelegram'
 									src={TelegramSvg}
 									alt='Telegram icon'
 								/>

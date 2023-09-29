@@ -3,10 +3,10 @@ import { Slogan } from '../components/layout/Main/Slogan'
 
 const Homepage = () => {
 	return (
-		<>
+		<div className='homepageContent'>
 			<MainScreen />
 			<Slogan />
-		</>
+		</div>
 	)
 }
 

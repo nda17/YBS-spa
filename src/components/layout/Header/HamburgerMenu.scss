@@ -1,12 +1,12 @@
-.GrTextAlignRight {
-	width: 2rem;
-	height: 2rem;
-	background-color: #181818;
-}
-
+.GrTextAlignRight,
 .HiOutlineChevronDown {
 	width: 2rem;
 	height: 2rem;
-	background-color: #181818;
+	z-index: 1;
 }
 
+.HiOutlineChevronDown {
+	position: absolute;
+	top: 1rem;
+	right: 0.9rem;
+}

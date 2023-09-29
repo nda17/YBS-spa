@@ -1,5 +1,5 @@
 import { useToggle } from '../../../hooks/useToggle'
-import { MobileNavigationMenu } from './MobileNavigationMenu'
+import { MobileNavigationMenu } from './MobileMenu'
 import { GrTextAlignRight } from 'react-icons/gr'
 import { HiOutlineChevronDown } from 'react-icons/hi2'
 import './HamburgerMenu.scss'
@@ -12,7 +12,7 @@ const HamburgerMenu = () => {
 	}
 	return (
 		<div>
-			<a onClick={() => handleOpenHamburger()}>
+			<a onClick={() => handleOpenHamburger()} >
 				{isVisible ? (
 					<GrTextAlignRight className='GrTextAlignRight' />
 				) : (

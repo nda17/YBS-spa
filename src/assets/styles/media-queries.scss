@@ -103,6 +103,11 @@
 
 /* Устройства Medium (планшеты, 768 пикселей и выше) */
 @media (min-width: 768px) {
+	.HiOutlineChevronDown {
+		top: -13.2rem !important;
+		right: -15.85rem !important;
+	}
+
 	.title {
 		font-size: 1.5rem !important;
 	}
@@ -110,6 +115,16 @@
 	.mainTitleText {
 		width: 19ch !important;
 		font-size: 2.5rem !important;
+	}
+
+	.homepageContent {
+		padding-top: 10rem !important;
+	}
+
+	.mobileMenu {
+		position: relative;
+    	width: 17rem !important;
+		padding-bottom: 2.3rem !important;
 	}
 
 	.footerInfoTextFirst,
@@ -145,10 +160,6 @@
 	.menuToggle {
 		top: 4.5rem !important;
 		right: 3.6rem !important;
-	}
-
-	.slide-menu {
-		padding: 13rem 2rem 3.125rem 3.6rem !important;
 	}
 
 	.sloganAuthorText {
@@ -244,7 +255,7 @@
 
 	.buttonChangeLangWrap {
 		flex-direction: column !important;
-    	margin: 0rem !important;
+		margin: 0rem !important;
 		padding: 0rem !important;
 	}
 

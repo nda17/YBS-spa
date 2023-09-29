@@ -2,12 +2,16 @@
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
+	z-index: -5;
 }
 
 .headerNav {
 	padding: 0rem 1.1rem;
 	box-sizing: content-box;
-	min-height: 4rem;
+	//TODO:
+	/* min-height: 4rem; */
+	height: 4rem;
+	//
 	background: #181818;
 	position: relative;
 	z-index: 9999999999;
@@ -52,7 +56,7 @@
 	}
 }
 
-.headerLinkIcon {
+.headerIconLinkContent {
 	width: 1.45rem;
     height: 1.45rem;
 }
@@ -64,6 +68,9 @@
 	text-align: center;
     position: absolute;
     left: 4.7rem;
+	position: absolute;
+	top: 1.6rem;
+	left: 4.6rem;
 }
 
 .buttonChangeLang,
