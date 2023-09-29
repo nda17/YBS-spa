@@ -2,7 +2,7 @@ import { Suspense } from 'react'
 
 
 import { Routes, Route } from 'react-router-dom'
-import { Homepage } from './pages/Homepage'
+import { HomePage } from './pages/HomePage'
 import { AboutPage } from './pages/AboutPage'
 import { ServicesPage } from './pages/ServicesPage'
 import { ContactsPage } from './pages/ContactsPage'
@@ -18,7 +18,7 @@ const App = () => {
 			<Suspense fallback='Loading'>
 				<Routes>
 					<Route path='/' element={<Layout />}>
-						<Route index element={<Homepage />} />
+						<Route index element={<HomePage />} />
 						<Route path='about' element={<AboutPage />} />
 						<Route path='services' element={<ServicesPage />} />
 						<Route path='calculate' element={<CalculatePricePage />} />

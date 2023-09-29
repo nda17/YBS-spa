@@ -1,11 +1,14 @@
-.image-block {
+//Video block
+
+.homePageVideoBlock {
 	position: relative;
-	height: 44.75rem;
+	/* height: 44.75rem; */
+	height: 30.75rem;
 	border-radius: 0rem 0rem 0.75rem 0.75rem;
 	display: flex;
 	justify-content: center;
-	margin-top: -11rem !important;
-	margin-bottom: 8% !important;
+	/* margin-top: -11rem !important; */
+	margin-bottom: 5% !important;
 }
 
 .mainTitle {
@@ -105,6 +108,79 @@
 
 	100% {
 		border-color: #f5deb3;
+	}
+}
+
+@keyframes printed_text {
+	from {
+		width: 0;
+	}
+}
+////
+
+//Slogan block
+.homePageSloganBlock {
+	margin-bottom: 5% !important;
+}
+
+.sloganWrapper{
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	border-top: 0.0625rem solid #ffffff;
+	border-bottom: 0.0625rem solid #ffffff;
+}
+
+.sloganText {
+	width: 100%;
+    color: #b8860b;
+    font-size: 1rem;
+    font-family: "Montserrat";
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.1rem;
+	white-space: wrap; /* не переносить текст на другую строку */
+	overflow: hidden; /* скрываем переполнение контентом */
+	animation: printed_text 3s steps(29);
+    margin: 0 auto;
+}
+
+.sloganAuthorText {
+	padding: 0rem 1rem;
+	color: #c0c0c0;
+	font-style: normal;
+	opacity: 0;
+	transition: all 2s;
+	font-size: 1.15rem;
+	margin: 0 auto;
+}
+
+.sloganAuthorText::before {
+	content: '*';
+	position: relative;
+	top: 0.3125rem;
+	right: 0.25rem;
+}
+.sloganAuthorText::after {
+	content: '*';
+	position: relative;
+	top: 0.3125rem;
+	left: 0.25rem;
+}
+
+//Animation keyframes
+@keyframes cursor {
+	0% {
+		border-color: khaki;
+	}
+
+	50% {
+		border-color: transparent;
+	}
+
+	100% {
+		border-color: khaki;
 	}
 }
 

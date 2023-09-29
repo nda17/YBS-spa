@@ -1,16 +1,14 @@
-import { MainScreen } from '../components/layout/Main/MainScreen'
-import { Slogan } from '../components/layout/Main/Slogan'
+import { Home } from '../components/layout/Main/Home'
 
-const Homepage = () => {
+const HomePage = () => {
 	return (
 		<div className='homepageContent'>
-			<MainScreen />
-			<Slogan />
+			<Home />
 		</div>
 	)
 }
 
-export { Homepage }
+export { HomePage }
 
 //   const [isLoading, setValueLoading] = useState(true);
 //   const [posts, setPosts] = useState(null);
