@@ -9,9 +9,20 @@ import BehanceSvg from '../../../public/icons/link-icon/be-white.svg'
 import './Header.scss'
 import '../../../assets/styles/media-queries.scss'
 import { HamburgerMenu } from './HamburgerMenu'
+import { MobileMenu } from './MobileMenu'
 import { ButtonsChangeLang } from '../../ui/buttons/ButtonsChangeLang'
 
+
+import { useToggle } from '../../../hooks/useToggle'
+
 const Header = () => {
+
+	const [isVisible, setVisible] = useToggle(true)
+	const handleOpenHamburger = () => {
+		setVisible(!isVisible)
+	}
+
+
 	const { t, i18n } = useTranslation()
 	useEffect(() => {
 		//Animation logo
@@ -97,7 +108,14 @@ const Header = () => {
 						</div>
 						<ButtonsChangeLang />
 					</div>
-					<HamburgerMenu />
+					<HamburgerMenu
+						isVisible={isVisible}
+						handleOpenHamburger={handleOpenHamburger}
+					/>
+					<MobileMenu
+						isVisible={isVisible}
+						handleOpenHamburger={handleOpenHamburger}
+					/>
 				</div>
 			</nav>
 		</header>

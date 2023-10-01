@@ -1,12 +1,21 @@
+.hamburgerIconWrap,
+.hamburgerButton {
+	width: 2rem;
+	height: 2rem;
+}
+
+.hamburgerIconWrap {
+	position: absolute;
+	right: 1.1rem;
+	top: 1rem;
+}
+
+.hamburgerButton {
+	display: flex;
+}
+
 .GrTextAlignRight,
 .HiOutlineChevronDown {
 	width: 2rem;
 	height: 2rem;
-	z-index: 1;
-}
-
-.HiOutlineChevronDown {
-	position: absolute;
-	top: 1rem;
-	right: 0.9rem;
 }

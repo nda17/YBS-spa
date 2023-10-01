@@ -29,7 +29,7 @@ const Footer = () => {
 							<img className='footerLogoIcon' src={LogoSvg} alt='Logo' />
 						</a>
 						<div className='footerInfoTextWrap'>
-							<p className='footerInfoTextFirst'>{`2023 - ${currentYear}`}</p>
+							<p className='footerInfoTextFirst'>{`2022 - ${currentYear}`}</p>
 							<p className='footerInfoTextSecond'>All rights reserved</p>
 						</div>
 					</div>

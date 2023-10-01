@@ -7,14 +7,14 @@ import './MobileMenu.scss'
 import '../../../assets/styles/media-queries.scss'
 import LogoSvg from '../../../public/images/YBS-white.svg'
 
-const MobileNavigationMenu = props => {
+const MobileMenu = props => {
 	const { t, i18n } = useTranslation()
 	const { isVisible, handleOpenHamburger = Function.prototype } = props //Состояние показан бургер или стрелка (открыто мобильное меню или нет), функция закрытия мобильного меню
 	const mobileMenuRef = useRef(null)
 	useClickOutside(mobileMenuRef, () => handleOpenHamburger()) //Закрытие мобильного меню при клике вне его блока
 	return (
 		!isVisible && (
-			<article className='mobileMenu' ref={mobileMenuRef}>
+			<article className='mobileMenu active' ref={mobileMenuRef}>
 				<img className='mobileMenuLogo' src={LogoSvg} alt='Logo image' />
 				<div className='mobileMenuCustomLinkWrapper'>
 					<CustomLink
@@ -53,12 +53,10 @@ const MobileNavigationMenu = props => {
 						{t('headerContacts.contacts')}
 					</CustomLink>
 				</div>
-				<div className='mobileMenuButtonLangChange'>
-					<ButtonsChangeLang />
-				</div>
+				<ButtonsChangeLang />
 			</article>
 		)
 	)
 }
 
-export { MobileNavigationMenu }
+export { MobileMenu }

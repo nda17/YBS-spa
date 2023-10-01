@@ -97,7 +97,6 @@
 }
 
 @media (min-width: 768px) {
-
 	.title {
 		font-size: 1.5rem !important;
 	}
@@ -108,7 +107,7 @@
 	}
 
 	.mobileMenu {
-		width: 17rem !important;
+		width: 16rem !important;
 		padding-bottom: 2.3rem !important;
 	}
 
@@ -214,7 +213,7 @@
 }
 
 @media (min-width: 992px) {
-	.GrTextAlignRight {
+	.hamburgerIconWrap {
 		display: none !important;
 	}
 
@@ -236,6 +235,10 @@
 		flex-direction: column !important;
 		margin: 0rem !important;
 		padding: 0rem !important;
+	}
+
+	.buttonChangeLang {
+		margin-right: 0 !important;
 	}
 
 	.headerListLinkWrap {

@@ -1,28 +1,19 @@
-import { useToggle } from '../../../hooks/useToggle'
-import { MobileNavigationMenu } from './MobileMenu'
 import { GrTextAlignRight } from 'react-icons/gr'
 import { HiOutlineChevronDown } from 'react-icons/hi2'
 import './HamburgerMenu.scss'
 import '../../../assets/styles/media-queries.scss'
 
-const HamburgerMenu = () => {
-	const [isVisible, setVisible] = useToggle(true)
-	const handleOpenHamburger = () => {
-		setVisible(!isVisible)
-	}
+const HamburgerMenu = (props) => {
+	const {isVisible, handleOpenHamburger = Function.prototype} = props
 	return (
-		<div>
-			<a onClick={() => handleOpenHamburger()}>
+		<div className='hamburgerIconWrap'>
+			<span className='hamburgerButton' onClick={() => handleOpenHamburger()}>
 				{isVisible ? (
 					<GrTextAlignRight className='GrTextAlignRight' />
 				) : (
 					<HiOutlineChevronDown className='HiOutlineChevronDown' />
 				)}
-			</a>
-			<MobileNavigationMenu
-				isVisible={isVisible}
-				handleOpenHamburger={handleOpenHamburger}
-			/>
+			</span>
 		</div>
 	)
 }

@@ -1,20 +1,24 @@
 .buttonChangeLangWrap {
-    padding-top: 0.6rem;
-    display: flex ;
+	padding-top: 0.6rem;
+	display: flex;
 }
 
 .buttonChangeLang {
-    background-color: rgb(66, 64, 64);
-    width: 2.6rem;    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 900;
-    font-size: 0.75rem;
-    line-height: 1rem;
-    margin-right: 0.5rem;
-    border-radius: 5rem;
-    border: 1px solid #000000;
-    transition: none;
-    &:active {
-        transform: scale(0.92);
-    }
+	background-color: rgb(66, 64, 64);
+	width: 2.6rem;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 900;
+	font-size: 0.75rem;
+	line-height: 1rem;
+	margin-right: 0.5rem;
+	border-radius: 5rem;
+	border: 1px solid #000000;
+	transition: none;
+	&:active {
+		transform: scale(0.92);
+	}
+	&:last-child {
+		margin-right: 0rem;
+	}
 }
