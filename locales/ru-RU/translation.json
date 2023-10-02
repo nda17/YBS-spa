@@ -1,0 +1,398 @@
+{
+	"buttonGoBack": {
+		"text": "Назад"
+	},
+	"headerHome": {
+		"home": "Главная"
+	},
+	"headerServices": {
+		"services": "Наши услуги"
+	},
+	"headerGallery": {
+		"gallery": "Галерея"
+	},
+	"headerCalculation": {
+		"calculation": "Калькулятор"
+	},
+	"headerContacts": {
+		"contacts": "Контакты"
+	},
+	"mainScreenSlogan": {
+		"title": "Digital агентство полного цикла"
+	},
+	"mainScreenSloganFirst": {
+		"title": "В век стремительного развития IT-технологий, электронной коммерции, каждое предприятие нуждается в сайте или веб-приложении для своей компании."
+	},
+	"mainScreenSloganSecond": {
+		"title": "Сайт - это лицо как лицо компании, так и незаменимый сотрудник, который работает 24/7."
+	},
+	"mainScreenSloganThird": {
+		"title": "Мы создадим вам сайт, который будет зарабатывать."
+	},
+	"mainScreenSloganFourth": {
+		"title": "Тот самый сайт, который будет делать ваш бизнес успешным."
+	},
+	"sloganText": {
+		"text": "«Если бы я спросил людей, что они хотят, они просили бы лошадь побыстрее.»"
+	},
+	"cardTitle": {
+		"title": "Чeм мы занимаемся и что можем сделать для вас ?"
+	},
+	"cardPriceA": {
+		"price": "от 15000 ₽"
+	},
+	"cardPriceB": {
+		"price": "от 25000 ₽"
+	},
+	"cardPriceC": {
+		"price": "от 70000 ₽"
+	},
+	"cardPriceD": {
+		"price": "от 35000 ₽"
+	},
+	"cardPriceE": {
+		"price": "от 30000 ₽"
+	},
+	"cardPriceF": {
+		"price": "от 120000 ₽"
+	},
+	"cardPriceG": {
+		"price": "от 20000 ₽"
+	},
+	"cardPriceH": {
+		"price": "от 2000 ₽"
+	},
+	"cardPriceI": {
+		"price": "от 2000 ₽"
+	},
+	"cardPriceJ": {
+		"price": "от 70000 ₽"
+	},
+	"cardPriceK": {
+		"price": "от 8000 ₽"
+	},
+	"cardPriceL": {
+		"price": "от 3000 ₽"
+	},
+	"cardPriceM": {
+		"price": "от 7000 ₽"
+	},
+	"cardPriceN": {
+		"price": "от 70000 ₽"
+	},
+	"cardPriceO": {
+		"price": "от 80000 ₽"
+	},
+	"cardPriceP": {
+		"price": "от 3000 ₽"
+	},
+	"cardTextA": {
+		"text": "Лендинги, одностраничные сайты, веб-приложения SPA"
+	},
+	"cardTextB": {
+		"text": "Многостраничные сайты, веб-приложения MPA и PWA "
+	},
+	"cardTextC": {
+		"text": "Сопровождение сайтов"
+	},
+	"cardTextD": {
+		"text": "Интернет-магазины и Интернет-витрины"
+	},
+	"cardTextE": {
+		"text": "Оптимизация сайтов"
+	},
+	"cardTextF": {
+		"text": "Запуск и сопровождение Онлайн школ"
+	},
+	"cardTextG": {
+		"text": "Вебинары"
+	},
+	"cardTextH": {
+		"text": "CRM-системы"
+	},
+	"cardTextI": {
+		"text": "Интеграция платежных систем"
+	},
+	"cardTextJ": {
+		"text": "Автоматизация воронок"
+	},
+	"cardTextK": {
+		"text": "Чат-боты"
+	},
+	"cardTextL": {
+		"text": "Маркетинговые услуги"
+	},
+	"cardTextM": {
+		"text": "Аналитика и стратегия"
+	},
+	"cardTextN": {
+		"text": "Работа с отделом продаж"
+	},
+	"cardTextO": {
+		"text": "Call - центр"
+	},
+	"cardTextP": {
+		"text": "Дополнительные услуги"
+	},
+	"cardMoreInfo": {
+		"text": "Подробнее"
+	},
+	"cardTextBackSideA": {
+		"text": "Создадим сайт визитку или лендинг вашего продукта. Всё коротко и по делу на одной странице. Как на Tilda так и на стеке: HTML/БЭМ, CSS/SCSS/SASS, Pixel Perfect, Vue, JavaScript, Typescript, Coffescript, React JS, React Native, Bootstrap, TailWind, Webpack, Gulp, GIT, Photoshop, Illustrator, After Effects, Figma и другие."
+	},
+	"cardTextBackSideB": {
+		"text": "Сайты и веб-приложения для серьезных компаний, с возможностью реализовать масштабируемые проекты под любые задачи."
+	},
+	"cardTextBackSideC": {
+		"text": "Возьмём на себя всю работу по сопровождению, обновлению и поддержанию вашего сайта."
+	},
+	"cardTextBackSideD-A": {
+		"text": "Создание полноценных интернет-магазинов с товарами, услугами или создание интернет-витрин."
+	},
+	"cardTextBackSideD-B": {
+		"text": "Витриной называется рекламный каталог, в котором есть подробная информация про каждую позицию товара, доступного к заказу."
+	},
+	"cardTextBackSideE-A": {
+		"text": "SEO оптимизация."
+	},
+	"cardTextBackSideE-B": {
+		"text": "Составление ТЗ. Аудит сайтa."
+	},
+	"cardTextBackSideE-C": {
+		"text": "Внедрение доступностии семантики."
+	},
+	"cardTextBackSideE-D": {
+		"text": "Перенос сайта с одной платформы на другую."
+	},
+	"cardTextBackSideF-A": {
+		"text": "Создание и настройка сущностей курса: тренингов, уроков и заданий на платформе GetCourse."
+	},
+	"cardTextBackSideF-B": {
+		"text": "Создание, настройка и проведение вебинаров на платформе Bizon365."
+	},
+	"cardTextBackSideF-C": {
+		"text": "Создание и настройка автовебинаров."
+	},
+	"cardTextBackSideF-D": {
+		"text": "Настройка amoCRM. Синхронизация amoCRM с Bizon365 и GetCourse."
+	},
+	"cardTextBackSideF-E": {
+		"text": "Подключение WhatsApp к amoCRM. Установка онлайн-телефонии с Sipuni."
+	},
+	"cardTextBackSideG": {
+		"text": "Создание, настройка и проведение вебинаров на платформе, настройка автовебинаров."
+	},
+	"cardTextBackSideH": {
+		"text": "Внедрение CRM-систем. Подключение мессенджеров к СRM. Интеграция онлайн-телефонии."
+	},
+	"cardTextBackSideI": {
+		"text": "Платежные системы: интеграция платежных систем на сайт, для удобной онлайн оплаты."
+	},
+	"cardTextBackSideJ-A": {
+		"text": "Создание карты Движения Покупателя и реализация ее в воронке."
+	},
+	"cardTextBackSideJ-B": {
+		"text": "Создание и настройка SMS-рассылки. Создание и настройка автозвонков."
+	},
+	"cardTextBackSideJ-C": {
+		"text": "Реализация воронки в чат-ботах."
+	},
+	"cardTextBackSideK": {
+		"text": "Создание и настройка чат ботов, интеграция настройка связи через What's App, Telegram, VK."
+	},
+	"cardTextBackSideL-A": {
+		"text": "Написание продающего текста."
+	},
+	"cardTextBackSideL-B": {
+		"text": "Разработка и внедрение маркетинговых мероприятий, подходящих под ваш сегмент и вашу деятельность."
+	},
+	"cardTextBackSideL-C": {
+		"text": "Мониторинг конкурентов, конкурентный анализ."
+	},
+	"cardTextBackSideL-D": {
+		"text": "Работа с блогерами и лидерами мнений."
+	},
+	"cardTextBackSideM": {
+		"text": "SWOT анализ, ABC анализ, разработка и применение антикризисных мероприятий."
+	},
+	"cardTextBackSideN-A": {
+		"text": "Создание отдела продаж, повышение конверсий, увеличение доли рынка, повышение квалификации и компетенции отдела продаж."
+	},
+	"cardTextBackSideN-B": {
+		"text": "Создание и увеличение воронки клиентов."
+	},
+	"cardTextBackSideO": {
+		"text": "Обзвон потенциальной базы холодных клиентов, рассылка КП, создание воронки клиентов."
+	},
+	"cardTextBackSideP-A": {
+		"text": "Продажа, установка и настройка лицензионного программного обеспечения."
+	},
+	"cardTextBackSideP-B": {
+		"text": "Настройка, оптимизация и модернизация вашего оборудования."
+	},
+	"galleryTitle": {
+		"title": "Галерея макетов"
+	},
+	"galleryCardOutsourcing": {
+		"title": "Сайт HR-аутсорсинга :"
+	},
+	"galleryCardBank": {
+		"title": "Сайт банковских услуг :"
+	},
+	"galleryCardPortfolio": {
+		"title": "Портфолио агентства :"
+	},
+	"galleryCardConcierge": {
+		"title": "Консьерж-сервис :"
+	},
+	"galleryCardCosmetics": {
+		"title": "Интернет-магазин косметики :"
+	},
+	"galleryCardBrands": {
+		"title": "Сайт упаковки брендовых вещей :"
+	},
+	"galleryCardClinique": {
+		"title": "Клиника семейной медицины :"
+	},
+	"galleryCardCafe": {
+		"title": "Сайт кафе :"
+	},
+	"galleryCardDesign": {
+		"title": "Сайт по обустройству помещений :"
+	},
+	"galleryCardFreelance": {
+		"title": "Freelance-площадка :"
+	},
+	"galleryCardFurniture": {
+		"title": "Интернет-магазин товаров для дома :"
+	},
+	"galleryCardJewerly": {
+		"title": "Магазин ювелирных украшений :"
+	},
+	"galleryCardMarketing": {
+		"title": "Маркетинговые услуги :"
+	},
+	"galleryCardMedical": {
+		"title": "Сайт медицинской клиники :"
+	},
+	"galleryCardMessenger": {
+		"title": "Сайт корпоративного мессенджера :"
+	},
+	"galleryCardMusic": {
+		"title": "Сайт обработки музыки :"
+	},
+	"galleryCardNeiro": {
+		"title": "Сайт компании по разработке нейротехнологий :"
+	},
+	"galleryCardPage": {
+		"title": "Целевая страница устройства :"
+	},
+	"galleryCardTracker": {
+		"title": "Сайт приложения фитнесс-трекера :"
+	},
+	"galleryCardVideo": {
+		"title": "Сайт видео-платформы :"
+	},
+	"galleryCardVpn": {
+		"title": "Сайт VPN-сервиса :"
+	},
+	"formMainTitleA": {
+		"text": "Вы можете рассчитать примерную стоимость наших работ ниже и прислать нам заявку."
+	},
+	"formMainTitleB": {
+		"text": "Мы свяжемся с вами !"
+	},
+	"formMainSelectTypeSite": {
+		"text": "Выберите тип сайта"
+	},
+	"formMainSelectA": {
+		"text": "Одностраничный сайт"
+	},
+	"formMainSelectB": {
+		"text": "Многостраничный сайт"
+	},
+	"formMainSelectC": {
+		"text": "Корпоративный сайт"
+	},
+	"formMainSelectD": {
+		"text": "Интернет-витрина (без интеграции 1С)"
+	},
+	"formMainSelectE": {
+		"text": "Интернет-магазин"
+	},
+	"formMainSelectF": {
+		"text": "Онлайн школа"
+	},
+	"formMainSelectOptions": {
+		"text": "Дополнительные опции"
+	},
+	"formMainSelectOptionsA": {
+		"text": "Индивидуальный дизаин"
+	},
+	"formMainSelectOptionsB": {
+		"text": "Регистрация домена на ваше имя и подключение к сайту"
+	},
+	"formMainSelectOptionsC": {
+		"text": "Настройка доменной почты"
+	},
+	"formMainSelectOptionsD": {
+		"text": "Подключение платежной системы"
+	},
+	"formMainSelectOptionsE": {
+		"text": "Подключение CRM"
+	},
+	"formMainSelectOptionsF": {
+		"text": "SEO-оптимизация"
+	},
+	"formMainSelectOptionsG": {
+		"text": "Составление ТЗ"
+	},
+	"formMainSelectOptionsH": {
+		"text": "Аудит сайта"
+	},
+	"formMainSelectMarketing": {
+		"text": "Маркетинговые услуги"
+	},
+	"formMainSelectMarketingA": {
+		"text": "Конкурентный анализ"
+	},
+	"formMainSelectMarketingB": {
+		"text": "Разработка маркетинговых мероприятий"
+	},
+	"formMainSelectMarketingC": {
+		"text": "SWOT анализ, ABC анализ"
+	},
+	"formMainSelectMarketingD": {
+		"text": "Повышение конверсий отдела продаж"
+	},
+	"formMainSelectMarketingE": {
+		"text": "Увеличение воронки лидов"
+	},
+	"formMainCost": {
+		"text": "Примерная стоимость: "
+	},
+	"formMainName": {
+		"text": "Введите Ваше имя"
+	},
+	"formMainEmail": {
+		"text": "Введите email"
+	},
+	"formMainPhone": {
+		"text": "Введите телефонный номер"
+	},
+	"formMainButtonSubmit": {
+		"text": "Отправить заявку"
+	},
+	"coockieAlert": {
+		"text": "Мы используем cookie-файлы, чтобы получить статистику, с целью персонализации сервисов и предложений. Продолжая пользоваться сайтом без изменения настроек, вы даёте согласие на использование cookie-файлов."
+	},
+	"coockieAlertAccept": {
+		"text": "Принять"
+	},
+	"coockieAlertClose": {
+		"text": "Закрыть"
+	},
+	"allRightsReserved": {
+		"text": "ООО «ЮБС» Все права защищены ©"
+	}
+}
