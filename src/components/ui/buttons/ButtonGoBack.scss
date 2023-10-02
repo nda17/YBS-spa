@@ -1,9 +1,10 @@
 .btnGoBack {
+	width: 5rem;
 	background: tomato;
 	padding: 0.2rem 0.5rem;
-	position: sticky;
-	bottom: 1.3rem;
-	left: 73%;
+	position: absolute;
+	bottom: 5.2rem;
+	right: 1rem;
 	opacity: 0.7;
 	border-radius: 1.1rem;
 	z-index: 9999999999;

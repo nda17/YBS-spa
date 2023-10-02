@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { useState, useEffect } from 'react'
 import './Home.scss'
-import '../../../assets/styles/media-queries.scss'
 import { MainVideoBackground } from '../../screens/MainVideoBackground'
 
 const Home = () => {

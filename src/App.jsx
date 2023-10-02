@@ -1,10 +1,10 @@
 import { Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { HomePage } from './pages/HomePage'
-import { AboutPage } from './pages/AboutPage'
 import { ServicesPage } from './pages/ServicesPage'
-import { ContactsPage } from './pages/ContactsPage'
+import { GalleryPage } from './pages/GalleryPage'
 import { CalculatePricePage } from './pages/CalculatePricePage'
+import { ContactsPage } from './pages/ContactsPage'
 import { NotFoundPage } from './pages/NotFoundPage'
 import { Layout } from './components/layout/Layout'
 import './assets/styles/index.scss'
@@ -17,8 +17,8 @@ const App = () => {
 				<Routes>
 					<Route path='/' element={<Layout />}>
 						<Route index element={<HomePage />} />
-						<Route path='about' element={<AboutPage />} />
 						<Route path='services' element={<ServicesPage />} />
+						<Route path='gallery' element={<GalleryPage />} />
 						<Route path='calculate' element={<CalculatePricePage />} />
 						<Route path='contacts' element={<ContactsPage />} />
 						<Route path='*' element={<NotFoundPage />} />

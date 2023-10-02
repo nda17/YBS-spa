@@ -1,0 +1,28 @@
+.cardGalleryWrap {
+	position: relative;
+	padding: 0rem 0rem 1.5rem 0rem;
+	display: flex;
+	justify-content: center;
+}
+
+.cardGallery {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 3rem;
+    max-width: 31.5rem;
+}
+
+.cardGalleryTitle {
+	text-align: center;
+	margin-bottom: 0.7rem;
+}
+
+.cardGalleryImage {
+	max-width: 100%;
+	border-radius: 0.75rem;
+	&:hover {
+		cursor: zoom-in;
+	}
+}

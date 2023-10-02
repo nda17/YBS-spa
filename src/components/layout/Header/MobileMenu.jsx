@@ -7,11 +7,11 @@ import './MobileMenu.scss'
 import '../../../assets/styles/media-queries.scss'
 import LogoSvg from '../../../public/images/YBS-white.svg'
 
-const MobileMenu = props => {
+const MobileMenu = (props) => {
 	const { t, i18n } = useTranslation()
-	const { isVisible, handleOpenHamburger = Function.prototype } = props //Состояние показан бургер или стрелка (открыто мобильное меню или нет), функция закрытия мобильного меню
+	const { isVisible, toggleVisible = Function.prototype } = props //Состояние показан бургер или стрелка (открыто мобильное меню или нет), функция закрытия мобильного меню
 	const mobileMenuRef = useRef(null)
-	useClickOutside(mobileMenuRef, () => handleOpenHamburger()) //Закрытие мобильного меню при клике вне его блока
+	useClickOutside(mobileMenuRef, toggleVisible) //Закрытие мобильного меню при клике вне его блока
 	return (
 		!isVisible && (
 			<article className='mobileMenu active' ref={mobileMenuRef}>
@@ -20,35 +20,35 @@ const MobileMenu = props => {
 					<CustomLink
 						to='/'
 						className='mobileMenuCustomLink'
-						onClick={() => handleOpenHamburger()}
+						onClick={toggleVisible}
 					>
 						{t('headerHome.home')}
 					</CustomLink>
 					<CustomLink
-						to='/about'
-						className='mobileMenuCustomLink'
-						onClick={() => handleOpenHamburger()}
-					>
-						{t('headerAbout.about')}
-					</CustomLink>
-					<CustomLink
 						to='/services'
 						className='mobileMenuCustomLink'
-						onClick={() => handleOpenHamburger()}
+						onClick={toggleVisible}
 					>
 						{t('headerServices.services')}
 					</CustomLink>
 					<CustomLink
+						to='/gallery'
+						className='mobileMenuCustomLink'
+						onClick={toggleVisible}
+					>
+						{t('headerGallery.gallery')}
+					</CustomLink>
+					<CustomLink
 						to='/calculate'
 						className='mobileMenuCustomLink'
-						onClick={() => handleOpenHamburger()}
+						onClick={toggleVisible}
 					>
 						{t('headerCalculation.calculation')}
 					</CustomLink>
 					<CustomLink
 						to='/contacts'
 						className='mobileMenuCustomLink'
-						onClick={() => handleOpenHamburger()}
+						onClick={toggleVisible}
 					>
 						{t('headerContacts.contacts')}
 					</CustomLink>
@@ -60,3 +60,14 @@ const MobileMenu = props => {
 }
 
 export { MobileMenu }
+
+
+
+
+
+
+
+
+
+
+

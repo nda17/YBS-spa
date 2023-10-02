@@ -1,10 +1,8 @@
-import { ButtonGoBack } from '../components/ui/buttons/ButtonGoBack'
 import { Link } from 'react-router-dom'
 
 const NotFoundPage = () => {
 	return (
 		<>
-			<ButtonGoBack />
 			<p className='titleNotFound'>
 				ERROR: 404 - Not found!
 				<br />

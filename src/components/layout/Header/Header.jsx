@@ -16,13 +16,7 @@ import { ButtonsChangeLang } from '../../ui/buttons/ButtonsChangeLang'
 import { useToggle } from '../../../hooks/useToggle'
 
 const Header = () => {
-
-	const [isVisible, setVisible] = useToggle(true)
-	const handleOpenHamburger = () => {
-		setVisible(!isVisible)
-	}
-
-
+	const [isVisible, toggleVisible] = useToggle(true)
 	const { t, i18n } = useTranslation()
 	useEffect(() => {
 		//Animation logo
@@ -55,15 +49,15 @@ const Header = () => {
 								<CustomLink to='/services' className='CustomLink'>
 									{t('headerServices.services')}
 								</CustomLink>
-								<CustomLink to='/calculate' className='CustomLink'>
-									{t('headerCalculation.calculation')}
+								<CustomLink to='/gallery' className='CustomLink'>
+									{t('headerGallery.gallery')}
 								</CustomLink>
 							</li>
 						</ul>
 						<ul className='CustomLinkWrap'>
 							<li>
-								<CustomLink to='/about' className='CustomLink'>
-									{t('headerAbout.about')}
+								<CustomLink to='/calculate' className='CustomLink'>
+									{t('headerCalculation.calculation')}
 								</CustomLink>
 								<CustomLink to='/contacts' className='CustomLink'>
 									{t('headerContacts.contacts')}
@@ -71,7 +65,11 @@ const Header = () => {
 							</li>
 						</ul>
 						<div className='headerIconWrap'>
-							<a href='tel:+79990860186' className='headerIconLink'>
+							<a
+								href='tel:+79990860186'
+								className='headerIconLink'
+								target='_blank'
+							>
 								<img
 									className='headerIconLinkContent iconPhone'
 									src={PhoneSvg}
@@ -80,6 +78,7 @@ const Header = () => {
 							</a>
 							<a
 								href='https://www.behance.net/ybsone'
+								target='_blank'
 								className='headerIconLink'
 							>
 								<img
@@ -90,6 +89,7 @@ const Header = () => {
 							</a>
 							<a
 								href='https://api.whatsapp.com/send/?phone=79990860186&text=%D0%A5%D0%BE%D1%87%D1%83+%D1%83+%D0%B2%D0%B0%D1%81+%D1%81%D0%B0%D0%B9%D1%82%21&type=phone_number&app_absent=0'
+								target='_blank'
 								className='headerIconLink'
 							>
 								<img
@@ -98,7 +98,11 @@ const Header = () => {
 									alt='WhatsApp icon'
 								/>
 							</a>
-							<a href='https://t.me/ybs_one' className='headerIconLink'>
+							<a
+								href='https://t.me/ybs_one'
+								target='_blank'
+								className='headerIconLink'
+							>
 								<img
 									className='headerIconLinkContent iconTelegram'
 									src={TelegramSvg}
@@ -108,14 +112,8 @@ const Header = () => {
 						</div>
 						<ButtonsChangeLang />
 					</div>
-					<HamburgerMenu
-						isVisible={isVisible}
-						handleOpenHamburger={handleOpenHamburger}
-					/>
-					<MobileMenu
-						isVisible={isVisible}
-						handleOpenHamburger={handleOpenHamburger}
-					/>
+					<HamburgerMenu isVisible={isVisible} toggleVisible={toggleVisible} />
+					<MobileMenu isVisible={isVisible} toggleVisible={toggleVisible} />
 				</div>
 			</nav>
 		</header>

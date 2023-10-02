@@ -5,11 +5,11 @@
 	"headerHome": {
 		"home": "Home"
 	},
-	"headerAbout": {
-		"about": "About us"
-	},
 	"headerServices": {
 		"services": "Services"
+	},
+	"headerGallery": {
+		"gallery": "Gallery"
 	},
 	"headerCalculation": {
 		"calculation": "Calculator"
@@ -230,6 +230,72 @@
 	"cardTextBackSideP-B": {
 		"text": "Tuning, optimizing and upgrading your equipment."
 	},
+	"galleryTitle": {
+		"title": "Layout gallery"
+	},
+	"galleryCardOutsourcing": {
+		"title": "HR outsourcing website :"
+	},
+	"galleryCardBank": {
+		"title": "Banking services website :"
+	},
+	"galleryCardPortfolio": {
+		"title": "Agency portfolio :"
+	},
+	"galleryCardConcierge": {
+		"title": "Concierge service :"
+	},
+	"galleryCardCosmetics": {
+		"title": "Online cosmetics store :"
+	},
+	"galleryCardBrands": {
+		"title": "Website for packaging branded items :"
+	},
+	"galleryCardClinique": {
+		"title": "Family medicine clinic :"
+	},
+	"galleryCardCafe": {
+		"title": "Website cafe :"
+	},
+	"galleryCardDesign": {
+		"title": "Website for arrangement of premises :"
+	},
+	"galleryCardFreelance": {
+		"title": "Freelance platform :"
+	},
+	"galleryCardFurniture": {
+		"title": "Online store of household goods :"
+	},
+	"galleryCardJewerly": {
+		"title": "Jewelry store :"
+	},
+	"galleryCardMarketing": {
+		"title": "Marketing services :"
+	},
+	"galleryCardMedical": {
+		"title": "Medical clinic website :"
+	},
+	"galleryCardMessenger": {
+		"title": "Corporate messenger website :"
+	},
+	"galleryCardMusic": {
+		"title": "Music processing site :"
+	},
+	"galleryCardNeiro": {
+		"title": "Website of a neurotechnology development company :"
+	},
+	"galleryCardPage": {
+		"title": "Device landing page :"
+	},
+	"galleryCardTracker": {
+		"title": "Fitness tracker app website :"
+	},
+	"galleryCardVideo": {
+		"title": "Video platform website :"
+	},
+	"galleryCardVpn": {
+		"title": "VPN service website :"
+	},
 	"formMainTitleA": {
 		"text": "Below you can calculate the approximate cost of our work and send us a request."
 	},
@@ -325,5 +391,8 @@
 	},
 	"coockieAlertClose": {
 		"text": "Close"
+	},
+	"allRightsReserved": {
+		"text": "LLC «UBS» All rights reserved ©"
 	}
 }

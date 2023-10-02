@@ -5,11 +5,11 @@
 	"headerHome": {
 		"home": "Главная"
 	},
-	"headerAbout": {
-		"about": "О нас"
-	},
 	"headerServices": {
 		"services": "Наши услуги"
+	},
+	"headerGallery": {
+		"gallery": "Галерея"
 	},
 	"headerCalculation": {
 		"calculation": "Калькулятор"
@@ -230,6 +230,72 @@
 	"cardTextBackSideP-B": {
 		"text": "Настройка, оптимизация и модернизация вашего оборудования."
 	},
+	"galleryTitle": {
+		"title": "Галерея макетов"
+	},
+	"galleryCardOutsourcing": {
+		"title": "Сайт HR-аутсорсинга :"
+	},
+	"galleryCardBank": {
+		"title": "Сайт банковских услуг :"
+	},
+	"galleryCardPortfolio": {
+		"title": "Портфолио агентства :"
+	},
+	"galleryCardConcierge": {
+		"title": "Консьерж-сервис :"
+	},
+	"galleryCardCosmetics": {
+		"title": "Интернет-магазин косметики :"
+	},
+	"galleryCardBrands": {
+		"title": "Сайт упаковки брендовых вещей :"
+	},
+	"galleryCardClinique": {
+		"title": "Клиника семейной медицины :"
+	},
+	"galleryCardCafe": {
+		"title": "Сайт кафе :"
+	},
+	"galleryCardDesign": {
+		"title": "Сайт по обустройству помещений :"
+	},
+	"galleryCardFreelance": {
+		"title": "Freelance-площадка :"
+	},
+	"galleryCardFurniture": {
+		"title": "Интернет-магазин товаров для дома :"
+	},
+	"galleryCardJewerly": {
+		"title": "Магазин ювелирных украшений :"
+	},
+	"galleryCardMarketing": {
+		"title": "Маркетинговые услуги :"
+	},
+	"galleryCardMedical": {
+		"title": "Сайт медицинской клиники :"
+	},
+	"galleryCardMessenger": {
+		"title": "Сайт корпоративного мессенджера :"
+	},
+	"galleryCardMusic": {
+		"title": "Сайт обработки музыки :"
+	},
+	"galleryCardNeiro": {
+		"title": "Сайт компании по разработке нейротехнологий :"
+	},
+	"galleryCardPage": {
+		"title": "Целевая страница устройства :"
+	},
+	"galleryCardTracker": {
+		"title": "Сайт приложения фитнесс-трекера :"
+	},
+	"galleryCardVideo": {
+		"title": "Сайт видео-платформы :"
+	},
+	"galleryCardVpn": {
+		"title": "Сайт VPN-сервиса :"
+	},
 	"formMainTitleA": {
 		"text": "Вы можете рассчитать примерную стоимость наших работ ниже и прислать нам заявку."
 	},
@@ -325,5 +391,8 @@
 	},
 	"coockieAlertClose": {
 		"text": "Закрыть"
+	},
+	"allRightsReserved": {
+		"text": "ООО «ЮБС» Все права защищены ©"
 	}
 }
