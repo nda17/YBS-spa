@@ -7,7 +7,7 @@ import './MobileMenu.scss'
 import '../../../assets/styles/media-queries.scss'
 import LogoSvg from '../../../public/images/YBS-white.svg'
 
-const MobileMenu = (props) => {
+const MobileMenu = props => {
 	const { t, i18n } = useTranslation()
 	const { isVisible, toggleVisible = Function.prototype } = props //Состояние показан бургер или стрелка (открыто мобильное меню или нет), функция закрытия мобильного меню
 	const mobileMenuRef = useRef(null)
@@ -60,14 +60,3 @@ const MobileMenu = (props) => {
 }
 
 export { MobileMenu }
-
-
-
-
-
-
-
-
-
-
-

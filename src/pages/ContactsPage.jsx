@@ -1,14 +1,11 @@
-import { useState, useEffect } from 'react'
+import Contacts from '../components/layout/Main/Contacts'
 
 const ContactsPage = () => {
-	const [show, setShow] = useState(false)
 	return (
 		<>
-			<h3 className='title'>PAGE UNDER DEVELOPMENT</h3>
+			<Contacts />
 		</>
 	)
 }
 
-export { ContactsPage }
-
-//FIXME:useState, useEffect ПЕРЕМЕСТИТЬ В КОМПОНЕНТ
+export default ContactsPage

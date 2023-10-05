@@ -394,5 +394,29 @@
 	},
 	"allRightsReserved": {
 		"text": "ООО «ЮБС» Все права защищены ©"
+	},
+	"contactsTitle": {
+		"text": "Контакты"
+	},
+	"contactsCompany": {
+		"text": "ООО «ЮБС»"
+	},
+	"contactsPhone": {
+		"text": "Наш телефон: +79990860186"
+	},
+	"contactsWa": {
+		"text": "Написать нам в Whats App"
+	},
+	"contactsTg": {
+		"text": "Написать нам в Telegram"
+	},
+	"contactsBe": {
+		"text": "Ссылка на наш Behance"
+	},
+	"contactsEmail": {
+		"text": "Написать на наш email: mail@ybs.one"
+	},
+	"contactsSlogan": {
+		"text": "Создаем ваши сайты и приложения !"
 	}
 }

@@ -11,8 +11,6 @@ import '../../../assets/styles/media-queries.scss'
 import { HamburgerMenu } from './HamburgerMenu'
 import { MobileMenu } from './MobileMenu'
 import { ButtonsChangeLang } from '../../ui/buttons/ButtonsChangeLang'
-
-
 import { useToggle } from '../../../hooks/useToggle'
 
 const Header = () => {

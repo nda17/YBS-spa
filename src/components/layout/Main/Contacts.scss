@@ -1,0 +1,62 @@
+.contactsLineBlock {
+	width: 98% !important;
+	max-width: 31.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0rem 0.75rem;
+	margin: 0 auto;
+}
+
+.contactsLineWrap {
+	display: flex;
+	align-items: center;
+}
+
+.contactsLine {
+	padding: 0.7rem 1rem;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	border: 1px solid rgb(184, 134, 11);
+}
+
+.contactsLineIcon {
+	width: 1.6rem;
+	margin-right: 0.6rem;
+}
+
+.contactsLineFirst {
+	border-radius: 0.75rem 0.75rem 0rem 0rem;
+}
+
+.contactsLineLast {
+	border-radius: 0rem 0rem 0.75rem 0.75rem;
+	margin-bottom: 2rem;
+}
+
+.contactsLineText {
+	color: #ffffff;
+	&:hover {
+		color: rgb(184, 134, 11);
+	}
+}
+
+.contactsLogoIcon {
+	width: 8rem;
+	margin-bottom: 2rem;
+	transition: all 2s;
+	&:hover {
+		scale: 1.1;
+	}
+}
+
+.contactsLogoSlogan {
+	color: rgb(184, 134, 11);
+	text-align: center;
+	transition: all 2s;
+	&:hover {
+		color: #ffffff;
+		scale: 1.1;
+	}
+}

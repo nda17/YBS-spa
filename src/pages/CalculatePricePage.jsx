@@ -1,10 +1,7 @@
-import { FormMain } from '../components/layout/Main/FormMain'
-
+import FormMain from '../components/layout/Main/FormMain'
 
 const CalculatePricePage = () => {
-	return (
-		<FormMain />
-	)
+	return <FormMain />
 }
 
-export { CalculatePricePage }
+export default CalculatePricePage

@@ -1,9 +1,7 @@
-import { CardServices } from '../components/layout/Main/CardServices'
+import CardServices from '../components/layout/Main/CardServices'
 
 const ServicesPage = () => {
-	return (
-			<CardServices />
-	)
+	return <CardServices />
 }
 
-export { ServicesPage }
+export default ServicesPage

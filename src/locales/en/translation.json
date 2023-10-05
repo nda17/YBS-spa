@@ -393,6 +393,31 @@
 		"text": "Close"
 	},
 	"allRightsReserved": {
-		"text": "LLC «UBS» All rights reserved ©"
+		"text": "«YBS» LLC All rights reserved ©"
+	},
+	"contactsTitle": {
+		"text": "Contacts"
+	},
+	"contactsCompany": {
+		"text": "«YBS» LLC."
+	},
+	"contactsPhone": {
+		"text": "Our phone: +79990860186"
+	},
+	"contactsWa": {
+		"text": "Write to us on Whats App"
+	},
+	"contactsTg": {
+		"text": "Write to us on Telegram"
+	},
+	"contactsBe": {
+		"text": "Link to our Behance"
+	},
+	"contactsEmail": {
+		"text": "Write to our email: mail@ybs.one"
+	},
+	"contactsSlogan": {
+		"text": "We create your websites and applications!"
 	}
 }
+

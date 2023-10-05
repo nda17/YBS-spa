@@ -1,11 +1,7 @@
-import { useTranslation } from 'react-i18next'
-import { Gallery } from '../components/layout/Main/Gallery'
+import Gallery from '../components/layout/Main/Gallery'
 
 const GalleryPage = () => {
-	const { t, i18n } = useTranslation()
-	return (
-			<Gallery />
-	)
+	return <Gallery />
 }
 
-export { GalleryPage }
+export default GalleryPage

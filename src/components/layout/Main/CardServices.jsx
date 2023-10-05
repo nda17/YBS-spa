@@ -1406,4 +1406,4 @@ const CardServices = () => {
 	)
 }
 
-export { CardServices }
+export default CardServices

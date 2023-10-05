@@ -11,11 +11,11 @@ i18n
 		debug: true,
 		defaultLocale: 'ru',
 		fallbackLng: 'en',
-		//Development server paths
+		//Development server paths locales
 		backend: {
 			loadPath: 'src/locales/{{lng}}/translation.json'
 		}
-		//Hosting paths
+		//Hosting paths locales
 		// backend: {
 		// 	loadPath:
 		// 		'locales/{{lng}}/translation.json'

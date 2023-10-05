@@ -661,4 +661,4 @@ const FormMain = () => {
 	)
 }
 
-export { FormMain }
+export default FormMain

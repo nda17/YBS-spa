@@ -1,45 +1,59 @@
 import { useTranslation } from 'react-i18next'
 import { useToggle } from '../../../hooks/useToggle'
-import { useState, useEffect, useRef } from 'react'
-import { GalleryBackgroundFilter } from '../../screens/GalleryBackgroundFilter'
+import { useState, useEffect } from 'react'
 import { ZoomGalleryImage } from '../../screens/ZoomGalleryImage'
 import './Gallery.scss'
+import outsoursing from '../../../public/gif/outsoursing.jpg'
+import bank from '../../../public/gif/bank.jpg'
+import portfolio from '../../../public/gif/portfolio.jpg'
+import concierge from '../../../public/gif/concierge.jpg'
+import cosmetics from '../../../public/gif/cosmetics.jpg'
+import brands from '../../../public/gif/brands.jpg'
+import clinique from '../../../public/gif/clinique.jpg'
+import cafe from '../../../public/gif/cafe.jpg'
+import design from '../../../public/gif/design.jpg'
+import freelance from '../../../public/gif/freelance.jpg'
+import furniture from '../../../public/gif/furniture.jpg'
+import jewerly from '../../../public/gif/jewerly.jpg'
+import marketing from '../../../public/gif/marketing.jpg'
+import medical from '../../../public/gif/medical.jpg'
+import messenger from '../../../public/gif/messenger.jpg'
+import music from '../../../public/gif/music.jpg'
+import neiro from '../../../public/gif/neiro.jpg'
+import page from '../../../public/gif/page.jpg'
+import tracker from '../../../public/gif/tracker.jpg'
+import video from '../../../public/gif/video.jpg'
+import vpn from '../../../public/gif/vpn.jpg'
+import outsoursingGif from '../../../public/gif/outsoursing.gif'
+import bankGif from '../../../public/gif/bank.gif'
+import portfolioGif from '../../../public/gif/portfolio.gif'
+import conciergeGif from '../../../public/gif/concierge.gif'
+import cosmeticsGif from '../../../public/gif/cosmetics.gif'
+import brandsGif from '../../../public/gif/brands.gif'
+import cliniqueGif from '../../../public/gif/clinique.gif'
+import cafeGif from '../../../public/gif/cafe.gif'
+import designGif from '../../../public/gif/design.gif'
+import freelanceGif from '../../../public/gif/freelance.gif'
+import furnitureGif from '../../../public/gif/furniture.gif'
+import jewerlyGif from '../../../public/gif/jewerly.gif'
+import marketingGif from '../../../public/gif/marketing.gif'
+import medicalGif from '../../../public/gif/medical.gif'
+import messengerGif from '../../../public/gif/messenger.gif'
+import musicGif from '../../../public/gif/music.gif'
+import neiroGif from '../../../public/gif/neiro.gif'
+import pageGif from '../../../public/gif/page.gif'
+import trackerGif from '../../../public/gif/tracker.gif'
+import videoGif from '../../../public/gif/video.gif'
+import vpnGif from '../../../public/gif/vpn.gif'
 
 const Gallery = () => {
 	const { t, i18n } = useTranslation()
 	const [isVisible, toggleVisible] = useToggle(false)
-	const [srcVideoFile, setSrcVideoFile] = useState(null)
+	const [srcGif, setSrcGif] = useState(null)
 	const [show, setShow] = useState(false)
 	const zoomImage = props => {
 		toggleVisible()
-		const src = {
-			outsourcing: '/src/public/gif/outsourcing.gif',
-			bank: '/src/public/gif/bank.gif',
-			portfolio: '/src/public/gif/portfolio.gif',
-			concierge: '/src/public/gif/concierge.gif',
-			cosmetics: '/src/public/gif/cosmetics .gif',
-			brands: '/src/public/gif/brands.gif',
-			clinique: '/src/public/gif/clinique.gif',
-			cafe: '/src/public/gif/cafe.gif',
-			design: '/src/public/gif/design.gif',
-			freelance: '/src/public/gif/freelance.gif',
-			furniture: '/src/public/gif/furniture.gif',
-			jewerly: '/src/public/gif/jewerly.gif',
-			marketing: '/src/public/gif/marketing.gif',
-			medical: '/src/public/gif/medical.gif',
-			messenger: '/src/public/gif/messenger.gif',
-			music: '/src/public/gif/music.gif',
-			neiro: '/src/public/gif/neiro.gif',
-			page: '/src/public/gif/page.gif',
-			tracker: '/src/public/gif/tracker.gif',
-			video: '/src/public/gif/video.gif',
-			vpn: '/src/public/gif/vpn.gif'
-		}
-		for (let key in src) {
-			if (key === props) {
-				setSrcVideoFile(src[key])
-			}
-		}
+		setSrcGif(props)
 	}
 	useEffect(() => {
 		const textElement = document.querySelector('.title')
@@ -52,24 +66,23 @@ const Gallery = () => {
 		<>
 			<h3 className='title'>{t('galleryTitle.title')}</h3>
 			<article className='row cardGalleryWrap'>
-				{/* {isVisible && <GalleryBackgroundFilter />} */}
 				<div className='cardGallery col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6'>
 					<h3 className='cardGalleryTitle'>
 						{t('galleryCardOutsourcing.title')}
 					</h3>
 					<img
-						onClick={() => zoomImage('outsourcing')}
+						onClick={() => zoomImage(outsoursingGif)}
 						className='cardGalleryImage'
-						src='/src/public/gif/outsoursing.jpg'
+						src={outsoursing}
 						alt='Layout image Outsourcing'
 					/>
 				</div>
 				<div className='cardGallery col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6'>
 					<h3 className='cardGalleryTitle'>{t('galleryCardBank.title')}</h3>
 					<img
-						onClick={() => zoomImage('bank')}
+						onClick={() => zoomImage(bankGif)}
 						className='cardGalleryImage'
-						src='/src/public/gif/bank.jpg'
+						src={bank}
 						alt='Layout image Banking services website'
 					/>
 				</div>
@@ -78,9 +91,9 @@ const Gallery = () => {
 						{t('galleryCardPortfolio.title')}
 					</h3>
 					<img
-						onClick={() => zoomImage('portfolio')}
+						onClick={() => zoomImage(portfolioGif)}
 						className='cardGalleryImage'
-						src='/src/public/gif/portfolio.jpg'
+						src={portfolio}
 						alt='Layout image Portfolio'
 					/>
 				</div>
@@ -89,9 +102,9 @@ const Gallery = () => {
 						{t('galleryCardConcierge.title')}
 					</h3>
 					<img
-						onClick={() => zoomImage('concierge')}
+						onClick={() => zoomImage(conciergeGif)}
 						className='cardGalleryImage'
-						src='/src/public/gif/concierge.jpg'
+						src={concierge}
 						alt='Layout image Service concierge'
 					/>
 				</div>
@@ -100,45 +113,45 @@ const Gallery = () => {
 						{t('galleryCardCosmetics.title')}
 					</h3>
 					<img
-						onClick={() => zoomImage('cosmetics')}
+						onClick={() => zoomImage(cosmeticsGif)}
 						className='cardGalleryImage'
-						src='/src/public/gif/cosmetics.jpg'
+						src={cosmetics}
 						alt='Layout image Online cosmetics store'
 					/>
 				</div>
 				<div className='cardGallery col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6'>
 					<h3 className='cardGalleryTitle'>{t('galleryCardBrands.title')}</h3>
 					<img
-						onClick={() => zoomImage('brands')}
+						onClick={() => zoomImage(brandsGif)}
 						className='cardGalleryImage'
-						src='/src/public/gif/brands.jpg'
+						src={brands}
 						alt='Layout image Website for packaging branded items'
 					/>
 				</div>
 				<div className='cardGallery col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6'>
 					<h3 className='cardGalleryTitle'>{t('galleryCardClinique.title')}</h3>
 					<img
-						onClick={() => zoomImage('clinique')}
+						onClick={() => zoomImage(cliniqueGif)}
 						className='cardGalleryImage'
-						src='/src/public/gif/clinique.jpg'
+						src={clinique}
 						alt='Layout image Family Medicine Clinic'
 					/>
 				</div>
 				<div className='cardGallery col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6'>
 					<h3 className='cardGalleryTitle'>{t('galleryCardCafe.title')}</h3>
 					<img
-						onClick={() => zoomImage('cafe')}
+						onClick={() => zoomImage(cafeGif)}
 						className='cardGalleryImage'
-						src='/src/public/gif/cafe.jpg'
+						src={cafe}
 						alt='Layout image Cafe"'
 					/>
 				</div>
 				<div className='cardGallery col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6'>
 					<h3 className='cardGalleryTitle'>{t('galleryCardDesign.title')}</h3>
 					<img
-						onClick={() => zoomImage('design')}
+						onClick={() => zoomImage(designGif)}
 						className='cardGalleryImage'
-						src='/src/public/gif/design.jpg'
+						src={design}
 						alt='Layout image Website for arrangement of premises'
 					/>
 				</div>
@@ -147,9 +160,9 @@ const Gallery = () => {
 						{t('galleryCardFreelance.title')}
 					</h3>
 					<img
-						onClick={() => zoomImage('freelance')}
+						onClick={() => zoomImage(freelanceGif)}
 						className='cardGalleryImage'
-						src='/src/public/gif/freelance.jpg'
+						src={freelance}
 						alt='Layout image Freelance platform'
 					/>
 				</div>
@@ -158,18 +171,18 @@ const Gallery = () => {
 						{t('galleryCardFurniture.title')}
 					</h3>
 					<img
-						onClick={() => zoomImage('furniture')}
+						onClick={() => zoomImage(furnitureGif)}
 						className='cardGalleryImage'
-						src='/src/public/gif/furniture.jpg'
+						src={furniture}
 						alt='Layout image Online store of household goods'
 					/>
 				</div>
 				<div className='cardGallery col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6'>
 					<h3 className='cardGalleryTitle'>{t('galleryCardJewerly.title')}</h3>
 					<img
-						onClick={() => zoomImage('jewerly')}
+						onClick={() => zoomImage(jewerlyGif)}
 						className='cardGalleryImage'
-						src='/src/public/gif/jewerly.jpg'
+						src={jewerly}
 						alt='Layout image Jewelry store'
 					/>
 				</div>
@@ -178,18 +191,18 @@ const Gallery = () => {
 						{t('galleryCardMarketing.title')}
 					</h3>
 					<img
-						onClick={() => zoomImage('marketing')}
+						onClick={() => zoomImage(marketingGif)}
 						className='cardGalleryImage'
-						src='/src/public/gif/marketing.jpg'
+						src={marketing}
 						alt='Layout image Marketing services'
 					/>
 				</div>
 				<div className='cardGallery col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6'>
 					<h3 className='cardGalleryTitle'>{t('galleryCardMedical.title')}</h3>
 					<img
-						onClick={() => zoomImage('medical')}
+						onClick={() => zoomImage(medicalGif)}
 						className='cardGalleryImage'
-						src='/src/public/gif/medical.jpg'
+						src={medical}
 						alt='Layout image Medical clinic website'
 					/>
 				</div>
@@ -198,80 +211,68 @@ const Gallery = () => {
 						{t('galleryCardMessenger.title')}
 					</h3>
 					<img
-						onClick={() => zoomImage('messenger')}
+						onClick={() => zoomImage(messengerGif)}
 						className='cardGalleryImage'
-						src='/src/public/gif/messenger.jpg'
+						src={messenger}
 						alt='Layout image Corporate messenger website'
 					/>
 				</div>
 				<div className='cardGallery col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6'>
-					<h3 className='cardGalleryTitle'>
-						{t('galleryCardMusic.title')}
-					</h3>
+					<h3 className='cardGalleryTitle'>{t('galleryCardMusic.title')}</h3>
 					<img
-						onClick={() => zoomImage('music')}
+						onClick={() => zoomImage(musicGif)}
 						className='cardGalleryImage'
-						src='/src/public/gif/music.jpg'
+						src={music}
 						alt='Layout image Music processing site'
 					/>
 				</div>
 				<div className='cardGallery col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6'>
-					<h3 className='cardGalleryTitle'>
-						{t('galleryCardNeiro.title')}
-					</h3>
+					<h3 className='cardGalleryTitle'>{t('galleryCardNeiro.title')}</h3>
 					<img
-						onClick={() => zoomImage('neiro')}
+						onClick={() => zoomImage(neiroGif)}
 						className='cardGalleryImage'
-						src='/src/public/gif/neiro.jpg'
+						src={neiro}
 						alt='Layout image Website of a neurotechnology development company'
 					/>
 				</div>
 				<div className='cardGallery col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6'>
-					<h3 className='cardGalleryTitle'>
-						{t('galleryCardPage.title')}
-					</h3>
+					<h3 className='cardGalleryTitle'>{t('galleryCardPage.title')}</h3>
 					<img
-						onClick={() => zoomImage('page')}
+						onClick={() => zoomImage(pageGif)}
 						className='cardGalleryImage'
-						src='/src/public/gif/page.jpg'
+						src={page}
 						alt='Layout image Device landing page'
 					/>
 				</div>
 				<div className='cardGallery col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6'>
-					<h3 className='cardGalleryTitle'>
-						{t('galleryCardTracker.title')}
-					</h3>
+					<h3 className='cardGalleryTitle'>{t('galleryCardTracker.title')}</h3>
 					<img
-						onClick={() => zoomImage('tracker')}
+						onClick={() => zoomImage(trackerGif)}
 						className='cardGalleryImage'
-						src='/src/public/gif/tracker.jpg'
+						src={tracker}
 						alt='Layout image Fitness tracker app website'
 					/>
 				</div>
 				<div className='cardGallery col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6'>
-					<h3 className='cardGalleryTitle'>
-						{t('galleryCardVideo.title')}
-					</h3>
+					<h3 className='cardGalleryTitle'>{t('galleryCardVideo.title')}</h3>
 					<img
-						onClick={() => zoomImage('video')}
+						onClick={() => zoomImage(videoGif)}
 						className='cardGalleryImage'
-						src='/src/public/gif/video.jpg'
+						src={video}
 						alt='Layout image Video platform website'
 					/>
 				</div>
 				<div className='cardGallery col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6'>
-					<h3 className='cardGalleryTitle'>
-						{t('galleryCardVpn.title')}
-					</h3>
+					<h3 className='cardGalleryTitle'>{t('galleryCardVpn.title')}</h3>
 					<img
-						onClick={() => zoomImage('vpn')}
+						onClick={() => zoomImage(vpnGif)}
 						className='cardGalleryImage'
-						src='/src/public/gif/vpn.jpg'
+						src={vpn}
 						alt='Layout image VPN service website'
 					/>
 				</div>
 				<ZoomGalleryImage
-					src={srcVideoFile}
+					srcGif={srcGif}
 					isVisible={isVisible}
 					toggleVisible={toggleVisible}
 				/>
@@ -280,4 +281,4 @@ const Gallery = () => {
 	)
 }
 
-export { Gallery }
+export default Gallery
