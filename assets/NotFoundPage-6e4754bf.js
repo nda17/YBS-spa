@@ -1,0 +1,1 @@
+import{j as s,L as t}from"./index-9d95c4ef.js";const r=()=>s.jsx(s.Fragment,{children:s.jsxs("p",{className:"titleNotFound",children:["ERROR: 404 - Not found!",s.jsx("br",{}),"Страница не существует.",s.jsx("br",{}),"Перейти на ",s.jsx(t,{to:"/",children:"ГЛАВНУЮ СТРАНЦУ"})]})});export{r as default};
