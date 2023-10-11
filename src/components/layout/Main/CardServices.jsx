@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next'
 import { useState, useEffect } from 'react'
-import './CardServices.scss'
 import spa from '../../../public/icons/card-icon/spa-white.svg'
 import mpa from '../../../public/icons/card-icon/mpa-white.svg'
 import service from '../../../public/icons/card-icon/service-white.svg'
@@ -17,6 +16,8 @@ import analytic from '../../../public/icons/card-icon/analytics-white.svg'
 import sales from '../../../public/icons/card-icon/sales-white.svg'
 import call from '../../../public/icons/card-icon/call-white.svg'
 import other from '../../../public/icons/card-icon/other-white.svg'
+import './CardServices.scss'
+import '../../../assets/styles/media-queries.scss'
 
 const CardServices = () => {
 	const { t, i18n } = useTranslation()

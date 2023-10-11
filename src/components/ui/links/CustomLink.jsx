@@ -1,5 +1,6 @@
 import { Link, useMatch } from 'react-router-dom'
 import './CustomLink.scss'
+import '../../../assets/styles/media-queries.scss'
 
 const CustomLink = ({ children, to, ...props }) => {
 	const match = useMatch(to)
@@ -17,4 +18,4 @@ const CustomLink = ({ children, to, ...props }) => {
 	)
 }
 
-export { CustomLink }
+export default CustomLink 

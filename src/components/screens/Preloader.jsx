@@ -8,4 +8,4 @@ const Preloader = () => {
 	)
 }
 
-export { Preloader }
+export default Preloader 

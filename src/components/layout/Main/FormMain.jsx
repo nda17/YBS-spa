@@ -1,8 +1,9 @@
 import { useTranslation } from 'react-i18next'
 import { useState, useEffect } from 'react'
-import { FormVideoBackground } from '../../screens/FormVideoBackground'
-import { AlertForm } from '../../ui/modal/AlertForm'
+import FormVideoBackground from '../../screens/FormVideoBackground'
+import AlertForm from '../../ui/modal/AlertForm'
 import './FormMain.scss'
+import '../../../assets/styles/media-queries.scss'
 
 const FormMain = () => {
 	const { t, i18n } = useTranslation()

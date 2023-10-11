@@ -1,9 +1,10 @@
 import { Outlet } from 'react-router-dom'
-import { Header } from './Header/Header'
-import { Footer } from './Footer/Footer'
-import { CookiePopup } from '../../components/ui/modal/CookiePopup'
 import { Suspense } from 'react'
-import { Preloader } from '../screens/Preloader'
+import Header from './Header/Header'
+import Footer from './Footer/Footer'
+import Preloader from '../screens/Preloader'
+import './Layout.scss'
+import '../../assets/styles/media-queries.scss'
 
 const Layout = () => {
 	return (
@@ -12,7 +13,6 @@ const Layout = () => {
 			<main className='main container-lg'>
 				<Suspense fallback={<Preloader />}>
 					<Outlet />
-					<CookiePopup />
 				</Suspense>
 			</main>
 			<Footer />

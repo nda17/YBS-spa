@@ -77,7 +77,7 @@
 	}
 
 	.footerInfoTextSecond {
-		top: 1.9rem !important;
+		top: 1.4rem !important;
 		left: -8rem !important;
 	}
 
@@ -91,8 +91,15 @@
 	}
 
 	.footerInfoTextFirst {
-		left: 0.5rem !important;
-		font-size: 0.7rem !important;
+		font-size: 0.6rem !important;
+	}
+
+	.footerInfoTextSecond {
+		left: -14rem !important;
+	}
+
+	.footerIconWrap {
+		top: 1rem !important;
 	}
 
 	.menuListFooter {
@@ -125,13 +132,15 @@
 
 	.footerInfoTextFirst,
 	.footerInfoTextSecond {
-		font-size: 0.65rem !important;
+		font-size: 0.8rem !important;
 	}
 
 	.footerInfoTextSecond {
-		font-size: 0.8rem !important;
-		top: 1.9rem !important;
 		left: 0 !important;
+	}
+
+	.footerLogoWrap {
+		left: 2.4rem !important;
 	}
 
 	.mainScreenSloganFirst {
@@ -234,6 +243,10 @@
 }
 
 @media (min-width: 992px) {
+	.cookiePopupWrap {
+		bottom: 4.6rem !important;
+	}
+
 	.hamburgerIconWrap {
 		display: none !important;
 	}
@@ -258,8 +271,31 @@
 		padding: 0rem !important;
 	}
 
+	.headerNav {
+		height: 4rem !important;
+	}
+
+	.headerCompanyNameText {
+		top: 1.6rem !important;
+		left: 4.5rem !important;
+	}
+
+	.headerLogoWrap {
+		top: 0.5rem !important;
+	}
+
+	.headerLogoIcon {
+		width: 3rem !important;
+		height: 3rem !important;
+	}
+
 	.buttonChangeLang {
 		margin-right: 0 !important;
+		margin-bottom: 0.2rem !important;
+	}
+
+	.buttonChangeLang:last-child {
+		margin-bottom: 0rem !important;
 	}
 
 	.headerListLinkWrap {
@@ -306,6 +342,37 @@
 
 	.galleryBackgroundFilter {
 		max-width: 60rem !important;
+	}
+
+	.footerNav {
+		height: 4rem !important;
+	}
+
+	.footerLogoWrap {
+		width: 2.5rem !important;
+		height: 2.5rem !important;
+		left: 2rem !important;
+	}
+
+	.footerLogoIcon {
+		width: 2.5rem !important;
+		height: 2.5rem !important;
+	}
+
+	.footerIconLink {
+		height: 1.7rem !important;
+	}
+
+	.footerIconWrap {
+		top: 1.5rem !important;
+	}
+
+	.footerInfoTextFirst {
+		top: 3.2rem !important;
+	}
+
+	.footerInfoTextSecond {
+		top: 2rem !important;
 	}
 }
 

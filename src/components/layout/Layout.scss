@@ -1,0 +1,25 @@
+.main {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	flex: 1 1 auto;
+	border-left: 3px solid #2e2e2e;
+	border-right: 3px solid #2e2e2e;
+	position: relative;
+}
+
+.main {
+	background: #080606;
+	overflow-y: auto;
+}
+
+/* Скрытие scrollbar для Chrome, Safari и Opera */
+.main::-webkit-scrollbar {
+	display: none;
+}
+
+/* Скрытие scrollbar для IE, Edge и Firefox */
+.main {
+	-ms-overflow-style: none; /* IE и Edge */
+	scrollbar-width: none; /* Firefox */
+}

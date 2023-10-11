@@ -1,5 +1,6 @@
-import './ButtonsChangeLang.scss'
 import i18n from 'i18next'
+import './ButtonsChangeLang.scss'
+import '../../../assets/styles/media-queries.scss'
 
 const ButtonsChangeLang = () => {
 	const locales = {
@@ -13,8 +14,7 @@ const ButtonsChangeLang = () => {
 					key={locale}
 					className='buttonChangeLang'
 					style={{
-						color:
-							i18n.resolvedLanguage === locale ? 'rgb(184, 134, 11)' : '#ffffff'
+						color: i18n.resolvedLanguage === locale ? '#b8860b' : '#ffffff'
 					}}
 					onClick={() => i18n.changeLanguage(locale)}
 				>
@@ -25,4 +25,4 @@ const ButtonsChangeLang = () => {
 	)
 }
 
-export { ButtonsChangeLang }
+export default ButtonsChangeLang

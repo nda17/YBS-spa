@@ -349,6 +349,19 @@
 	width: 26%;
 }
 
+.title {
+	transition: all 2s;
+	opacity: 0;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	font-weight: 700;
+	line-height: 1.9rem;
+	margin-bottom: 2.8125rem;
+	padding: 2.5rem 0.7rem 0rem 0.7rem;
+}
+
 //Animation keyframes Finger Icon
 @keyframes interactiveMotion0 {
 	from {

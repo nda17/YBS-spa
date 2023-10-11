@@ -1,11 +1,11 @@
 import { useTranslation } from 'react-i18next'
 import { useRef } from 'react'
-import { CustomLink } from '../../ui/links/CustomLink'
+import CustomLink from '../../ui/links/CustomLink'
 import { useClickOutside } from '../../../hooks/useClickOutside'
-import { ButtonsChangeLang } from '../../ui/buttons/ButtonsChangeLang'
+import ButtonsChangeLang from '../../ui/buttons/ButtonsChangeLang'
+import LogoSvg from '../../../public/images/YBS-white.svg'
 import './MobileMenu.scss'
 import '../../../assets/styles/media-queries.scss'
-import LogoSvg from '../../../public/images/YBS-white.svg'
 
 const MobileMenu = props => {
 	const { t, i18n } = useTranslation()
@@ -14,7 +14,7 @@ const MobileMenu = props => {
 	useClickOutside(mobileMenuRef, toggleVisible) //Закрытие мобильного меню при клике вне его блока
 	return (
 		!isVisible && (
-			<article className='mobileMenu active' ref={mobileMenuRef}>
+			<article className='mobileMenu' ref={mobileMenuRef}>
 				<img className='mobileMenuLogo' src={LogoSvg} alt='Logo image' />
 				<div className='mobileMenuCustomLinkWrapper'>
 					<CustomLink
@@ -59,4 +59,4 @@ const MobileMenu = props => {
 	)
 }
 
-export { MobileMenu }
+export default MobileMenu

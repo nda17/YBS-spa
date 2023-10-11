@@ -5,4 +5,4 @@ const GalleryBackgroundFilter = () => {
 	return <div className='galleryBackgroundFilter'></div>
 }
 
-export { GalleryBackgroundFilter }
+export default GalleryBackgroundFilter

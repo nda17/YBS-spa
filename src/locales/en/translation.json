@@ -375,10 +375,10 @@
 		"text": "Enter your name"
 	},
 	"formMainEmail": {
-		"text": "Enter email"
+		"text": "Enter your email address"
 	},
 	"formMainPhone": {
-		"text": "Enter phone number"
+		"text": "Enter your phone number"
 	},
 	"formMainButtonSubmit": {
 		"text": "Submit"
@@ -393,13 +393,10 @@
 		"text": "Close"
 	},
 	"allRightsReserved": {
-		"text": "«YBS» LLC All rights reserved ©"
+		"text": "«YBS» LLC. All rights reserved ©"
 	},
 	"contactsTitle": {
 		"text": "Contacts"
-	},
-	"contactsCompany": {
-		"text": "«YBS» LLC."
 	},
 	"contactsPhone": {
 		"text": "Our phone: +79990860186"
@@ -413,8 +410,11 @@
 	"contactsBe": {
 		"text": "Link to our Behance"
 	},
-	"contactsEmail": {
-		"text": "Write to our email: mail@ybs.one"
+	"contactsEmailDevelopment": {
+		"text": "For orders: zakaz@ybs.one"
+	},
+	"contactsEmailPartners": {
+		"text": "For cooperation issues: mail@ybs.one"
 	},
 	"contactsSlogan": {
 		"text": "We create your websites and applications!"

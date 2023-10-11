@@ -1,7 +1,7 @@
 //Video block
 .homePageVideoBlock {
 	position: relative;
-	height: 30.75rem;
+	min-height: 31rem;
 	border-radius: 0rem 0rem 0.75rem 0.75rem;
 	display: flex;
 	justify-content: center;
@@ -29,9 +29,9 @@
 	margin: 0 auto 1.5rem auto;
 	transition: all 2s;
 	width: 15.2rem;
-	white-space: nowrap; /* не переносить текст на другую строку */
-	overflow: hidden; /* скрываем переполнение контентом */
-	border-right: 3px solid #f5deb3; /* рисуем курсор */
+	white-space: nowrap; /* запрет переноса текста на другую строку */
+	overflow: hidden; /* скрытие переполнения контентом */
+	border-right: 3px solid #f5deb3; /* отрисовка курсора */
 	animation: cursor 0.75s step-end infinite, printed_text 3s steps(29);
 }
 
@@ -114,9 +114,9 @@
 	font-family: 'Montserrat';
 	font-style: italic;
 	font-weight: 400;
-	line-height: 1.1rem;
-	white-space: wrap; /* не переносить текст на другую строку */
-	overflow: hidden; /* скрываем переполнение контентом */
+	line-height: 2rem;
+	white-space: wrap; /* запрет переноса текста на другую строку */
+	overflow: hidden; /* скрытие переполнения контентом */
 	animation: printed_text 3s steps(29);
 	margin: 0 auto 0.4rem auto;
 }

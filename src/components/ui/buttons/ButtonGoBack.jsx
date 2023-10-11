@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 import './ButtonGoBack.scss'
+import '../../../assets/styles/media-queries.scss'
 
 const ButtonGoBack = () => {
 	const { t, i18n } = useTranslation()
@@ -13,4 +14,4 @@ const ButtonGoBack = () => {
 	)
 }
 
-export { ButtonGoBack }
+export default ButtonGoBack

@@ -1,17 +1,19 @@
 import { useTranslation } from 'react-i18next'
 import { useEffect } from 'react'
-import { CustomLink } from '../../ui/links/CustomLink'
+import CustomLink from '../../ui/links/CustomLink'
 import LogoSvg from '../../../public/images/YBS-white.svg'
-import PhoneSvg from '../../../public/icons/link-icon/phone-white.svg'
-import WhatsAppSvg from '../../../public/icons/link-icon/wa-white.svg'
-import TelegramSvg from '../../../public/icons/link-icon/tg-white.svg'
-import BehanceSvg from '../../../public/icons/link-icon/be-white.svg'
+import {
+	BsTelephoneOutboundFill,
+	BsWhatsapp,
+	BsTelegram,
+	BsBehance
+} from 'react-icons/bs'
+import HamburgerMenu from './HamburgerMenu'
+import MobileMenu from './MobileMenu'
+import ButtonsChangeLang from '../../ui/buttons/ButtonsChangeLang'
+import { useToggle } from '../../../hooks/useToggle'
 import './Header.scss'
 import '../../../assets/styles/media-queries.scss'
-import { HamburgerMenu } from './HamburgerMenu'
-import { MobileMenu } from './MobileMenu'
-import { ButtonsChangeLang } from '../../ui/buttons/ButtonsChangeLang'
-import { useToggle } from '../../../hooks/useToggle'
 
 const Header = () => {
 	const [isVisible, toggleVisible] = useToggle(true)
@@ -68,44 +70,28 @@ const Header = () => {
 								className='headerIconLink'
 								target='_blank'
 							>
-								<img
-									className='headerIconLinkContent iconPhone'
-									src={PhoneSvg}
-									alt='Phone icon'
-								/>
+								<BsTelephoneOutboundFill className='headerIconLinkContent iconPhone' />
 							</a>
 							<a
 								href='https://www.behance.net/ybsone'
 								target='_blank'
 								className='headerIconLink'
 							>
-								<img
-									className='headerIconLinkContent iconBehance'
-									src={BehanceSvg}
-									alt='Behance icon'
-								/>
+								<BsBehance className='headerIconLinkContent iconBehance' />
 							</a>
 							<a
 								href='https://api.whatsapp.com/send/?phone=79990860186&text=%D0%A5%D0%BE%D1%87%D1%83+%D1%83+%D0%B2%D0%B0%D1%81+%D1%81%D0%B0%D0%B9%D1%82%21&type=phone_number&app_absent=0'
 								target='_blank'
 								className='headerIconLink'
 							>
-								<img
-									className='headerIconLinkContent iconWhatsapp'
-									src={WhatsAppSvg}
-									alt='WhatsApp icon'
-								/>
+								<BsWhatsapp className='headerIconLinkContent iconWhatsapp' />
 							</a>
 							<a
 								href='https://t.me/ybs_one'
 								target='_blank'
 								className='headerIconLink'
 							>
-								<img
-									className='headerIconLinkContent iconTelegram'
-									src={TelegramSvg}
-									alt='Telegram icon'
-								/>
+								<BsTelegram className='headerIconLinkContent iconTelegram' />
 							</a>
 						</div>
 						<ButtonsChangeLang />
@@ -118,4 +104,4 @@ const Header = () => {
 	)
 }
 
-export { Header }
+export default Header

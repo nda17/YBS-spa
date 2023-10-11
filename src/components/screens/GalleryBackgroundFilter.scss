@@ -1,4 +1,5 @@
 .galleryBackgroundFilter {
+	height: 100vh;
 	position: absolute;
 	background-color: #000000;
 	z-index: 5;
@@ -6,7 +7,7 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
+	margin: auto;
 	opacity: 0.93;
 	z-index: -5;
-	margin: 0 auto;
 }

@@ -1,9 +1,10 @@
 import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useClickOutside } from '../../hooks/useClickOutside'
-import './ZoomGalleryImage.scss'
 import { IoCloseSharp } from 'react-icons/io5'
-import { GalleryBackgroundFilter } from './GalleryBackgroundFilter'
+import GalleryBackgroundFilter from './GalleryBackgroundFilter'
+import './ZoomGalleryImage.scss'
+import '../../assets/styles/media-queries.scss'
 
 const ZoomGalleryImage = props => {
 	const { t, i18n } = useTranslation()
@@ -18,6 +19,7 @@ const ZoomGalleryImage = props => {
 					<GalleryBackgroundFilter />
 					<div className='ZoomImageBlock'>
 						<img className='zoomImage' src={srcGif} ref={zoomImage} />
+						<span className='zoomImageFilter'></span>
 						<span className='zoomImageButton' onClick={toggleVisible}>
 							<IoCloseSharp className='zoomImageButtonIcon' />
 						</span>
@@ -28,4 +30,4 @@ const ZoomGalleryImage = props => {
 	)
 }
 
-export { ZoomGalleryImage }
+export default ZoomGalleryImage

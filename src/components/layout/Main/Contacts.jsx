@@ -1,12 +1,16 @@
 import { useTranslation } from 'react-i18next'
 import { useState, useEffect } from 'react'
 import LogoSvg from '../../../public/images/YBS-white.svg'
-import PhoneSvg from '../../../public/icons/link-icon/phone-white.svg'
-import WhatsAppSvg from '../../../public/icons/link-icon/wa-white.svg'
-import TelegramSvg from '../../../public/icons/link-icon/tg-white.svg'
-import BehanceSvg from '../../../public/icons/link-icon/be-white.svg'
-import EmailSvg from '../../../public/icons/link-icon/email-white.svg'
+import {
+	BsTelephoneOutboundFill,
+	BsWhatsapp,
+	BsTelegram,
+	BsBehance,
+	BsEnvelopeAt,
+	BsPeople
+} from 'react-icons/bs'
 import './Contacts.scss'
+import '../../../assets/styles/media-queries.scss'
 
 const Contacts = () => {
 	const { t, i18n } = useTranslation()
@@ -32,7 +36,7 @@ const Contacts = () => {
 		<>
 			<h3 className='title'>{t('contactsTitle.text')}</h3>
 			<article className='row contactsLineBlock'>
-				<div className='contactsLine contactsLineFirst col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6'>
+				<div className='contactsLineFirst col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6'>
 					<a className='contactsLineWrap' href='https://ybs.one/'>
 						<img className='contactsLineIcon' src={LogoSvg} alt='Logo' />
 						<p className='contactsLineText'>{t('contactsCompany.text')}</p>
@@ -44,7 +48,7 @@ const Contacts = () => {
 						className='contactsLineWrap'
 						target='_blank'
 					>
-						<img className='contactsLineIcon' src={PhoneSvg} alt='Phone icon' />
+						<BsTelephoneOutboundFill className='contactsLineIcon' />
 						<p className='contactsLineText'>{t('contactsPhone.text')}</p>
 					</a>
 				</div>
@@ -54,11 +58,7 @@ const Contacts = () => {
 						target='_blank'
 						className='contactsLineWrap'
 					>
-						<img
-							className='contactsLineIcon'
-							src={WhatsAppSvg}
-							alt='WhatsApp icon'
-						/>
+						<BsWhatsapp className='contactsLineIcon' />
 						<p className='contactsLineText'>{t('contactsWa.text')}</p>
 					</a>
 				</div>
@@ -68,11 +68,7 @@ const Contacts = () => {
 						target='_blank'
 						className='contactsLineWrap'
 					>
-						<img
-							className='contactsLineIcon'
-							src={TelegramSvg}
-							alt='Telegram icon'
-						/>
+						<BsTelegram className='contactsLineIcon' />
 						<p className='contactsLineText'>{t('contactsTg.text')}</p>
 					</a>
 				</div>
@@ -82,26 +78,58 @@ const Contacts = () => {
 						target='_blank'
 						className='contactsLineWrap'
 					>
-						<img
-							className='contactsLineIcon'
-							src={BehanceSvg}
-							alt='Behance icon'
-						/>
+						<BsBehance className='contactsLineIcon' />
 						<p className='contactsLineText'>{t('contactsBe.text')}</p>
 					</a>
 				</div>
-				<div className='contactsLine contactsLineLast col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6'>
+				<div className='contactsLine col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6'>
 					<a
 						href='mailto:mail@ybs.one'
 						target='_blank'
 						className='contactsLineWrap'
 					>
-						<img className='contactsLineIcon' src={EmailSvg} alt='Email icon' />
-						<p className='contactsLineText'>{t('contactsEmail.text')}</p>
+						<BsEnvelopeAt className='contactsLineIcon' />
+						<p className='contactsLineText'>
+							{t('contactsEmailDevelopment.text')}
+						</p>
 					</a>
 				</div>
-				<img className='contactsLogoIcon' src={LogoSvg} alt='Logo' />
-				<p className='contactsLogoSlogan'>{t('contactsSlogan.text')}</p>
+				<div className='contactsLineLast col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6'>
+					<a
+						href='mailto:mail@ybs.one'
+						target='_blank'
+						className='contactsLineWrap'
+					>
+						<BsPeople className='contactsLineIcon' />
+						<p className='contactsLineText'>
+							{t('contactsEmailPartners.text')}
+						</p>
+					</a>
+				</div>
+				<div className='circleAnimationWrapper'>
+					<svg
+						viewBox='0 0 200 200'
+						width='200'
+						height='200'
+						xmlns='http://www.w3.org/2000/svg'
+						className='link__svg'
+						aria-labelledby='link1-title link1-desc'
+					>
+						<path
+							id='link-circle'
+							className='link__path'
+							d='M 20, 100 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0'
+							stroke='none'
+							fill='none'
+						/>
+						<text className='link__text'>
+							<textPath href='#link-circle' stroke='none'>
+								Создаем ваши сайты и приложения!
+							</textPath>
+						</text>
+					</svg>
+					<img className='contactsLogoIcon' src={LogoSvg} alt='Logo' />
+				</div>
 			</article>
 		</>
 	)

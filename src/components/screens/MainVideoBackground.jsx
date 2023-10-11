@@ -1,7 +1,7 @@
-import './MainVideoBackground.scss'
-import '../../assets/styles/media-queries.scss'
 import videomp4 from '../../public/video/video-building-1.mp4'
 import videowebm from '../../public/video/video-building-2.webm'
+import './MainVideoBackground.scss'
+import '../../assets/styles/media-queries.scss'
 
 const MainVideoBackground = () => {
 	return (
@@ -15,4 +15,4 @@ const MainVideoBackground = () => {
 	)
 }
 
-export { MainVideoBackground }
+export default MainVideoBackground

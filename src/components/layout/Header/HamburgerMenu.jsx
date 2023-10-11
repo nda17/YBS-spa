@@ -18,4 +18,4 @@ const HamburgerMenu = props => {
 	)
 }
 
-export { HamburgerMenu }
+export default HamburgerMenu

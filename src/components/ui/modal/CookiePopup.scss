@@ -1,100 +1,76 @@
-.cookie-popup-wrap {
-	opacity: 0;
+.cookiePopupWrap {
+	width: 19rem;
+	height: 14rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	right: -100rem;
-	left: 0;
-	margin: auto;
-	height: 16.7rem;
-	width: 19rem;
-	background: #ffffff;
+	position: absolute;
+	bottom: 3.5rem;
+	right: 0.5rem;
+	background: #484545;
 	border-radius: 0.75rem;
-	padding: 0.9375rem 1.5625rem;
-	transition: right 1s ease;
-	box-shadow: -1rem 0rem 2.375rem 1.125rem rgba(0, 0, 0, 0.31) inset;
+	padding: 1rem;
 	z-index: 9999999999;
 }
 
-.cookie-popup-wrap.show {
-	opacity: 1;
-	right: 0;
-	left: 0;
-	bottom: 10%;
-	margin: auto;
+.show {
+	display: flex;
 }
 
-.cookie-popup-wrap header {
+.hidden {
+	display: none;
+}
+
+.cookiePopupTitleWrap {
 	display: flex;
 	align-items: center;
-	column-gap: 0.2rem;
+	margin-bottom: 0.7rem;
 }
 
-header i {
-	color: #4070f4;
-	font-size: 2rem;
-}
-
-header h2 {
-	display: flex;
-	color: #4070f4;
-	font-weight: 500;
-	align-items: center;
-	margin: 0;
-}
-
-.cookie-popup-wrap .data {
-	margin-top: 1rem;
-}
-
-.cookie-popup-wrap .data p {
-	color: #333333;
-	font-size: 1rem;
-}
-
-.coockiesIcon {
-	fill: #dd850b;
+.cookiePopupTitleIcon {
 	width: 2rem;
 	height: 2rem;
+	margin-right: 0.3rem;
 }
 
-.coockiesTitleText {
-	font-weight: 900;
+.cookiePopupTitleText {
+	display: flex;
+	align-items: center;
+	color: #9a9aff;
+	font-weight: 800;
 }
 
-.cookie-popup-wrap .buttons-cookie {
-	margin-top: 1rem;
-	width: 100%;
+.cookiePopupText {
+	color: #ffffff;
+	font-size: 0.9rem;
+	margin-bottom: 0.7rem;
+}
+
+.cookiePopupBtnWrap {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
 
-.buttons-cookie .button-cookie-popup {
-	border: none;
-	color: #ffffff;
-	padding: 0.5rem 0;
+.cookiePopupBtnAccept,
+.cookiePopupBtnDecline {
+	border: 1px solid #ffffff;
 	border-radius: 0.25rem;
+	width: 7.8rem;
 	background: #4070f4;
-	cursor: pointer;
-	width: 7.5rem;
-	transition: all 0.4s ease;
-}
-
-.buttons-cookie #acceptBtn:hover {
-	background-color: #034bf1;
-}
-
-#declineBtn {
-	border: 0.125rem solid #4070f4;
-	background-color: #ffffff;
-	color: #4070f4;
-}
-
-#declineBtn:hover {
-	background-color: #4070f4;
 	color: #ffffff;
+	padding: 0.5rem 0rem;
+	transition: all 0.3s;
+}
+
+.cookiePopupBtnAccept {
+	&:hover {
+		background: #034bf1;
+	}
+}
+
+.cookiePopupBtnDecline {
+	&:hover {
+		background: #e74646;
+	}
 }

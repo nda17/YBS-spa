@@ -1,21 +1,52 @@
 .zoomImageWrap {
 	display: flex;
+	justify-content: center;
 	z-index: 10;
 	position: fixed;
 	top: 0;
-	height: 100vh;
-	align-items: center;
-	justify-content: center;
-}
-.ZoomImageBlock {
-	width: 100%;
-	max-width: 960px;
-	position: relative;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 100vw;
+	height: 55vh;
 }
 
-.zoomImage {
+.ZoomImageBlock {
+	width: 90%;
+	height: 70%;
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	&:hover {
+		cursor: zoom-out;
+	}
+}
+
+.zoomImage,
+.zoomImageFilter {
 	width: 100%;
+	height: 100%;
 	border-radius: 1rem;
+}
+
+.zoomImage,
+.zoomImageFilter {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+}
+
+.zoomImageFilter {
+	background: #b8860b;
+	z-index: 2;
+	opacity: 0.2;
 }
 
 .zoomImageButton {
@@ -24,6 +55,7 @@
 	position: absolute;
 	top: 0.4rem;
 	right: 0.4rem;
+	z-index: 3;
 	&:hover {
 		cursor: pointer;
 	}

@@ -8,17 +8,16 @@
 .headerNav {
 	padding: 0rem 1.1rem;
 	box-sizing: content-box;
-	height: 4rem;
-	background: #181818;
+	height: 2.5rem;
+	background: #2e2e2e;
 	position: relative;
 	z-index: 9999999999;
-	transition: all 4s ease 0s;
 }
 
 .headerLogoWrap {
 	transition: all 0.4s;
 	position: absolute;
-	top: 0.4375rem;
+	top: 0.3rem;
 	left: 0.9375rem;
 	&:hover {
 		transform: scale(0.86);
@@ -26,8 +25,8 @@
 }
 
 .headerLogoIcon {
-	width: 3rem;
-	height: 3rem;
+	width: 1.8rem;
+	height: 1.8rem;
 }
 
 .headerListLinkWrap {
@@ -56,21 +55,17 @@
 .headerIconLinkContent {
 	width: 1.45rem;
 	height: 1.45rem;
+	fill: #ffffff;
 }
 
 .headerCompanyNameText {
-	color: rgb(184, 134, 11);
+	color: #b8860b;
 	font-size: 0.9rem;
 	font-weight: 500;
 	text-align: center;
 	position: absolute;
-	left: 4.7rem;
-	position: absolute;
-	top: 1.6rem;
-	left: 4.6rem;
-}
-
-.headerCompanyNameText {
+    top: 0.9rem;
+    left: 3.6rem;
 	transition: all 0.4s;
 	&:hover {
 		color: #f5deb3;
