@@ -1,4 +1,151 @@
+@media (orientation: portrait) {
+	.zoomImageWrap {
+		height: 25vh;
+	}
+
+	.ZoomImageBlock {
+		width: 100vw;
+		height: 100%;
+		max-width: 450px;
+		max-height: 210px;
+	}
+}
+
+@media (orientation: landscape) {
+	.zoomImageWrap {
+		height: 65vh;
+	}
+
+	.ZoomImageBlock {
+		width: 70vw;
+		height: 90%;
+		max-width: 500px;
+		max-height: 210px;
+	}
+}
+
+@media (min-width: 576px) and (orientation: portrait) {
+	.zoomImageWrap {
+		height: 40vh;
+	}
+
+	.ZoomImageBlock {
+		width: 90vw;
+		max-width: 660px;
+		max-height: 320px;
+	}
+}
+
+@media (min-width: 576px) and (orientation: landscape) {
+	.zoomImageWrap {
+		height: 70vh;
+	}
+
+	.ZoomImageBlock {
+		width: 82vw;
+		max-width: 490px;
+		max-height: 280px;
+	}
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+	.zoomImageWrap {
+		height: 42vh;
+	}
+
+	.ZoomImageBlock {
+		width: 85vw;
+		max-width: 720px;
+		max-height: 370px;
+	}
+}
+
+@media (min-width: 768px) and (orientation: landscape) {
+	.zoomImageWrap {
+		height: 70vh;
+	}
+
+	.ZoomImageBlock {
+		width: 80vw;
+		max-width: 600px;
+		max-height: 300px;
+	}
+}
+
+@media (min-width: 992px) and (orientation: portrait) {
+	.zoomImageWrap {
+		height: 35vh;
+	}
+
+	.ZoomImageBlock {
+		width: 75vw;
+		max-width: 950px;
+		max-height: 460px;
+	}
+}
+
+@media (min-width: 992px) and (orientation: landscape) {
+	.zoomImageWrap {
+		height: 68vh;
+	}
+
+	.ZoomImageBlock {
+		width: 75vw;
+		max-width: 850px;
+		max-height: 380px;
+	}
+}
+
+@media (min-width: 1200px) and (orientation: portrait) {
+	.zoomImageWrap {
+		height: 38vh;
+	}
+
+	.ZoomImageBlock {
+		width: 77vw;
+		max-width: 950px;
+		max-height: 460px;
+	}
+}
+
+@media (min-width: 1200px) and (orientation: landscape) {
+	.zoomImageWrap {
+		height: 68vh;
+	}
+
+	.ZoomImageBlock {
+		width: 75vw;
+		max-width: 800px;
+		max-height: 360px;
+	}
+}
+
+@media (min-width: 1400px) and (orientation: portrait) {
+	.zoomImageWrap {
+		height: 35vh;
+	}
+
+	.ZoomImageBlock {
+		width: 77vw;
+		max-width: 1220px;
+		max-height: 645px;
+	}
+}
+
+@media (min-width: 1400px) and (orientation: landscape) {
+	.zoomImageWrap {
+		height: 68vh;
+	}
+
+	.ZoomImageBlock {
+		width: 75vw;
+		max-width: 1220px;
+		max-height: 660px;
+	}
+}
+
 .zoomImageWrap {
+	width: 100vw;
 	display: flex;
 	justify-content: center;
 	z-index: 10;
@@ -8,15 +155,11 @@
 	right: 0;
 	bottom: 0;
 	margin: auto;
-	width: 100vw;
-	height: 55vh;
 }
 
 .ZoomImageBlock {
-	width: 90%;
-	height: 70%;
 	position: relative;
-	top: 0;
+	top: -0.3rem;
 	left: 0;
 	right: 0;
 	bottom: 0;

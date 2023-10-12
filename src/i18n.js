@@ -15,7 +15,7 @@ i18n
 		// backend: {
 		// 	loadPath: 'src/locales/{{lng}}/translation.json'
 		// }
-		//TODO: Hosting paths locales
+		// TODO: Hosting paths locales
 		backend: {
 			loadPath:
 				'locales/{{lng}}/translation.json'
