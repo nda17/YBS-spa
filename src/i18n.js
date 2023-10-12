@@ -12,14 +12,14 @@ i18n
 		defaultLocale: 'ru',
 		fallbackLng: 'en',
 		//TODO: Development server paths locales
-		// backend: {
-		// 	loadPath: 'src/locales/{{lng}}/translation.json'
-		// }
-		// TODO: Hosting paths locales
 		backend: {
-			loadPath:
-				'locales/{{lng}}/translation.json'
+			loadPath: 'src/locales/{{lng}}/translation.json'
 		}
+		//TODO: Hosting paths locales
+		// backend: {
+		// 	loadPath:
+		// 		'locales/{{lng}}/translation.json'
+		// }
 	})
 
 export { i18n }
