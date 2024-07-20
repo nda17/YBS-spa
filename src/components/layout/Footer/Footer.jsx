@@ -74,13 +74,6 @@ const Footer = () => {
 						>
 							<BsTelegram className='footerLinkIcon iconTelegram' />
 						</a>
-						<a
-							href='https://github.com/nda17'
-							target='_blank'
-							className='footerIconLink'
-						>
-							<BsGithub className='footerLinkIcon iconGithub' />
-						</a>
 					</div>
 				</div>
 			</nav>
