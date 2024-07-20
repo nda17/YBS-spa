@@ -1,0 +1,1 @@
+import{j as o,L as t}from"./index-c86971df.js";const s=()=>o.jsxs("p",{className:"titleNotFound",children:["ERROR: 404 - Not found!",o.jsx("br",{}),"Страница не существует.",o.jsx("br",{}),"Перейти на ",o.jsx(t,{to:"/",children:"ГЛАВНУЮ СТРАНЦУ"})]}),r=()=>o.jsx(s,{});export{r as default};
