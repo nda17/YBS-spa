@@ -1,8 +1,8 @@
+import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useState, useEffect } from 'react'
 import { BiSolidCookie } from 'react-icons/bi'
-import './CookiePopup.scss'
 import '../../../assets/styles/media-queries.scss'
+import './CookiePopup.scss'
 
 function CookiePopup() {
 	const { t, i18n } = useTranslation()

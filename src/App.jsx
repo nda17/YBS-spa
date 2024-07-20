@@ -1,9 +1,8 @@
-// import { Suspense } from 'react'
 import { lazy } from 'react'
-import { Routes, Route } from 'react-router-dom'
-import Layout from './components/layout/Layout'
-import './assets/styles/index.scss'
+import { Route, Routes } from 'react-router-dom'
 import './assets/fonts/fonts.scss'
+import './assets/styles/index.scss'
+import Layout from './components/layout/Layout'
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'))
 const HomePage = lazy(() => import('./pages/HomePage'))
 const ServicesPage = lazy(() => import('./pages/ServicesPage'))
