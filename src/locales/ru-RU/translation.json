@@ -1,21 +1,21 @@
 {
-	"buttonGoBack": {
-		"text": "Назад"
-	},
 	"headerHome": {
 		"home": "Главная"
 	},
 	"headerServices": {
 		"services": "Наши услуги"
 	},
-	"headerGallery": {
-		"gallery": "Галерея"
+	"headerPortfolio": {
+		"portfolio": "Проекты"
 	},
 	"headerCalculation": {
 		"calculation": "Калькулятор"
 	},
 	"headerContacts": {
 		"contacts": "Контакты"
+	},
+	"footerOfferDisclaimer": {
+		"text": "Информация на сайте не является публичной офертой согласно ст. 437 ГК РФ"
 	},
 	"mainScreenSlogan": {
 		"title": "Digital агентство полного цикла"
@@ -35,20 +35,233 @@
 	"sloganText": {
 		"text": "«Если бы я спросил людей, что они хотят, они просили бы лошадь побыстрее.»"
 	},
+	"landingIntroTitle": {
+		"text": "Сайт работает как часть бизнеса"
+	},
+	"landingIntroText": {
+		"text": "Мы собираем стратегию, дизайн, разработку и запуск в один понятный процесс: от первой идеи до заявок, продаж и дальнейшего сопровождения."
+	},
+	"landingIntroStrategyTitle": {
+		"text": "Стратегия"
+	},
+	"landingIntroStrategyText": {
+		"text": "Разбираем задачу, аудиторию и путь клиента, чтобы сайт решал конкретную бизнес-цель."
+	},
+	"landingIntroDesignTitle": {
+		"text": "Интерфейс"
+	},
+	"landingIntroDesignText": {
+		"text": "Проектируем структуру, визуальный стиль и адаптивные экраны без лишнего шума."
+	},
+	"landingIntroLaunchTitle": {
+		"text": "Запуск"
+	},
+	"landingIntroLaunchText": {
+		"text": "Собираем, подключаем аналитику, формы, интеграции и помогаем вывести проект в работу."
+	},
+	"landingProcessTitle": {
+		"text": "Как проходит работа"
+	},
+	"landingProcessText": {
+		"text": "Двигаемся короткими понятными этапами, чтобы вы видели прогресс и могли принимать решения без хаоса."
+	},
+	"landingProcessBriefTitle": {
+		"text": "Бриф"
+	},
+	"landingProcessBriefText": {
+		"text": "Фиксируем цели, ограничения, сроки, контент и ожидаемый результат."
+	},
+	"landingProcessPrototypeTitle": {
+		"text": "Прототип"
+	},
+	"landingProcessPrototypeText": {
+		"text": "Собираем структуру страниц и сценарии, прежде чем переходить к визуалу."
+	},
+	"landingProcessBuildTitle": {
+		"text": "Разработка"
+	},
+	"landingProcessBuildText": {
+		"text": "Верстаем, программируем, адаптируем и подключаем нужные сервисы."
+	},
+	"landingProcessLaunchTitle": {
+		"text": "Запуск"
+	},
+	"landingProcessLaunchText": {
+		"text": "Проверяем формы, скорость, аналитику и передаем проект в эксплуатацию."
+	},
+	"landingParallaxTitle": {
+		"text": "От идеи до работающего digital-продукта"
+	},
+	"landingParallaxText": {
+		"text": "Делаем инструмент, помогающий объяснить, продавать и масштабировать бизнес"
+	},
+	"landingPortfolioTitle": {
+		"text": "Реальные проекты"
+	},
+	"landingPortfolioText": {
+		"text": "Домены:"
+	},
+	"landingPortfolioDesktop": {
+		"text": "Desktop"
+	},
+	"landingPortfolioMobile": {
+		"text": "Mobile"
+	},
+	"landingPortfolioOpen": {
+		"text": "Открыть сайт"
+	},
+	"landingPortfolioShowMore": {
+		"text": "Показать больше проектов"
+	},
+	"landingPortfolioShowLess": {
+		"text": "Свернуть проекты"
+	},
+	"landingBentoTitle": {
+		"text": "Что усиливает лендинг"
+	},
+	"landingBentoText": {
+		"text": "Добавляем не декор ради декора, а элементы, которые помогают быстрее понять предложение, довериться команде и оставить заявку."
+	},
+	"landingBentoSpeedTitle": {
+		"text": "Скорость"
+	},
+	"landingBentoSpeedText": {
+		"text": "Оптимизируем структуру, медиа и анимации, чтобы сайт ощущался легким."
+	},
+	"landingBentoAdaptiveTitle": {
+		"text": "Адаптив"
+	},
+	"landingBentoAdaptiveText": {
+		"text": "Прорабатываем desktop, tablet и mobile без случайных переносов и пустот."
+	},
+	"landingBentoAnalyticsTitle": {
+		"text": "Аналитика"
+	},
+	"landingBentoAnalyticsText": {
+		"text": "Подключаем цели, события и понятную картину по заявкам."
+	},
+	"landingBentoIntegrationsTitle": {
+		"text": "Интеграции"
+	},
+	"landingBentoIntegrationsText": {
+		"text": "Формы, мессенджеры, CRM, платежи и внешние сервисы."
+	},
+	"landingBentoSupportTitle": {
+		"text": "Поддержка"
+	},
+	"landingBentoSupportText": {
+		"text": "Помогаем после запуска: правки, развитие и техническая стабильность."
+	},
+	"landingBentoPromotionTitle": {
+		"text": "Продвижение"
+	},
+	"landingBentoPromotionText": {
+		"text": "Собираем ключевые слова для поиска, настраиваем базовое SEO. Берём дальнейшее продвижение в топ поиска на себя."
+	},
+	"landingStatsTitle": {
+		"text": "Команда и процесс"
+	},
+	"landingStatsText": {
+		"text": "Работаем кроссплатформенной командой по Agile/Scrum: короткие обсуждения важнее долгих согласований, а спринты помогают держать фокус на разработке, сопровождении и быстрых решениях."
+	},
+	"landingStatsTeamLabel": {
+		"text": "человек в команде"
+	},
+	"landingStatsDirectionsLabel": {
+		"text": "направления: разработка и сопровождение"
+	},
+	"landingStatsRolesLabel": {
+		"text": "ролей: PO, аналитика, дизайн, разработка, QA"
+	},
+	"landingStatsSprintLabel": {
+		"text": "Agile/Scrum ритм для всех проектов"
+	},
+	"landingPortfolioFilterAll": {
+		"text": "Все"
+	},
+	"landingPortfolioFilterMedical": {
+		"text": "Медицина"
+	},
+	"landingPortfolioFilterCommerce": {
+		"text": "Коммерция"
+	},
+	"landingPortfolioFilterServices": {
+		"text": "Услуги"
+	},
+	"landingPortfolioFilterCorporate": {
+		"text": "Корпоративные"
+	},
+	"landingPortfolioCase": {
+		"text": "Кейс"
+	},
+	"landingPortfolioFeatured": {
+		"text": "Проект нашей компании"
+	},
+	"landingPortfolioClose": {
+		"text": "Закрыть кейс"
+	},
+	"landingCtaTitle": {
+		"text": "Давайте соберем сайт, который выглядит сильнее конкурентов"
+	},
+	"landingCtaText": {
+		"text": "Можно начать с короткого расчета или сразу обсудить задачу, сроки и формат запуска."
+	},
+	"landingCtaCalculate": {
+		"text": "Рассчитать проект"
+	},
+	"landingCtaContacts": {
+		"text": "Обсудить задачу"
+	},
+	"landingFaqTitle": {
+		"text": "Частые вопросы"
+	},
+	"landingFaqText": {
+		"text": "Коротко о сроках, запуске и том, что понадобится от вас на старте."
+	},
+	"landingFaqQuestionA": {
+		"text": "Сколько времени занимает запуск?"
+	},
+	"landingFaqAnswerA": {
+		"text": "Небольшой лендинг можно подготовить за несколько недель. Точный срок зависит от контента, интеграций и сложности дизайна."
+	},
+	"landingFaqQuestionB": {
+		"text": "Можно ли доработать уже существующий сайт?"
+	},
+	"landingFaqAnswerB": {
+		"text": "Да, сначала смотрим текущую структуру, код и цели, затем предлагаем безопасный план улучшений."
+	},
+	"landingFaqQuestionC": {
+		"text": "Что нужно для старта?"
+	},
+	"landingFaqAnswerC": {
+		"text": "Достаточно описать задачу, аудиторию, услуги и примеры сайтов, которые вам близки по ощущению."
+	},
+	"landingFaqQuestionD": {
+		"text": "Вы помогаете после запуска?"
+	},
+	"landingFaqAnswerD": {
+		"text": "Да, можем сопровождать сайт, добавлять разделы, обновлять контент и следить за технической частью."
+	},
+	"landingFaqQuestionE": {
+		"text": "Можно ли заказать продвижение?"
+	},
+	"landingFaqAnswerE": {
+		"text": "Да, мы предлагаем различные варианты продвижения: от базовой настройки SEO и контекстной рекламы, до полноценной рекламной кампании."
+	},
 	"cardTitle": {
-		"title": "Чeм мы занимаемся и что можем сделать для вас ?"
+		"title": "Наши услуги"
 	},
 	"cardPriceA": {
-		"price": "от 15000 ₽"
+		"price": "от 30000 ₽"
 	},
 	"cardPriceB": {
-		"price": "от 25000 ₽"
+		"price": "от 45000 ₽"
 	},
 	"cardPriceC": {
 		"price": "от 7000 ₽"
 	},
 	"cardPriceD": {
-		"price": "от 35000 ₽"
+		"price": "от 70000 ₽"
 	},
 	"cardPriceE": {
 		"price": "от 30000 ₽"
@@ -138,163 +351,97 @@
 		"text": "Подробнее"
 	},
 	"cardTextBackSideA": {
-		"text": "Создадим сайт визитку или лендинг вашего продукта. Всё коротко и по делу на одной странице. Как на Tilda так и на стеке: HTML/БЭМ, CSS/SCSS/SASS, Pixel Perfect, Vue, JavaScript, Typescript, Coffescript, React JS, React Native, Bootstrap, TailWind, Webpack, Gulp, GIT, Photoshop, Illustrator, After Effects, Figma и другие."
+		"text": "Лендинг, сайт-визитка или SPA под задачу бизнеса."
 	},
 	"cardTextBackSideB": {
-		"text": "Сайты и веб-приложения для серьезных компаний, с возможностью реализовать масштабируемые проекты под любые задачи."
+		"text": "Многостраничный сайт или масштабируемое веб-приложение."
 	},
 	"cardTextBackSideC": {
-		"text": "Возьмём на себя всю работу по сопровождению, обновлению и поддержанию вашего сайта."
+		"text": "Обновления, поддержка, правки и контроль стабильной работы."
 	},
 	"cardTextBackSideD-A": {
-		"text": "Создание полноценных интернет-магазинов с товарами, услугами или создание интернет-витрин."
+		"text": "Интернет-магазин или витрина с каталогом."
 	},
 	"cardTextBackSideD-B": {
-		"text": "Витриной называется рекламный каталог, в котором есть подробная информация про каждую позицию товара, доступного к заказу."
+		"text": "Карточки товаров, структура и путь к заказу."
 	},
 	"cardTextBackSideE-A": {
-		"text": "SEO оптимизация."
+		"text": "SEO-аудит."
 	},
 	"cardTextBackSideE-B": {
-		"text": "Составление ТЗ. Аудит сайтa."
+		"text": "ТЗ и проверка сайта."
 	},
 	"cardTextBackSideE-C": {
-		"text": "Внедрение доступностии семантики."
+		"text": "Семантика и доступность."
 	},
 	"cardTextBackSideE-D": {
-		"text": "Перенос сайта с одной платформы на другую."
+		"text": "Перенос на новую платформу."
 	},
 	"cardTextBackSideF-A": {
-		"text": "Создание и настройка сущностей курса: тренингов, уроков и заданий на платформе GetCourse."
+		"text": "Настройка курсов."
 	},
 	"cardTextBackSideF-B": {
-		"text": "Создание, настройка и проведение вебинаров на платформе Bizon365."
+		"text": "Вебинары."
 	},
 	"cardTextBackSideF-C": {
-		"text": "Создание и настройка автовебинаров."
+		"text": "Автовебинары."
 	},
 	"cardTextBackSideF-D": {
-		"text": "Настройка amoCRM. Синхронизация amoCRM с Bizon365 и GetCourse."
+		"text": "amoCRM."
 	},
 	"cardTextBackSideF-E": {
-		"text": "Подключение WhatsApp к amoCRM. Установка онлайн-телефонии с Sipuni."
+		"text": "Интеграции связи."
 	},
 	"cardTextBackSideG": {
-		"text": "Создание, настройка и проведение вебинаров на платформе, настройка автовебинаров."
+		"text": "Вебинары и автовебинары под вашу воронку."
 	},
 	"cardTextBackSideH": {
-		"text": "Внедрение CRM-систем. Подключение мессенджеров к СRM. Интеграция онлайн-телефонии."
+		"text": "CRM, мессенджеры и телефония в одной системе."
 	},
 	"cardTextBackSideI": {
-		"text": "Платежные системы: интеграция платежных систем на сайт, для удобной онлайн оплаты."
+		"text": "Подключим удобную онлайн-оплату на сайт."
 	},
 	"cardTextBackSideJ-A": {
-		"text": "Создание карты Движения Покупателя и реализация ее в воронке."
+		"text": "Карта пути клиента."
 	},
 	"cardTextBackSideJ-B": {
-		"text": "Создание и настройка SMS-рассылки. Создание и настройка автозвонков."
+		"text": "SMS и автозвонки."
 	},
 	"cardTextBackSideJ-C": {
-		"text": "Реализация воронки в чат-ботах."
+		"text": "Воронка в чат-ботах."
 	},
 	"cardTextBackSideK": {
-		"text": "Создание и настройка чат ботов, интеграция настройка связи через What's App, Telegram, VK."
+		"text": "Чат-боты для WhatsApp, Telegram и VK."
 	},
 	"cardTextBackSideL-A": {
-		"text": "Написание продающего текста."
+		"text": "Продающий текст."
 	},
 	"cardTextBackSideL-B": {
-		"text": "Разработка и внедрение маркетинговых мероприятий, подходящих под ваш сегмент и вашу деятельность."
+		"text": "Маркетинговые акции."
 	},
 	"cardTextBackSideL-C": {
-		"text": "Мониторинг конкурентов, конкурентный анализ."
+		"text": "Анализ конкурентов."
 	},
 	"cardTextBackSideL-D": {
-		"text": "Работа с блогерами и лидерами мнений."
+		"text": "Работа с лидерами мнений."
 	},
 	"cardTextBackSideM": {
-		"text": "SWOT анализ, ABC анализ, разработка и применение антикризисных мероприятий."
+		"text": "SWOT, ABC и антикризисные решения."
 	},
 	"cardTextBackSideN-A": {
-		"text": "Создание отдела продаж, повышение конверсий, увеличение доли рынка, повышение квалификации и компетенции отдела продаж."
+		"text": "Отдел продаж и рост конверсии."
 	},
 	"cardTextBackSideN-B": {
-		"text": "Создание и увеличение воронки клиентов."
+		"text": "Воронка клиентов."
 	},
 	"cardTextBackSideO": {
-		"text": "Обзвон потенциальной базы холодных клиентов, рассылка КП, создание воронки клиентов."
+		"text": "Холодные звонки, КП и обработка базы."
 	},
 	"cardTextBackSideP-A": {
-		"text": "Продажа, установка и настройка лицензионного программного обеспечения."
+		"text": "Лицензионное ПО."
 	},
 	"cardTextBackSideP-B": {
-		"text": "Настройка, оптимизация и модернизация вашего оборудования."
-	},
-	"galleryTitle": {
-		"title": "Галерея макетов"
-	},
-	"galleryCardOutsourcing": {
-		"title": "Сайт HR-аутсорсинга :"
-	},
-	"galleryCardBank": {
-		"title": "Сайт банковских услуг :"
-	},
-	"galleryCardPortfolio": {
-		"title": "Портфолио агентства :"
-	},
-	"galleryCardConcierge": {
-		"title": "Консьерж-сервис :"
-	},
-	"galleryCardCosmetics": {
-		"title": "Интернет-магазин косметики :"
-	},
-	"galleryCardBrands": {
-		"title": "Сайт упаковки брендовых вещей :"
-	},
-	"galleryCardClinique": {
-		"title": "Клиника семейной медицины :"
-	},
-	"galleryCardCafe": {
-		"title": "Сайт кафе :"
-	},
-	"galleryCardDesign": {
-		"title": "Сайт по обустройству помещений :"
-	},
-	"galleryCardFreelance": {
-		"title": "Freelance-площадка :"
-	},
-	"galleryCardFurniture": {
-		"title": "Интернет-магазин товаров для дома :"
-	},
-	"galleryCardJewerly": {
-		"title": "Магазин ювелирных украшений :"
-	},
-	"galleryCardMarketing": {
-		"title": "Маркетинговые услуги :"
-	},
-	"galleryCardMedical": {
-		"title": "Сайт медицинской клиники :"
-	},
-	"galleryCardMessenger": {
-		"title": "Сайт корпоративного мессенджера :"
-	},
-	"galleryCardMusic": {
-		"title": "Сайт обработки музыки :"
-	},
-	"galleryCardNeiro": {
-		"title": "Сайт компании по разработке нейротехнологий :"
-	},
-	"galleryCardPage": {
-		"title": "Целевая страница устройства :"
-	},
-	"galleryCardTracker": {
-		"title": "Сайт приложения фитнесс-трекера :"
-	},
-	"galleryCardVideo": {
-		"title": "Сайт видео-платформы :"
-	},
-	"galleryCardVpn": {
-		"title": "Сайт VPN-сервиса :"
+		"text": "Настройка оборудования."
 	},
 	"formMainTitleA": {
 		"text": "Вы можете рассчитать примерную стоимость наших работ ниже и прислать нам заявку."
@@ -401,6 +548,9 @@
 	"contactsCompany": {
 		"text": "ООО «ЮБС»"
 	},
+	"contactsTelegramChannel": {
+		"text": "Telegram-канал YBS"
+	},
 	"contactsPhone": {
 		"text": "Телефон: +79990860186"
 	},
@@ -410,9 +560,6 @@
 	"contactsTg": {
 		"text": "Написать в Telegram"
 	},
-	"contactsBe": {
-		"text": "Ссылка на Behance"
-	},
 	"contactsEmailDevelopment": {
 		"text": "По вопросам заказов: zakaz@ybs.one"
 	},
@@ -420,6 +567,6 @@
 		"text": "По вопросам сотрудничества: mail@ybs.one"
 	},
 	"contactsSlogan": {
-		"text": "Создаем ваши сайты и приложения !"
+		"text": "Создаем ваши сайты и приложения!"
 	}
 }

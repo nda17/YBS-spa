@@ -7,7 +7,7 @@
 	height: 100%;
 	background: linear-gradient(63deg, #000000 0.6%, rgba(0, 0, 0, 0) 100%);
 	border-radius: 0.75rem 0.75rem 0rem 0rem;
-	z-index: 99999999;
+	z-index: 0;
 	object-fit: cover;
 }
 
@@ -20,5 +20,5 @@
 	height: 100%;
 	background: linear-gradient(63deg, #000000 0.6%, rgba(0, 0, 0, 0) 100%);
 	border-radius: 0.75rem 0.75rem 0rem 0rem;
-	z-index: 999999999;
+	z-index: var(--z-base);
 }

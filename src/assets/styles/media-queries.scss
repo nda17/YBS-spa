@@ -1,5 +1,5 @@
 @media (min-width: 576px) {
-	.title {
+	.sectionTitle {
 		font-size: 1.7rem !important;
 	}
 
@@ -10,10 +10,6 @@
 
 	.mainScreenSloganFourth {
 		top: 5rem !important;
-	}
-
-	.wrapper-card-block {
-		width: 20rem !important;
 	}
 
 	.card .cover.item-b {
@@ -77,8 +73,7 @@
 	}
 
 	.footerInfoTextSecond {
-		top: 1.4rem !important;
-		left: -8rem !important;
+		top: 2.55rem !important;
 	}
 
 	.footerLinkIcon {
@@ -94,25 +89,18 @@
 		font-size: 0.6rem !important;
 	}
 
-	.footerInfoTextSecond {
-		left: -14rem !important;
-	}
-
 	.footerIconWrap {
-		top: 1rem !important;
+		top: 2.2rem !important;
 	}
 
 	.menuListFooter {
 		right: 1rem !important;
 	}
 
-	.cardGallery {
-		width: 17.5rem !important;
-	}
 }
 
 @media (min-width: 768px) {
-	.title {
+	.sectionTitle {
 		font-size: 1.5rem !important;
 	}
 
@@ -129,10 +117,6 @@
 	.footerInfoTextFirst,
 	.footerInfoTextSecond {
 		font-size: 0.8rem !important;
-	}
-
-	.footerInfoTextSecond {
-		left: 0 !important;
 	}
 
 	.footerLogoWrap {
@@ -229,21 +213,14 @@
 		background-position: center !important;
 	}
 
-	.cardGallery {
-		width: 20.5rem !important;
-	}
 }
 
 @media (min-width: 992px) {
-	.cookiePopupWrap {
-		bottom: 4.6rem !important;
-	}
-
 	.hamburgerIconWrap {
 		display: none !important;
 	}
 
-	.title {
+	.sectionTitle {
 		font-size: 1.65rem !important;
 	}
 
@@ -264,16 +241,16 @@
 	}
 
 	.headerNav {
-		height: 4rem !important;
+		height: 8rem !important;
 	}
 
 	.headerCompanyNameText {
-		top: 1.6rem !important;
+		top: 3.45rem !important;
 		left: 4.5rem !important;
 	}
 
 	.headerLogoWrap {
-		top: 0.5rem !important;
+		top: 2.5rem !important;
 	}
 
 	.headerLogoIcon {
@@ -325,21 +302,14 @@
 		white-space: nowrap !important;
 	}
 
-	.cardGallery {
-		width: 26.5rem !important;
-	}
-
-	.galleryBackgroundFilter {
-		max-width: 60rem !important;
-	}
-
 	.footerNav {
-		height: 4rem !important;
+		height: 8rem !important;
 	}
 
 	.footerLogoWrap {
 		width: 2.5rem !important;
 		height: 2.5rem !important;
+		top: 2.75rem !important;
 		left: 2rem !important;
 	}
 
@@ -353,15 +323,15 @@
 	}
 
 	.footerIconWrap {
-		top: 1.5rem !important;
+		top: 3.15rem !important;
 	}
 
 	.footerInfoTextFirst {
-		top: 3.2rem !important;
+		top: 6.4rem !important;
 	}
 
 	.footerInfoTextSecond {
-		top: 2rem !important;
+		top: 3.5rem !important;
 	}
 }
 
@@ -436,28 +406,10 @@
 		background-position: left !important;
 	}
 
-	.cardGallery {
-		width: 22.5rem !important;
-	}
-
-	.galleryBackgroundFilter {
-		max-width: 71.25rem !important;
-	}
-
-	.contactsLineBlock {
-		max-width: 67.5rem !important;
-	}
 }
 
 @media (min-width: 1400px) {
 	.mainTitleText {
 		width: 18.1ch !important;
-	}
-	.cardGallery {
-		width: 26.5rem !important;
-	}
-
-	.galleryBackgroundFilter {
-		max-width: 82.5rem !important;
 	}
 }

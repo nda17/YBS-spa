@@ -1,42 +1,61 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { BiSolidCookie } from 'react-icons/bi'
-import '../../../assets/styles/media-queries.scss'
 import './CookiePopup.scss'
 
+const COOKIE_NAME = 'cookieYBS'
+const COOKIE_MAX_AGE = 60 * 60 * 24 * 365
+
 function CookiePopup() {
-	const { t, i18n } = useTranslation()
-	const [addClass, setAddClass] = useState(false)
-	const executeDataCookies = () => {
-		if (document.cookie.includes('cookieYBSData')) {
-			return
-		} else {
-			setAddClass(true)
-		}
-	}
+	const { t } = useTranslation()
+	const [isVisible, setIsVisible] = useState(false)
+
 	const acceptBtnClick = () => {
 		document.cookie =
-			'cookieYBS=cookieYBSData; SameSite=Lax; max-age=' + 60 * 60 * 24 * 365
-		setAddClass(false)
+			`${COOKIE_NAME}=cookieYBSData; SameSite=Lax; Max-Age=${COOKIE_MAX_AGE}; Path=/`
+		setIsVisible(false)
 	}
+
 	const declineBtnClick = () => {
-		setAddClass(false)
+		setIsVisible(false)
 	}
+
 	useEffect(() => {
-		executeDataCookies()
+		const isCookieAccepted = document.cookie
+			.split('; ')
+			.some(cookieItem => cookieItem.startsWith(`${COOKIE_NAME}=`))
+
+		setIsVisible(!isCookieAccepted)
 	}, [])
+
 	return (
-		<div className={`cookiePopupWrap ${addClass ? 'show' : 'hidden'}`}>
+		<div
+			className={`cookiePopupWrap ${
+				isVisible ? 'cookiePopupWrapVisible' : ''
+			}`}
+			role='dialog'
+			aria-live='polite'
+			aria-label='Cookies'
+			aria-hidden={!isVisible}
+		>
 			<div className='cookiePopupTitleWrap'>
-				<BiSolidCookie className='cookiePopupTitleIcon' color='#dd850b' />
-				<h2 className='cookiePopupTitleText'>Cookies Consent</h2>
+				<BiSolidCookie className='cookiePopupTitleIcon' aria-hidden='true' />
+				<h2 className='cookiePopupTitleText'>Cookies</h2>
 			</div>
 			<p className='cookiePopupText'>{t('coockieAlert.text')}</p>
 			<div className='cookiePopupBtnWrap'>
-				<button onClick={acceptBtnClick} className='cookiePopupBtnAccept'>
+				<button
+					type='button'
+					onClick={acceptBtnClick}
+					className='cookiePopupBtnAccept'
+				>
 					<p>{t('coockieAlertAccept.text')}</p>
 				</button>
-				<button onClick={declineBtnClick} className='cookiePopupBtnDecline'>
+				<button
+					type='button'
+					onClick={declineBtnClick}
+					className='cookiePopupBtnDecline'
+				>
 					<p>{t('coockieAlertClose.text')}</p>
 				</button>
 			</div>

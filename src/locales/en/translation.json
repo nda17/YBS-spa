@@ -1,21 +1,21 @@
 {
-	"buttonGoBack": {
-		"text": "Back"
-	},
 	"headerHome": {
 		"home": "Home"
 	},
 	"headerServices": {
 		"services": "Services"
 	},
-	"headerGallery": {
-		"gallery": "Gallery"
+	"headerPortfolio": {
+		"portfolio": "Projects"
 	},
 	"headerCalculation": {
 		"calculation": "Calculator"
 	},
 	"headerContacts": {
 		"contacts": "Contacts"
+	},
+	"footerOfferDisclaimer": {
+		"text": "The information on this website is not a public offer under Article 437 of the Civil Code of the Russian Federation"
 	},
 	"mainScreenSlogan": {
 		"title": "Full cycle digital agency"
@@ -35,20 +35,233 @@
 	"sloganText": {
 		"text": "«If I had asked people what they wanted, they would have said faster horses.»"
 	},
+	"landingIntroTitle": {
+		"text": "A website works as part of the business"
+	},
+	"landingIntroText": {
+		"text": "We combine strategy, design, development, and launch into one clear process: from the first idea to leads, sales, and ongoing support."
+	},
+	"landingIntroStrategyTitle": {
+		"text": "Strategy"
+	},
+	"landingIntroStrategyText": {
+		"text": "We clarify the task, audience, and customer journey so the website solves a specific business goal."
+	},
+	"landingIntroDesignTitle": {
+		"text": "Interface"
+	},
+	"landingIntroDesignText": {
+		"text": "We design the structure, visual style, and responsive screens without unnecessary noise."
+	},
+	"landingIntroLaunchTitle": {
+		"text": "Launch"
+	},
+	"landingIntroLaunchText": {
+		"text": "We build, connect analytics, forms, integrations, and help move the project into production."
+	},
+	"landingProcessTitle": {
+		"text": "How the work goes"
+	},
+	"landingProcessText": {
+		"text": "We move through short and clear stages, so you can see progress and make decisions without chaos."
+	},
+	"landingProcessBriefTitle": {
+		"text": "Brief"
+	},
+	"landingProcessBriefText": {
+		"text": "We define goals, constraints, timelines, content, and the expected result."
+	},
+	"landingProcessPrototypeTitle": {
+		"text": "Prototype"
+	},
+	"landingProcessPrototypeText": {
+		"text": "We assemble page structure and user scenarios before moving into visual design."
+	},
+	"landingProcessBuildTitle": {
+		"text": "Development"
+	},
+	"landingProcessBuildText": {
+		"text": "We code, adapt, test, and connect the services the project needs."
+	},
+	"landingProcessLaunchTitle": {
+		"text": "Launch"
+	},
+	"landingProcessLaunchText": {
+		"text": "We check forms, speed, analytics, and hand the project over for real use."
+	},
+	"landingParallaxTitle": {
+		"text": "From idea to working digital product"
+	},
+	"landingParallaxText": {
+		"text": "We build a tool that helps explain, sell, and scale a business."
+	},
+	"landingPortfolioTitle": {
+		"text": "Real projects"
+	},
+	"landingPortfolioText": {
+		"text": "Domains:"
+	},
+	"landingPortfolioDesktop": {
+		"text": "Desktop"
+	},
+	"landingPortfolioMobile": {
+		"text": "Mobile"
+	},
+	"landingPortfolioOpen": {
+		"text": "Open website"
+	},
+	"landingPortfolioShowMore": {
+		"text": "Show more projects"
+	},
+	"landingPortfolioShowLess": {
+		"text": "Show less projects"
+	},
+	"landingBentoTitle": {
+		"text": "What makes the landing stronger"
+	},
+	"landingBentoText": {
+		"text": "We add useful interaction, clear structure, and conversion details that help visitors understand the offer and leave a request."
+	},
+	"landingBentoSpeedTitle": {
+		"text": "Speed"
+	},
+	"landingBentoSpeedText": {
+		"text": "We optimize structure, media, and animation so the website feels light."
+	},
+	"landingBentoAdaptiveTitle": {
+		"text": "Responsive"
+	},
+	"landingBentoAdaptiveText": {
+		"text": "We polish desktop, tablet, and mobile screens without random gaps."
+	},
+	"landingBentoAnalyticsTitle": {
+		"text": "Analytics"
+	},
+	"landingBentoAnalyticsText": {
+		"text": "We connect goals, events, and a clear picture of incoming leads."
+	},
+	"landingBentoIntegrationsTitle": {
+		"text": "Integrations"
+	},
+	"landingBentoIntegrationsText": {
+		"text": "Forms, messengers, CRM, payments, and external services."
+	},
+	"landingBentoSupportTitle": {
+		"text": "Support"
+	},
+	"landingBentoSupportText": {
+		"text": "We help after launch with updates, growth, and technical stability."
+	},
+	"landingBentoPromotionTitle": {
+		"text": "Promotion"
+	},
+	"landingBentoPromotionText": {
+		"text": "We collect search keywords, set up basic SEO, and can take further promotion to the top of search results on ourselves."
+	},
+	"landingStatsTitle": {
+		"text": "Team and process"
+	},
+	"landingStatsText": {
+		"text": "We work as a cross-platform Agile/Scrum team: short discussions matter more than long approvals, while sprints keep development, support, and decisions moving."
+	},
+	"landingStatsTeamLabel": {
+		"text": "people in the team"
+	},
+	"landingStatsDirectionsLabel": {
+		"text": "tracks: development and support"
+	},
+	"landingStatsRolesLabel": {
+		"text": "roles: PO, analytics, design, development, QA"
+	},
+	"landingStatsSprintLabel": {
+		"text": "Agile/Scrum rhythm for every project"
+	},
+	"landingPortfolioFilterAll": {
+		"text": "All"
+	},
+	"landingPortfolioFilterMedical": {
+		"text": "Medical"
+	},
+	"landingPortfolioFilterCommerce": {
+		"text": "Commerce"
+	},
+	"landingPortfolioFilterServices": {
+		"text": "Services"
+	},
+	"landingPortfolioFilterCorporate": {
+		"text": "Corporate"
+	},
+	"landingPortfolioCase": {
+		"text": "Case"
+	},
+	"landingPortfolioFeatured": {
+		"text": "Our company project"
+	},
+	"landingPortfolioClose": {
+		"text": "Close case"
+	},
+	"landingCtaTitle": {
+		"text": "Let us build a website that looks stronger than competitors"
+	},
+	"landingCtaText": {
+		"text": "Start with a quick estimate or discuss the task, timeline, and launch format right away."
+	},
+	"landingCtaCalculate": {
+		"text": "Calculate project"
+	},
+	"landingCtaContacts": {
+		"text": "Discuss task"
+	},
+	"landingFaqTitle": {
+		"text": "FAQ"
+	},
+	"landingFaqText": {
+		"text": "Short answers about timing, launch, and what we need from you at the start."
+	},
+	"landingFaqQuestionA": {
+		"text": "How long does a launch take?"
+	},
+	"landingFaqAnswerA": {
+		"text": "A small landing can be prepared in a few weeks. The exact timing depends on content, integrations, and design complexity."
+	},
+	"landingFaqQuestionB": {
+		"text": "Can you improve an existing website?"
+	},
+	"landingFaqAnswerB": {
+		"text": "Yes. We first review the current structure, code, and goals, then suggest a safe improvement plan."
+	},
+	"landingFaqQuestionC": {
+		"text": "What do you need to start?"
+	},
+	"landingFaqAnswerC": {
+		"text": "It is enough to describe the task, audience, services, and examples of websites that feel close to what you want."
+	},
+	"landingFaqQuestionD": {
+		"text": "Do you help after launch?"
+	},
+	"landingFaqAnswerD": {
+		"text": "Yes. We can support the website, add sections, update content, and watch the technical side."
+	},
+	"landingFaqQuestionE": {
+		"text": "Can I order promotion?"
+	},
+	"landingFaqAnswerE": {
+		"text": "Yes. We offer different promotion options: from basic SEO and contextual advertising setup to a full advertising campaign."
+	},
 	"cardTitle": {
-		"title": "What do we do and what can we do for you ?"
+		"title": "Our services"
 	},
 	"cardPriceA": {
-		"price": "from 15000 ₽"
+		"price": "from 30000 ₽"
 	},
 	"cardPriceB": {
-		"price": "from 25000 ₽"
+		"price": "from 45000 ₽"
 	},
 	"cardPriceC": {
 		"price": "from 7000 ₽"
 	},
 	"cardPriceD": {
-		"price": "from 35000 ₽"
+		"price": "from 70000 ₽"
 	},
 	"cardPriceE": {
 		"price": "from 30000 ₽"
@@ -138,163 +351,97 @@
 		"text": "More info"
 	},
 	"cardTextBackSideA": {
-		"text": "We will create a business card website or a landing page for your product. Everything is short and to the point on one page. Both Tilda and HTML/BEM, CSS/SCSS/SASS, Pixel Perfect, Vue, JavaScript, Typescript, Coffescript, React JS, React Native, Bootstrap, TailWind, Webpack, Gulp, GIT, Photoshop, Illustrator, After Effects, Figma and others."
+		"text": "Landing page, business site, or SPA for a clear task."
 	},
 	"cardTextBackSideB": {
-		"text": "Websites and web applications for serious companies, with the ability to implement scalable projects for any task."
+		"text": "Multipage website or scalable web application."
 	},
 	"cardTextBackSideC": {
-		"text": "We will take care of all the maintenance, updating and maintenance of your site."
+		"text": "Updates, support, fixes, and stability checks."
 	},
 	"cardTextBackSideD-A": {
-		"text": "Creation of full-fledged online stores with goods, services or the creation of online storefronts."
+		"text": "Online store or catalog storefront."
 	},
 	"cardTextBackSideD-B": {
-		"text": "A showcase is an advertising catalog, which contains detailed information about each item of goods available for order."
+		"text": "Product cards, structure, and order flow."
 	},
 	"cardTextBackSideE-A": {
-		"text": "SEO optimization."
+		"text": "SEO audit."
 	},
 	"cardTextBackSideE-B": {
-		"text": "Preparation of technical specifications. Site audit."
+		"text": "Brief and site check."
 	},
 	"cardTextBackSideE-C": {
-		"text": "Implementing accessibility and semantics."
+		"text": "Semantics and accessibility."
 	},
 	"cardTextBackSideE-D": {
-		"text": "Transferring a site from one platform to another."
+		"text": "Platform migration."
 	},
 	"cardTextBackSideF-A": {
-		"text": "Creation and configuration of course entities: trainings, lessons and assignments on the GetCourse platform."
+		"text": "Course setup."
 	},
 	"cardTextBackSideF-B": {
-		"text": "Creation, setup and holding of webinars on the Bizon365 platform."
+		"text": "Webinars."
 	},
 	"cardTextBackSideF-C": {
-		"text": "Creation and setup of autowebinars."
+		"text": "Autowebinars."
 	},
 	"cardTextBackSideF-D": {
-		"text": "amoCRM setup. Synchronization of amoCRM with Bizon365 and GetCourse."
+		"text": "amoCRM."
 	},
 	"cardTextBackSideF-E": {
-		"text": "WhatsApp connection to amoCRM. Installing online telephony with Sipuni."
+		"text": "Communication integrations."
 	},
 	"cardTextBackSideG": {
-		"text": "Creating, setting up and conducting webinars on the platform, setting up autowebinars."
+		"text": "Webinars and autowebinars for your funnel."
 	},
 	"cardTextBackSideH": {
-		"text": "Implementation of CRM systems. Connecting messengers to CRM. Integration of online telephony."
+		"text": "CRM, messengers, and telephony in one flow."
 	},
 	"cardTextBackSideI": {
-		"text": "Payment systems: integration of payment systems on the site, for convenient online payment."
+		"text": "We connect convenient online payments."
 	},
 	"cardTextBackSideJ-A": {
-		"text": "Creating a Buyer Movement Map and implementing it in the funnel."
+		"text": "Customer journey map."
 	},
 	"cardTextBackSideJ-B": {
-		"text": "Creation and configuration of SMS-mailing. Creating and configuring auto calls."
+		"text": "SMS and auto calls."
 	},
 	"cardTextBackSideJ-C": {
-		"text": "Funnel implementation in chatbots."
+		"text": "Chatbot funnels."
 	},
 	"cardTextBackSideK": {
-		"text": "Creation and configuration of chat bots, integration of communication settings via Whats App, Telegram, VK."
+		"text": "Chatbots for WhatsApp, Telegram, and VK."
 	},
 	"cardTextBackSideL-A": {
-		"text": "Writing a sales text."
+		"text": "Sales copy."
 	},
 	"cardTextBackSideL-B": {
-		"text": "Development and implementation of marketing activities suitable for your segment and your activity."
+		"text": "Marketing campaigns."
 	},
 	"cardTextBackSideL-C": {
-		"text": "Monitoring of competitors, competitive analysis."
+		"text": "Competitor analysis."
 	},
 	"cardTextBackSideL-D": {
-		"text": "Work with bloggers and opinion leaders."
+		"text": "Opinion leader outreach."
 	},
 	"cardTextBackSideM": {
-		"text": "SWOT analysis, ABC analysis, development and application of anti-crisis measures."
+		"text": "SWOT, ABC, and crisis response."
 	},
 	"cardTextBackSideN-A": {
-		"text": "Creating a sales department, increasing conversions, increasing market share, improving the skills and competence of the sales department."
+		"text": "Sales team and conversion growth."
 	},
 	"cardTextBackSideN-B": {
-		"text": "Creation and expansion of the customer funnel."
+		"text": "Customer funnel."
 	},
 	"cardTextBackSideO": {
-		"text": "Calling a potential base of cold customers, sending out CPs, creating a funnel of customers."
+		"text": "Cold calls, offers, and lead-base handling."
 	},
 	"cardTextBackSideP-A": {
-		"text": "Sale, installation and configuration of licensed software."
+		"text": "Licensed software."
 	},
 	"cardTextBackSideP-B": {
-		"text": "Tuning, optimizing and upgrading your equipment."
-	},
-	"galleryTitle": {
-		"title": "Layout gallery"
-	},
-	"galleryCardOutsourcing": {
-		"title": "HR outsourcing website :"
-	},
-	"galleryCardBank": {
-		"title": "Banking services website :"
-	},
-	"galleryCardPortfolio": {
-		"title": "Agency portfolio :"
-	},
-	"galleryCardConcierge": {
-		"title": "Concierge service :"
-	},
-	"galleryCardCosmetics": {
-		"title": "Online cosmetics store :"
-	},
-	"galleryCardBrands": {
-		"title": "Website for packaging branded items :"
-	},
-	"galleryCardClinique": {
-		"title": "Family medicine clinic :"
-	},
-	"galleryCardCafe": {
-		"title": "Website cafe :"
-	},
-	"galleryCardDesign": {
-		"title": "Website for arrangement of premises :"
-	},
-	"galleryCardFreelance": {
-		"title": "Freelance platform :"
-	},
-	"galleryCardFurniture": {
-		"title": "Online store of household goods :"
-	},
-	"galleryCardJewerly": {
-		"title": "Jewelry store :"
-	},
-	"galleryCardMarketing": {
-		"title": "Marketing services :"
-	},
-	"galleryCardMedical": {
-		"title": "Medical clinic website :"
-	},
-	"galleryCardMessenger": {
-		"title": "Corporate messenger website :"
-	},
-	"galleryCardMusic": {
-		"title": "Music processing site :"
-	},
-	"galleryCardNeiro": {
-		"title": "Website of a neurotechnology development company :"
-	},
-	"galleryCardPage": {
-		"title": "Device landing page :"
-	},
-	"galleryCardTracker": {
-		"title": "Fitness tracker app website :"
-	},
-	"galleryCardVideo": {
-		"title": "Video platform website :"
-	},
-	"galleryCardVpn": {
-		"title": "VPN service website :"
+		"text": "Hardware setup."
 	},
 	"formMainTitleA": {
 		"text": "Below you can calculate the approximate cost of our work and send us a request."
@@ -398,6 +545,12 @@
 	"contactsTitle": {
 		"text": "Contacts"
 	},
+	"contactsCompany": {
+		"text": "Your Business Site"
+	},
+	"contactsTelegramChannel": {
+		"text": "YBS Telegram channel"
+	},
 	"contactsPhone": {
 		"text": "Our phone: +79990860186"
 	},
@@ -406,9 +559,6 @@
 	},
 	"contactsTg": {
 		"text": "Write to us on Telegram"
-	},
-	"contactsBe": {
-		"text": "Link to our Behance"
 	},
 	"contactsEmailDevelopment": {
 		"text": "For orders: zakaz@ybs.one"
@@ -420,4 +570,3 @@
 		"text": "We create your websites and applications!"
 	}
 }
-

@@ -7,9 +7,17 @@ const MainVideoBackground = () => {
 	return (
 		<div>
 			<div className='bgGradientFilter'></div>
-			<video className='bgMainVideo' autoPlay muted playsInline loop>
-				<source src={videomp4} />
-				<source src={videowebm} />
+			<video
+				className='bgMainVideo'
+				autoPlay
+				muted
+				playsInline
+				loop
+				preload='metadata'
+				aria-hidden='true'
+			>
+				<source src={videowebm} type='video/webm' />
+				<source src={videomp4} type='video/mp4' />
 			</video>
 		</div>
 	)

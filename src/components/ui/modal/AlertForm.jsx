@@ -1,11 +1,13 @@
 import './AlertForm.scss'
 import '../../../assets/styles/media-queries.scss'
 
-const AlertForm = () => {
+const AlertForm = ({ alertRef, ruMessageRef, enMessageRef }) => {
 	return (
-		<article className='alertForm'>
-			<p className='alertFormRu'>YBS</p>
-			<p className='alertFormEn'></p>
+		<article className='alertForm' ref={alertRef}>
+			<p className='alertFormRu' ref={ruMessageRef}>
+				YBS
+			</p>
+			<p className='alertFormEn' ref={enMessageRef}></p>
 		</article>
 	)
 }

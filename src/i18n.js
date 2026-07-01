@@ -1,25 +1,31 @@
-import i18n, { changeLanguage } from 'i18next'
+import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
-import Backend from 'i18next-http-backend'
+import enTranslation from './locales/en/translation.json'
+import ruTranslation from './locales/ru/translation.json'
+import ruRuTranslation from './locales/ru-RU/translation.json'
 
 i18n
-	.use(Backend)
 	.use(LanguageDetector)
 	.use(initReactI18next)
 	.init({
-		debug: true,
-		defaultLocale: 'ru',
+		debug: import.meta.env.DEV,
 		fallbackLng: 'en',
-		//TODO: Development server paths locales
-		backend: {
-			loadPath: 'src/locales/{{lng}}/translation.json'
+		supportedLngs: ['en', 'ru', 'ru-RU'],
+		resources: {
+			en: {
+				translation: enTranslation
+			},
+			ru: {
+				translation: ruTranslation
+			},
+			'ru-RU': {
+				translation: ruRuTranslation
+			}
+		},
+		interpolation: {
+			escapeValue: false
 		}
-		//TODO: Hosting paths locales
-		// backend: {
-		// 	loadPath:
-		// 		'locales/{{lng}}/translation.json'
-		// }
 	})
 
 export { i18n }

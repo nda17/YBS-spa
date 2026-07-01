@@ -1,25 +1,141 @@
+.main.container-lg {
+	width: 100%;
+	max-width: none;
+	margin-right: 0;
+	margin-left: 0;
+}
+
 .main {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
+	--pageParallaxSlow: 0px;
+	--pageParallaxFast: 0px;
+	--pageScrollProgress: 0;
 	flex: 1 1 auto;
-	border-left: 3px solid #2e2e2e;
-	border-right: 3px solid #2e2e2e;
 	position: relative;
+	isolation: isolate;
+	background: linear-gradient(
+		145deg,
+		#020303 0%,
+		#070909 36%,
+		#0a0d0f 68%,
+		#030404 100%
+	);
+	min-height: 100vh;
 }
 
-.main {
-	background: #080606;
-	overflow-y: auto;
+.pageProgressBar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: var(--z-progress);
+	height: 0.18rem;
+	pointer-events: none;
+	background: linear-gradient(90deg, #b8860b, #0f726e, #f5deb3);
+	transform: scaleX(var(--pageScrollProgress));
+	transform-origin: left center;
 }
 
-/* Скрытие scrollbar для Chrome, Safari и Opera */
-.main::-webkit-scrollbar {
-	display: none;
+.main::after {
+	content: '';
+	position: fixed;
+	z-index: 0;
+	inset: 0;
+	pointer-events: none;
+	background:
+		linear-gradient(
+			180deg,
+			rgba(2, 3, 3, 0.08) 0%,
+			rgba(5, 14, 14, 0.34) 48%,
+			rgba(3, 4, 4, 0.82) 100%
+		),
+		linear-gradient(
+			120deg,
+			rgba(184, 134, 11, 0.08) 0%,
+			transparent 34%,
+			rgba(245, 222, 179, 0.04) 72%,
+			transparent 100%
+		);
 }
 
-/* Скрытие scrollbar для IE, Edge и Firefox */
-.main {
-	-ms-overflow-style: none; /* IE и Edge */
-	scrollbar-width: none; /* Firefox */
+.mainParallaxBackground {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 0;
+	height: 100vh;
+	min-height: 100vh;
+	overflow: hidden;
+	pointer-events: none;
+	background:
+		linear-gradient(90deg, rgba(184, 134, 11, 0.035) 1px, transparent 1px),
+		linear-gradient(0deg, rgba(245, 222, 179, 0.025) 1px, transparent 1px),
+		linear-gradient(
+			135deg,
+			rgba(2, 3, 3, 0.98) 0%,
+			rgba(8, 10, 10, 0.94) 34%,
+			rgba(11, 13, 15, 0.96) 66%,
+			rgba(3, 4, 4, 0.98) 100%
+		);
+	background-size: 4.75rem 4.75rem, 4.75rem 4.75rem, auto;
+}
+
+.mainParallaxLayer {
+	position: absolute;
+	inset: -22%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	will-change: transform;
+}
+
+.mainParallaxLayerSlow {
+	inset: -24% -36%;
+	opacity: 0.52;
+	background-image:
+		linear-gradient(
+			115deg,
+			rgba(5, 6, 6, 0.82) 0%,
+			rgba(8, 8, 8, 0.34) 48%,
+			rgba(5, 6, 6, 0.84) 100%
+		),
+		url('../../public/images/parallax-background.webp');
+	background-size: cover, max(120rem, 145vw) auto;
+	background-position: center, center;
+	transform: translate3d(0, var(--pageParallaxSlow), 0) scale(1.12);
+}
+
+.mainParallaxLayerFast {
+	opacity: 0.16;
+	background-image:
+		linear-gradient(
+			45deg,
+			rgba(184, 134, 11, 0.16) 0%,
+			rgba(5, 6, 6, 0.22) 42%,
+			rgba(245, 222, 179, 0.08) 100%
+		),
+		repeating-linear-gradient(
+			128deg,
+			transparent 0,
+			transparent 7rem,
+			rgba(245, 222, 179, 0.06) 7.08rem,
+			transparent 7.22rem
+		);
+	background-repeat: no-repeat, repeat;
+	background-size: cover, 24rem 24rem;
+	background-position: right center, center;
+	transform: translate3d(0, var(--pageParallaxFast), 0) scale(1.18);
+}
+
+.mainContent {
+	position: relative;
+	z-index: 1;
+	min-height: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.mainParallaxLayerSlow,
+	.mainParallaxLayerFast {
+		transform: none;
+	}
 }

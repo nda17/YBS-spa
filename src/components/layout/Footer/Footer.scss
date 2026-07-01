@@ -1,27 +1,43 @@
+.footer.container-lg {
+	width: 100%;
+	max-width: none;
+	margin-right: 0;
+	margin-left: 0;
+}
+
 .footer {
 	position: relative;
 }
 
 .footerNav {
-	padding: 0rem 1.1rem 0.18rem 1.1rem;
+	padding: 0;
 	box-sizing: content-box;
-	height: 2.9rem;
-	background: #2e2e2e;
+	height: 5.8rem;
+	background: linear-gradient(
+		90deg,
+		rgba(8, 6, 6, 0.94),
+		rgba(30, 35, 34, 0.82),
+		rgba(8, 6, 6, 0.92)
+	);
+	backdrop-filter: blur(1rem);
+	border-top: 1px solid rgba(184, 134, 11, 0.28);
+	box-shadow: 0 -0.75rem 1.6rem rgba(0, 0, 0, 0.2);
 	position: relative;
-	z-index: 9999999999;
+	z-index: var(--z-sticky);
 }
 
 .footerWrap {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
+	height: 100%;
+	position: relative;
 }
 
 .footerIconWrap {
 	display: flex;
-	transition: all 0.6s;
 	position: absolute;
-	top: 0.5rem;
+	top: 2.2rem;
 	right: 1.1rem;
 }
 
@@ -35,9 +51,9 @@
 .footerLogoWrap {
 	width: 1.8rem;
 	height: 1.8rem;
-	transition: all 0.4s;
+	transition: transform 0.4s ease;
 	position: absolute;
-	top: 0.3rem;
+	top: 2rem;
 	left: 1.9rem;
 	&:hover {
 		transform: scale(0.92);
@@ -54,14 +70,15 @@
 }
 
 .footerInfoTextFirst,
-.footerInfoTextSecond {
+.footerInfoTextSecond,
+.footerOfferDisclaimer {
 	color: #b8860b;
 	text-align: center;
 }
 
 .footerInfoTextFirst {
 	position: absolute;
-	top: 2.3rem;
+	top: 4.6rem;
 	left: 1.1rem;
 	font-size: 0.6rem;
 	font-weight: 500;
@@ -69,13 +86,28 @@
 
 .footerInfoTextSecond {
 	position: absolute;
-	top: 2rem;
+	top: 2.55rem;
+	left: 50%;
+	width: min(34rem, calc(100% - 8rem));
+	margin-bottom: 0.35rem;
 	text-align: center;
-	right: 1.2rem;
-	margin: auto;
 	font-size: 0.6rem;
 	font-weight: 900;
 	font-style: italic;
+	transform: translateX(-50%);
+}
+
+.footerOfferDisclaimer {
+	position: absolute;
+	top: 4.25rem;
+	left: 50%;
+	width: min(42rem, calc(100% - 8rem));
+	margin: 0;
+	font-size: 0.52rem;
+	font-weight: 500;
+	line-height: 1.25;
+	opacity: 0.78;
+	transform: translateX(-50%);
 }
 
 .footerLinkIcon {
@@ -84,67 +116,127 @@
 }
 
 .iconPhone {
-	animation: pulse-icons 1.8s linear infinite;
-}
-
-.iconBehance {
-	animation: pulse-icons 1.6s linear infinite;
+	animation: footerPulseIcons 1.8s linear infinite;
 }
 
 .iconWhatsapp {
-	animation: pulse-icons 1.4s linear infinite;
+	animation: footerPulseIcons 1.4s linear infinite;
 }
 
 .iconTelegram {
-	animation: pulse-icons 1.2s linear infinite;
+	animation: footerPulseIcons 1.2s linear infinite;
 }
 
 .iconGithub {
-	animation: pulse-icons 1.7s linear infinite;
+	animation: footerPulseIcons 1.7s linear infinite;
 }
 
 //Animation keyframes
-@keyframes pulse-icons {
+@keyframes footerPulseIcons {
 	0% {
 		scale: 1;
-		-webkit-transition: 1s all;
-		-o-transition: 1s all;
-		transition: 1s all;
 	}
 
 	20% {
 		scale: 1.04;
-		-webkit-transition: 1s all;
-		-o-transition: 1s all;
-		transition: 1s all;
 	}
 
 	40% {
 		scale: 1.08;
-		-webkit-transition: 1s all;
-		-o-transition: 1s all;
-		transition: 1s all;
 	}
 
 	60% {
 		scale: 1.08;
-		-webkit-transition: 1s all;
-		-o-transition: 1s all;
-		transition: 1s all;
 	}
 
 	80% {
 		scale: 1.04;
-		-webkit-transition: 1s all;
-		-o-transition: 1s all;
-		transition: 1s all;
 	}
 
 	100% {
 		scale: 1;
-		-webkit-transition: 1s all;
-		-o-transition: 1s all;
-		transition: 1s all;
 	}
 }
 ////
+
+@media (max-width: 575.98px) {
+	.footerNav {
+		height: auto;
+		min-height: 8.8rem;
+		padding: 1rem 0;
+	}
+
+	.footerWrap {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		grid-template-areas:
+			'logo icons'
+			'rights rights'
+			'disclaimer disclaimer'
+			'years years';
+		gap: 0.75rem 1rem;
+		align-items: center;
+		width: calc(100% - 2rem) !important;
+		margin: 0 auto;
+	}
+
+	.footerLogoWrap {
+		position: static !important;
+		grid-area: logo;
+		width: 2rem;
+		height: 2rem;
+	}
+
+	.footerLogoIcon {
+		width: 2rem;
+		height: 2rem;
+	}
+
+	.footerIconWrap {
+		position: static !important;
+		grid-area: icons;
+		justify-content: flex-end;
+		gap: 1.05rem;
+	}
+
+	.footerIconLink {
+		margin-right: 0;
+	}
+
+	.footerLinkIcon {
+		width: 1.55rem !important;
+		height: 1.55rem !important;
+	}
+
+	.footerInfoTextWrap {
+		display: contents;
+	}
+
+	.footerInfoTextSecond {
+		position: static !important;
+		grid-area: rights;
+		width: 100%;
+		max-width: none;
+		transform: none;
+		font-size: 0.72rem !important;
+		line-height: 1.35;
+		text-align: center;
+	}
+
+	.footerOfferDisclaimer {
+		position: static !important;
+		grid-area: disclaimer;
+		width: 100%;
+		transform: none;
+		font-size: 0.62rem !important;
+		line-height: 1.35;
+	}
+
+	.footerInfoTextFirst {
+		position: static !important;
+		grid-area: years;
+		font-size: 0.78rem !important;
+		line-height: 1.2;
+		text-align: center;
+	}
+}

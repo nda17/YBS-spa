@@ -1,12 +1,22 @@
 import { useTranslation } from 'react-i18next'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import FormVideoBackground from '../../screens/FormVideoBackground'
 import AlertForm from '../../ui/modal/AlertForm'
 import './FormMain.scss'
 import '../../../assets/styles/media-queries.scss'
 
 const FormMain = () => {
-	const { t, i18n } = useTranslation()
+	const { t } = useTranslation()
+	const formCalcRef = useRef(null)
+	const formWrapperRef = useRef(null)
+	const titleRef = useRef(null)
+	const usernameInputRef = useRef(null)
+	const emailInputRef = useRef(null)
+	const telInputRef = useRef(null)
+	const alertRef = useRef(null)
+	const alertRuMessageRef = useRef(null)
+	const alertEnMessageRef = useRef(null)
+	const alertTimerRef = useRef(null)
 	//Блок с калькулятором цен на услуги:
 	const [price, setPrice] = useState(0)
 	const [oldPrice, setOldPrice] = useState(0)
@@ -76,9 +86,13 @@ const FormMain = () => {
 	}
 	//Функция расчета стоимости (принимает новое значение состояния измененного компонента):
 	const changePrice = props => {
-		setPrice(price + Number(props))
+		setPrice(currentPrice => currentPrice + Number(props))
 	}
 	useEffect(() => {
+		const formWrapperElement = formWrapperRef.current
+		if (!formWrapperElement) {
+			return
+		}
 		const onEntry = entry => {
 			entry.forEach(change => {
 				if (change.isIntersecting) {
@@ -86,20 +100,55 @@ const FormMain = () => {
 				}
 			})
 		}
-		let options = {
+		const options = {
 			threshold: [0]
 		}
-		let observer = new IntersectionObserver(onEntry, options)
-		let elements = document.querySelectorAll('.formWrapper')
-		for (let elm of elements) {
-			observer.observe(elm)
-		}
+		const observer = new IntersectionObserver(onEntry, options)
+		observer.observe(formWrapperElement)
+
+		return () => observer.disconnect()
 	}, [])
 	//Блок с формой введеных данных (name, email, phone number) and button Submit:
 	const [inputUsername, setInputUsername] = useState('')
 	const [inputEmail, setInputEmail] = useState('')
 	const [inputTel, setInputTel] = useState('')
-	const formCalc = document.querySelector('.form-calc')
+	const setInputValidationState = (inputRef, isValid) => {
+		if (inputRef.current) {
+			inputRef.current.style.outline = isValid
+				? '2px green solid'
+				: '2px tomato solid'
+		}
+	}
+	const resetInputValidationState = () => {
+		const contactInputRefs = [usernameInputRef, emailInputRef, telInputRef]
+
+		contactInputRefs.forEach(inputRef => {
+			if (inputRef.current) {
+				inputRef.current.style.outline = 'none'
+			}
+		})
+	}
+	const showFormAlert = ({ ruMessage, enMessage }) => {
+		if (
+			!alertRef.current ||
+			!alertRuMessageRef.current ||
+			!alertEnMessageRef.current
+		) {
+			return
+		}
+
+		alertRuMessageRef.current.innerText = ruMessage
+		alertEnMessageRef.current.innerText = enMessage
+		alertRef.current.classList.add('alertFormOpen')
+
+		if (alertTimerRef.current) {
+			clearTimeout(alertTimerRef.current)
+		}
+
+		alertTimerRef.current = setTimeout(() => {
+			alertRef.current?.classList.remove('alertFormOpen')
+		}, 2800)
+	}
 	//Валидация введенных данных перед отправкой:
 	const validate = () => {
 		let isValid = true
@@ -107,37 +156,31 @@ const FormMain = () => {
 		let isValidEmail = true
 		let isValidTel = true
 		//Валидация имени
-		const NAME_REGEXP = /[^0-9][a-zA-Z0-9\-]*$/
+		const NAME_REGEXP = /[^0-9][a-zA-Z0-9-]*$/
 		if (NAME_REGEXP.test(inputUsername)) {
-			document.querySelector('.form-control-username').style.outline =
-				'2px green solid'
+			setInputValidationState(usernameInputRef, true)
 			isValidName = true
 		} else {
-			document.querySelector('.form-control-username').style.outline =
-				'2px tomato solid'
+			setInputValidationState(usernameInputRef, false)
 			isValidName = false
 		}
 		//Валидация email
 		const EMAIL_REGEXP =
 			/^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu
 		if (EMAIL_REGEXP.test(inputEmail)) {
-			document.querySelector('.form-control-email').style.outline =
-				'2px green solid'
+			setInputValidationState(emailInputRef, true)
 			isValidEmail = true
 		} else {
-			document.querySelector('.form-control-email').style.outline =
-				'2px tomato solid'
+			setInputValidationState(emailInputRef, false)
 			isValidEmail = false
 		}
 		//Валидация номера телефона
 		const MOBILE_PHONE_REGEXP = /^(\+7|8)?(\d{10})$/
 		if (MOBILE_PHONE_REGEXP.test(inputTel)) {
-			document.querySelector('.form-control-tel').style.outline =
-				'2px green solid'
+			setInputValidationState(telInputRef, true)
 			isValidTel = true
 		} else {
-			document.querySelector('.form-control-tel').style.outline =
-				'2px tomato solid'
+			setInputValidationState(telInputRef, false)
 			isValidTel = false
 		}
 		isValidName && isValidEmail && isValidTel
@@ -155,18 +198,17 @@ const FormMain = () => {
 	const handleSubmit = event => {
 		event.preventDefault()
 		if (validate()) {
+			const normalizedProductOptions =
+				productOptions.length === 0 ? 'Не выбраны' : productOptions
+			const normalizedProductMarketing =
+				productMarketing.length === 0 ? 'Не выбраны' : productMarketing
+
 			fetch('https://formspree.io/f/xpzgzken', {
 				method: 'POST',
 				body: JSON.stringify({
 					'Необходимый тип сайта:': productType,
-					'Необходимые опции:':
-						productOptions.length === 0
-							? setProductOptions('Не выбраны')
-							: productOptions,
-					'Необходимые маркетинговые услуги:':
-						productMarketing.length === 0
-							? setProductMarketing('Не выбраны')
-							: productMarketing,
+					'Необходимые опции:': normalizedProductOptions,
+					'Необходимые маркетинговые услуги:': normalizedProductMarketing,
 					'Рассчитанная стоимость услуг': `${price} р.`,
 					'Имя клиента:': inputUsername,
 					'Email клиента:': inputEmail,
@@ -177,54 +219,68 @@ const FormMain = () => {
 				}
 			})
 				.then(response => {
-					const modal = document.querySelector('.alertForm')
-					const modalRu = document.querySelector('.alertFormRu')
-					const modalEn = document.querySelector('.alertFormEn')
 					if (response.ok) {
-						modalRu.innerText = 'Заявка отправлена.'
-						modalEn.innerText = 'Application sent.'
-						modal.classList.add('alertFormOpen')
-						formCalc.reset()
-						document.querySelector('.form-control-username').style.outline =
-							'none'
-						document.querySelector('.form-control-email').style.outline = 'none'
-						document.querySelector('.form-control-tel').style.outline = 'none'
-						setTimeout(() => modal.classList.remove('alertFormOpen'), 2800)
+						showFormAlert({
+							ruMessage: 'Заявка отправлена.',
+							enMessage: 'Application sent.'
+						})
+						formCalcRef.current?.reset()
+						resetInputValidationState()
 					} else {
-						modalRu.innerText = 'Ошибка 404 (Not found), попробуйте позже.'
-						modalEn.innerText = 'ERROR 404 (Not found), try later.'
-						modal.classList.add('alertFormOpen')
-						formCalc.reset()
-						document.querySelector('.form-control-username').style.outline =
-							'none'
-						document.querySelector('.form-control-email').style.outline = 'none'
-						document.querySelector('.form-control-tel').style.outline = 'none'
-						setTimeout(() => modal.classList.remove('alertFormOpen'), 2800)
+						showFormAlert({
+							ruMessage: 'Ошибка 404 (Not found), попробуйте позже.',
+							enMessage: 'ERROR 404 (Not found), try later.'
+						})
+						formCalcRef.current?.reset()
+						resetInputValidationState()
 					}
 				})
-				.catch(console.error)
+				.catch(() => {
+					showFormAlert({
+						ruMessage: 'Ошибка отправки, попробуйте позже.',
+						enMessage: 'Sending error, try later.'
+					})
+				})
 		}
 	}
-	const [show, setShow] = useState(false)
 	useEffect(() => {
-		const textElement = document.querySelector('.title')
-		setTimeout(() => {
-			setShow(true)
-			textElement.style.opacity = '1'
+		const timerId = setTimeout(() => {
+			if (titleRef.current) {
+				titleRef.current.style.opacity = '1'
+			}
 		}, 1000)
-	}, [show])
+
+		return () => clearTimeout(timerId)
+	}, [])
+	useEffect(() => {
+		return () => {
+			if (alertTimerRef.current) {
+				clearTimeout(alertTimerRef.current)
+			}
+		}
+	}, [])
 	return (
 		<>
-			<h3 className='title'>
+			<h3
+				className='sectionTitle sectionTitleDelayed animatedTitleFlicker'
+				ref={titleRef}
+			>
 				{t('formMainTitleA.text')}
 				<br />
 				{t('formMainTitleB.text')}
 			</h3>
-			<article className='row main-form-block formWrapper container-lg'>
+			<article
+				className='row main-form-block formWrapper container-lg'
+				ref={formWrapperRef}
+			>
 				<FormVideoBackground />
 				<div className='col-lg-7 col-md-9 col-sm-10 col-xs-12 service-calc'>
-					<AlertForm />
-					<form className='form-calc' onSubmit={handleSubmit}>
+					<AlertForm
+						alertRef={alertRef}
+						ruMessageRef={alertRuMessageRef}
+						enMessageRef={alertEnMessageRef}
+					/>
+					<form className='form-calc' ref={formCalcRef} onSubmit={handleSubmit}>
 						<div className='accordion' id='accordionExample'>
 							<div className='accordion-item'>
 								<h2 className='accordion-header' id='headingOne'>
@@ -615,6 +671,7 @@ const FormMain = () => {
 							<div className='form-contacts'>
 								<div className='form-group'>
 									<input
+										ref={usernameInputRef}
 										onChange={event => setInputUsername(event.target.value)}
 										required
 										onKeyDown={handleKeyDown}
@@ -627,6 +684,7 @@ const FormMain = () => {
 								</div>
 								<div className='form-group'>
 									<input
+										ref={emailInputRef}
 										onChange={event => setInputEmail(event.target.value)}
 										required
 										onKeyDown={handleKeyDown}
@@ -640,6 +698,7 @@ const FormMain = () => {
 								</div>
 								<div className='form-group'>
 									<input
+										ref={telInputRef}
 										onChange={event => setInputTel(event.target.value)}
 										required
 										onKeyDown={handleKeyDown}

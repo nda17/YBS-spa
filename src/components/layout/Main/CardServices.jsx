@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { useState, useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import spa from '../../../public/icons/card-icon/spa-white.svg'
 import mpa from '../../../public/icons/card-icon/mpa-white.svg'
 import service from '../../../public/icons/card-icon/service-white.svg'
@@ -20,15 +20,19 @@ import './CardServices.scss'
 import '../../../assets/styles/media-queries.scss'
 
 const CardServices = () => {
-	const { t, i18n } = useTranslation()
-	const [show, setShow] = useState(false)
+	const { t } = useTranslation()
+	const titleRef = useRef(null)
+
 	useEffect(() => {
-		const textElement = document.querySelector('.title')
-		setTimeout(() => {
-			setShow(true)
-			textElement.style.opacity = '1'
+		const timerId = setTimeout(() => {
+			if (titleRef.current) {
+				titleRef.current.style.opacity = '1'
+			}
 		}, 1000)
-	}, [show])
+
+		return () => clearTimeout(timerId)
+	}, [])
+
 	useEffect(() => {
 		const onEntry = entry => {
 			entry.forEach(change => {
@@ -37,19 +41,30 @@ const CardServices = () => {
 				}
 			})
 		}
-		let options = {
+		const options = {
 			threshold: [0]
 		}
-		let observer = new IntersectionObserver(onEntry, options)
-		let elements = document.querySelectorAll('.cardWrapper')
+		const observer = new IntersectionObserver(onEntry, options)
+		const elements = document.querySelectorAll('.cardWrapper')
 		for (let elm of elements) {
 			observer.observe(elm)
 		}
+
+		return () => observer.disconnect()
 	}, [])
+
 	return (
 		<>
-			<h3 className='title'>{t('cardTitle.title')}</h3>
-			<article className='row cardServicesWrapper' id='cards-service-link'>
+			<h3
+				className='sectionTitle sectionTitleDelayed animatedTitleFlicker'
+				ref={titleRef}
+			>
+				{t('cardTitle.title')}
+			</h3>
+			<article
+				className='row cardServicesWrapper'
+				id='cards-service-link'
+			>
 				<div className='wrapper-card-block col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-6'>
 					<div className='card cardWrapper'>
 						<div className='cover item-a'>
