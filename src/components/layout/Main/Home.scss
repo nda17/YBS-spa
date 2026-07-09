@@ -36,10 +36,13 @@
 	width: 90%;
 	margin: 0 auto;
 	position: absolute;
+	left: 0;
+	right: 0;
 	top: 35%;
 }
 
 .mainTitleText {
+	--heroTitleMaxWidth: 25ch;
 	pointer-events: none;
 	position: relative;
 	display: block;
@@ -52,8 +55,10 @@
 	text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
 	font-family: 'Montserrat';
 	margin: 0 auto 1.5rem auto;
+	padding: 0 0.12em;
 	transition: color 2s ease, width 2s ease, border-color 2s ease;
-	width: 15.2rem;
+	width: max-content;
+	max-width: var(--heroTitleMaxWidth);
 	white-space: nowrap; /* запрет переноса текста на другую строку */
 	overflow: hidden; /* скрытие переполнения контентом */
 	border-right: 3px solid var(--color-accent-soft); /* отрисовка курсора */
@@ -129,6 +134,7 @@
 	text-align: center;
 	font-family: 'Montserrat';
 	line-height: 1.3rem;
+	overflow-wrap: anywhere;
 	z-index: 1;
 }
 
@@ -192,9 +198,6 @@
 	font-weight: 400;
 	line-height: 2rem;
 	white-space: normal;
-	overflow: hidden;
-	clip-path: inset(0 100% 0 0);
-	animation: slogan_text_reveal 3s steps(44, end) forwards;
 	margin: 0 auto 0.4rem auto;
 }
 
@@ -202,8 +205,6 @@
 	padding: 0rem 1rem;
 	color: var(--color-text-muted);
 	font-style: normal;
-	opacity: 0;
-	transition: opacity 2s ease;
 	font-size: 1.15rem;
 	margin: 0 auto;
 }
@@ -244,6 +245,7 @@
 	margin-bottom: 0.8rem;
 	text-transform: uppercase;
 	letter-spacing: 0;
+	overflow-wrap: anywhere;
 }
 
 .landingSectionText {
@@ -312,11 +314,6 @@
 .landingCtaSection {
 	--titleFlickerDelay: -0.65s;
 	--titleFlickerDuration: 5.15s;
-}
-
-.landingCalculateSection {
-	--titleFlickerDelay: -2.45s;
-	--titleFlickerDuration: 4.7s;
 }
 
 .landingFaqSection {
@@ -485,7 +482,6 @@
 }
 
 .landingServicesSection,
-.landingCalculateSection,
 .landingContactsSection {
 	padding-left: 0;
 	padding-right: 0;
@@ -890,15 +886,6 @@
 	max-height: 12rem;
 }
 
-.landingCalculateSection .main-form-block {
-	margin-bottom: 0 !important;
-}
-
-.landingCalculateSection .service-calc {
-	padding-top: 5rem;
-	padding-bottom: 5rem;
-}
-
 .landingContactsSection {
 	padding-bottom: 4rem;
 }
@@ -1165,17 +1152,11 @@
 
 @keyframes heroPrintedText {
 	from {
-		width: 0;
-	}
-}
-
-@keyframes slogan_text_reveal {
-	from {
-		clip-path: inset(0 100% 0 0);
+		max-width: 0;
 	}
 
 	to {
-		clip-path: inset(0 0 0 0);
+		max-width: var(--heroTitleMaxWidth);
 	}
 }
 

@@ -51,7 +51,7 @@
 .card:hover .cover:after {
 	background-color: black;
 }
-.card:hover .cover h1 {
+.card:hover .cover [class^='card-title-'] {
 	transform: translateZ(6.25rem);
 }
 .card:hover .cover .price {
@@ -212,7 +212,7 @@
 	background-size: revert;
 }
 
-.card .cover h1 {
+.card .cover [class^='card-title-'] {
 	min-height: 3.2rem;
 	font-weight: 100;
 	position: absolute;
@@ -409,7 +409,7 @@
 		min-height: 20.5rem;
 	}
 
-	.card .cover h1 {
+	.card .cover [class^='card-title-'] {
 		font-size: 0.92rem;
 	}
 
@@ -459,7 +459,7 @@
 		min-height: 24rem;
 	}
 
-	.card .cover h1 {
+	.card .cover [class^='card-title-'] {
 		font-size: 1rem;
 	}
 
@@ -498,7 +498,7 @@
 		min-height: 20rem;
 	}
 
-	.card .cover h1 {
+	.card .cover [class^='card-title-'] {
 		font-size: 0.95rem;
 	}
 
@@ -592,4 +592,34 @@
 }
 .ellipse4 {
 	animation: interactiveMotion4 3s ease-out infinite;
+}
+
+.cardWrapper .textMoreInfo,
+.cardWrapper .ellipse0,
+.cardWrapper .ellipse1,
+.cardWrapper .ellipse2,
+.cardWrapper .ellipse3,
+.cardWrapper .ellipse4 {
+	animation-play-state: paused;
+}
+
+.cardWrapper.is-in-view .textMoreInfo,
+.cardWrapper.is-in-view .ellipse0,
+.cardWrapper.is-in-view .ellipse1,
+.cardWrapper.is-in-view .ellipse2,
+.cardWrapper.is-in-view .ellipse3,
+.cardWrapper.is-in-view .ellipse4 {
+	animation-play-state: running;
+}
+
+.cardWrapper.is-in-view .cover,
+.cardWrapper.is-in-view .cover:before,
+.cardWrapper.is-in-view .cover [class^='card-title-'],
+.cardWrapper.is-in-view .cover .price,
+.cardWrapper.is-in-view .cover .card-icon,
+.cardWrapper.is-in-view .cover a,
+.cardWrapper.is-in-view .card-back,
+.cardWrapper.is-in-view .card-back p,
+.cardWrapper.is-in-view .card-back .big-text {
+	will-change: transform;
 }

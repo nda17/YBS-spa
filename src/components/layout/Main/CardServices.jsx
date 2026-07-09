@@ -38,14 +38,28 @@ const CardServices = () => {
 			entry.forEach(change => {
 				if (change.isIntersecting) {
 					change.target.classList.add('show')
+					change.target.classList.add('is-in-view')
+					return
 				}
+
+				change.target.classList.remove('is-in-view')
 			})
 		}
 		const options = {
 			threshold: [0]
 		}
-		const observer = new IntersectionObserver(onEntry, options)
 		const elements = document.querySelectorAll('.cardWrapper')
+
+		if (!('IntersectionObserver' in window)) {
+			for (let elm of elements) {
+				elm.classList.add('show')
+				elm.classList.add('is-in-view')
+			}
+
+			return
+		}
+
+		const observer = new IntersectionObserver(onEntry, options)
 		for (let elm of elements) {
 			observer.observe(elm)
 		}
@@ -55,12 +69,12 @@ const CardServices = () => {
 
 	return (
 		<>
-			<h3
+			<h2
 				className='sectionTitle sectionTitleDelayed animatedTitleFlicker'
 				ref={titleRef}
 			>
 				{t('cardTitle.title')}
-			</h3>
+			</h2>
 			<article
 				className='row cardServicesWrapper'
 				id='cards-service-link'
@@ -69,8 +83,8 @@ const CardServices = () => {
 					<div className='card cardWrapper'>
 						<div className='cover item-a'>
 							<span className='price price-a'>{t('cardPriceA.price')}</span>
-							<img src={spa} alt='Pictures cards' className='card-icon' />
-							<h1 className='card-title-a'>{t('cardTextA.text')}</h1>
+							<img src={spa} alt='' className='card-icon' />
+							<h3 className='card-title-a'>{t('cardTextA.text')}</h3>
 							<div className='moreInfo'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -147,8 +161,8 @@ const CardServices = () => {
 					<div className='card cardWrapper'>
 						<div className='cover item-b'>
 							<span className='price price-b'>{t('cardPriceB.price')}</span>
-							<img src={mpa} alt='Pictures card' className='card-icon' />
-							<h1 className='card-title-b'>{t('cardTextB.text')}</h1>
+							<img src={mpa} alt='' className='card-icon' />
+							<h3 className='card-title-b'>{t('cardTextB.text')}</h3>
 							<div className='moreInfo'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -225,8 +239,8 @@ const CardServices = () => {
 					<div className='card cardWrapper'>
 						<div className='cover item-c'>
 							<span className='price price-c'>{t('cardPriceC.price')}</span>
-							<img src={service} alt='Pictures card' className='card-icon' />
-							<h1 className='card-title-c'>{t('cardTextC.text')}</h1>
+							<img src={service} alt='' className='card-icon' />
+							<h3 className='card-title-c'>{t('cardTextC.text')}</h3>
 							<div className='moreInfo'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -303,8 +317,8 @@ const CardServices = () => {
 					<div className='card cardWrapper'>
 						<div className='cover item-d'>
 							<span className='price price-d'>{t('cardPriceD.price')}</span>
-							<img src={eCommerce} alt='Pictures card' className='card-icon' />
-							<h1 className='card-title-d'>{t('cardTextD.text')}</h1>
+							<img src={eCommerce} alt='' className='card-icon' />
+							<h3 className='card-title-d'>{t('cardTextD.text')}</h3>
 							<div className='moreInfo'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -391,8 +405,8 @@ const CardServices = () => {
 					<div className='card cardWrapper'>
 						<div className='cover item-e'>
 							<span className='price price-e'>{t('cardPriceE.price')}</span>
-							<img src={speed} alt='Pictures card' className='card-icon' />
-							<h1 className='card-title-e'>{t('cardTextE.text')}</h1>
+							<img src={speed} alt='' className='card-icon' />
+							<h3 className='card-title-e'>{t('cardTextE.text')}</h3>
 							<div className='moreInfo'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -488,8 +502,8 @@ const CardServices = () => {
 					<div className='card cardWrapper'>
 						<div className='cover item-f'>
 							<span className='price price-f'>{t('cardPriceF.price')}</span>
-							<img src={school} alt='Pictures card' className='card-icon' />
-							<h1 className='card-title-f'>{t('cardTextF.text')}</h1>
+							<img src={school} alt='' className='card-icon' />
+							<h3 className='card-title-f'>{t('cardTextF.text')}</h3>
 							<div className='moreInfo'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -590,8 +604,8 @@ const CardServices = () => {
 					<div className='card cardWrapper'>
 						<div className='cover item-g'>
 							<span className='price price-g'>{t('cardPriceG.price')}</span>
-							<img src={webinar} alt='Pictures card' className='card-icon' />
-							<h1 className='card-title-g'>{t('cardTextG.text')}</h1>
+							<img src={webinar} alt='' className='card-icon' />
+							<h3 className='card-title-g'>{t('cardTextG.text')}</h3>
 							<div className='moreInfo'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -668,8 +682,8 @@ const CardServices = () => {
 					<div className='card cardWrapper'>
 						<div className='cover item-h'>
 							<span className='price price-h'>{t('cardPriceH.price')}</span>
-							<img src={crm} alt='Pictures card' className='card-icon' />
-							<h1 className='card-title-h'>{t('cardTextH.text')}</h1>
+							<img src={crm} alt='' className='card-icon' />
+							<h3 className='card-title-h'>{t('cardTextH.text')}</h3>
 							<div className='moreInfo'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -746,8 +760,8 @@ const CardServices = () => {
 					<div className='card cardWrapper'>
 						<div className='cover item-i'>
 							<span className='price price-i'>{t('cardPriceI.price')}</span>
-							<img src={payment} alt='Pictures card' className='card-icon' />
-							<h1 className='card-title-i'>{t('cardTextI.text')}</h1>
+							<img src={payment} alt='' className='card-icon' />
+							<h3 className='card-title-i'>{t('cardTextI.text')}</h3>
 							<div className='moreInfo'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -824,8 +838,8 @@ const CardServices = () => {
 					<div className='card cardWrapper'>
 						<div className='cover item-j'>
 							<span className='price price-j'>{t('cardPriceJ.price')}</span>
-							<img src={funnel} alt='Pictures card' className='card-icon' />
-							<h1 className='card-title-j'>{t('cardTextJ.text')}</h1>
+							<img src={funnel} alt='' className='card-icon' />
+							<h3 className='card-title-j'>{t('cardTextJ.text')}</h3>
 							<div className='moreInfo'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -916,8 +930,8 @@ const CardServices = () => {
 					<div className='card cardWrapper'>
 						<div className='cover item-k'>
 							<span className='price price-k'>{t('cardPriceK.price')}</span>
-							<img src={bot} alt='Pictures card' className='card-icon' />
-							<h1 className='card-title-k'>{t('cardTextK.text')}</h1>
+							<img src={bot} alt='' className='card-icon' />
+							<h3 className='card-title-k'>{t('cardTextK.text')}</h3>
 							<div className='moreInfo'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -994,8 +1008,8 @@ const CardServices = () => {
 					<div className='card cardWrapper'>
 						<div className='cover item-l'>
 							<span className='price price-l'>{t('cardPriceL.price')}</span>
-							<img src={marketing} alt='Pictures card' className='card-icon' />
-							<h1 className='card-title-l'>{t('cardTextL.text')}</h1>
+							<img src={marketing} alt='' className='card-icon' />
+							<h3 className='card-title-l'>{t('cardTextL.text')}</h3>
 							<div className='moreInfo'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -1091,8 +1105,8 @@ const CardServices = () => {
 					<div className='card cardWrapper'>
 						<div className='cover item-m'>
 							<span className='price price-m'>{t('cardPriceM.price')}</span>
-							<img src={analytic} alt='Pictures card' className='card-icon' />
-							<h1 className='card-title-m'>{t('cardTextM.text')}</h1>
+							<img src={analytic} alt='' className='card-icon' />
+							<h3 className='card-title-m'>{t('cardTextM.text')}</h3>
 							<div className='moreInfo'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -1169,8 +1183,8 @@ const CardServices = () => {
 					<div className='card cardWrapper'>
 						<div className='cover item-n'>
 							<span className='price price-n'>{t('cardPriceN.price')}</span>
-							<img src={sales} alt='Pictures card' className='card-icon' />
-							<h1 className='card-title-n'>{t('cardTextN.text')}</h1>
+							<img src={sales} alt='' className='card-icon' />
+							<h3 className='card-title-n'>{t('cardTextN.text')}</h3>
 							<div className='moreInfo'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -1256,8 +1270,8 @@ const CardServices = () => {
 					<div className='card cardWrapper'>
 						<div className='cover item-o'>
 							<span className='price price-o'>{t('cardPriceO.price')}</span>
-							<img src={call} alt='Pictures card' className='card-icon' />
-							<h1 className='card-title-o'>{t('cardTextO.text')}</h1>
+							<img src={call} alt='' className='card-icon' />
+							<h3 className='card-title-o'>{t('cardTextO.text')}</h3>
 							<div className='moreInfo'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -1334,8 +1348,8 @@ const CardServices = () => {
 					<div className='card cardWrapper'>
 						<div className='cover item-p'>
 							<span className='price price-p'>{t('cardPriceP.price')}</span>
-							<img src={other} alt='Pictures card' className='card-icon' />
-							<h1 className='card-title-p'>{t('cardTextP.text')}</h1>
+							<img src={other} alt='' className='card-icon' />
+							<h3 className='card-title-p'>{t('cardTextP.text')}</h3>
 							<div className='moreInfo'>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'

@@ -8,9 +8,6 @@
 	"headerPortfolio": {
 		"portfolio": "Проекты"
 	},
-	"headerCalculation": {
-		"calculation": "Калькулятор"
-	},
 	"headerContacts": {
 		"contacts": "Контакты"
 	},
@@ -204,10 +201,7 @@
 		"text": "Давайте соберем сайт, который выглядит сильнее конкурентов"
 	},
 	"landingCtaText": {
-		"text": "Можно начать с короткого расчета или сразу обсудить задачу, сроки и формат запуска."
-	},
-	"landingCtaCalculate": {
-		"text": "Рассчитать проект"
+		"text": "Можно сразу обсудить задачу, сроки и формат запуска."
 	},
 	"landingCtaContacts": {
 		"text": "Обсудить задачу"
@@ -442,93 +436,6 @@
 	},
 	"cardTextBackSideP-B": {
 		"text": "Настройка оборудования."
-	},
-	"formMainTitleA": {
-		"text": "Вы можете рассчитать примерную стоимость наших работ ниже и прислать нам заявку."
-	},
-	"formMainTitleB": {
-		"text": "Мы свяжемся с вами !"
-	},
-	"formMainSelectTypeSite": {
-		"text": "Выберите тип сайта"
-	},
-	"formMainSelectA": {
-		"text": "Одностраничный сайт"
-	},
-	"formMainSelectB": {
-		"text": "Многостраничный сайт"
-	},
-	"formMainSelectC": {
-		"text": "Корпоративный сайт"
-	},
-	"formMainSelectD": {
-		"text": "Интернет-витрина (без интеграции 1С)"
-	},
-	"formMainSelectE": {
-		"text": "Интернет-магазин"
-	},
-	"formMainSelectF": {
-		"text": "Онлайн школа"
-	},
-	"formMainSelectOptions": {
-		"text": "Дополнительные опции"
-	},
-	"formMainSelectOptionsA": {
-		"text": "Индивидуальный дизаин"
-	},
-	"formMainSelectOptionsB": {
-		"text": "Регистрация домена на ваше имя и подключение к сайту"
-	},
-	"formMainSelectOptionsC": {
-		"text": "Настройка доменной почты"
-	},
-	"formMainSelectOptionsD": {
-		"text": "Подключение платежной системы"
-	},
-	"formMainSelectOptionsE": {
-		"text": "Подключение CRM"
-	},
-	"formMainSelectOptionsF": {
-		"text": "SEO-оптимизация"
-	},
-	"formMainSelectOptionsG": {
-		"text": "Составление ТЗ"
-	},
-	"formMainSelectOptionsH": {
-		"text": "Аудит сайта"
-	},
-	"formMainSelectMarketing": {
-		"text": "Маркетинговые услуги"
-	},
-	"formMainSelectMarketingA": {
-		"text": "Конкурентный анализ"
-	},
-	"formMainSelectMarketingB": {
-		"text": "Разработка маркетинговых мероприятий"
-	},
-	"formMainSelectMarketingC": {
-		"text": "SWOT анализ, ABC анализ"
-	},
-	"formMainSelectMarketingD": {
-		"text": "Повышение конверсий отдела продаж"
-	},
-	"formMainSelectMarketingE": {
-		"text": "Увеличение воронки лидов"
-	},
-	"formMainCost": {
-		"text": "Примерная стоимость: "
-	},
-	"formMainName": {
-		"text": "Введите имя"
-	},
-	"formMainEmail": {
-		"text": "Введите email"
-	},
-	"formMainPhone": {
-		"text": "Введите телефон"
-	},
-	"formMainButtonSubmit": {
-		"text": "Отправить заявку"
 	},
 	"coockieAlert": {
 		"text": "Мы используем cookie-файлы, чтобы получить статистику, с целью персонализации сервисов и предложений. Продолжая пользоваться сайтом без изменения настроек, вы даёте согласие на использование cookie-файлов."

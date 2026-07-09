@@ -8,9 +8,6 @@
 	"headerPortfolio": {
 		"portfolio": "Projects"
 	},
-	"headerCalculation": {
-		"calculation": "Calculator"
-	},
 	"headerContacts": {
 		"contacts": "Contacts"
 	},
@@ -204,10 +201,7 @@
 		"text": "Let us build a website that looks stronger than competitors"
 	},
 	"landingCtaText": {
-		"text": "Start with a quick estimate or discuss the task, timeline, and launch format right away."
-	},
-	"landingCtaCalculate": {
-		"text": "Calculate project"
+		"text": "Discuss the task, timeline, and launch format right away."
 	},
 	"landingCtaContacts": {
 		"text": "Discuss task"
@@ -442,93 +436,6 @@
 	},
 	"cardTextBackSideP-B": {
 		"text": "Hardware setup."
-	},
-	"formMainTitleA": {
-		"text": "Below you can calculate the approximate cost of our work and send us a request."
-	},
-	"formMainTitleB": {
-		"text": "We will contact you !"
-	},
-	"formMainSelectTypeSite": {
-		"text": "Select site type"
-	},
-	"formMainSelectA": {
-		"text": "One page website"
-	},
-	"formMainSelectB": {
-		"text": "Multipage site"
-	},
-	"formMainSelectC": {
-		"text": "Corporate website"
-	},
-	"formMainSelectD": {
-		"text": "Internet showcase (without integration with 1C)"
-	},
-	"formMainSelectE": {
-		"text": "Online store (e-commerce)"
-	},
-	"formMainSelectF": {
-		"text": "Online school"
-	},
-	"formMainSelectOptions": {
-		"text": "Additional options"
-	},
-	"formMainSelectOptionsA": {
-		"text": "Individual design"
-	},
-	"formMainSelectOptionsB": {
-		"text": "Registering a domain in your name and connecting to the site"
-	},
-	"formMainSelectOptionsC": {
-		"text": "Domain mail setup"
-	},
-	"formMainSelectOptionsD": {
-		"text": "Payment system connection"
-	},
-	"formMainSelectOptionsE": {
-		"text": "Connection to CRM"
-	},
-	"formMainSelectOptionsF": {
-		"text": "SEO optimization"
-	},
-	"formMainSelectOptionsG": {
-		"text": "Preparation of terms of reference"
-	},
-	"formMainSelectOptionsH": {
-		"text": "Site audit"
-	},
-	"formMainSelectMarketing": {
-		"text": "Marketing services"
-	},
-	"formMainSelectMarketingA": {
-		"text": "Competitive analysis"
-	},
-	"formMainSelectMarketingB": {
-		"text": "Development of marketing activities"
-	},
-	"formMainSelectMarketingC": {
-		"text": "SWOT analysis, ABC analysis"
-	},
-	"formMainSelectMarketingD": {
-		"text": "Increasing sales conversion"
-	},
-	"formMainSelectMarketingE": {
-		"text": "Increasing the funnel of leads"
-	},
-	"formMainCost": {
-		"text": "Estimated cost: "
-	},
-	"formMainName": {
-		"text": "Enter your name"
-	},
-	"formMainEmail": {
-		"text": "Enter your email address"
-	},
-	"formMainPhone": {
-		"text": "Enter your phone number"
-	},
-	"formMainButtonSubmit": {
-		"text": "Submit"
 	},
 	"coockieAlert": {
 		"text": "We use cookies to provide statistics, target personalization services and offers. By continuing to use the site without changing your settings, you consent to the use of cookies."

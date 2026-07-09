@@ -1,8 +1,34 @@
 import { useEffect, useRef, useState } from 'react'
 
-const LazyPortfolioVideo = ({ src, poster, ...videoProps }) => {
+const LazyPortfolioVideo = ({
+	src,
+	poster,
+	playbackRate = 0.18,
+	...videoProps
+}) => {
 	const videoRef = useRef(null)
 	const [shouldLoad, setShouldLoad] = useState(false)
+	const [shouldPlay, setShouldPlay] = useState(false)
+
+	useEffect(() => {
+		if (videoRef.current) {
+			videoRef.current.playbackRate = playbackRate
+		}
+	}, [playbackRate, shouldLoad])
+
+	useEffect(() => {
+		const videoElement = videoRef.current
+		if (!videoElement || !shouldLoad) {
+			return
+		}
+
+		if (shouldPlay) {
+			videoElement.play().catch(() => {})
+			return
+		}
+
+		videoElement.pause()
+	}, [shouldLoad, shouldPlay])
 
 	useEffect(() => {
 		const videoElement = videoRef.current
@@ -12,6 +38,7 @@ const LazyPortfolioVideo = ({ src, poster, ...videoProps }) => {
 
 		if (!('IntersectionObserver' in window)) {
 			setShouldLoad(true)
+			setShouldPlay(true)
 			return
 		}
 
@@ -20,12 +47,12 @@ const LazyPortfolioVideo = ({ src, poster, ...videoProps }) => {
 				const [entry] = entries
 				if (entry.isIntersecting) {
 					setShouldLoad(true)
-					observer.disconnect()
 				}
+				setShouldPlay(entry.isIntersecting)
 			},
 			{
-				rootMargin: '280px 0px',
-				threshold: 0.01
+				rootMargin: '0px',
+				threshold: 0
 			}
 		)
 

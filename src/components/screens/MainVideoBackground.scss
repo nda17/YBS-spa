@@ -1,13 +1,36 @@
+.bgMainPosterWrap,
+.bgMainPoster,
 .bgMainVideo {
 	position: absolute;
+	inset: 0;
 	width: 100%;
-	left: 0;
-	right: 0;
 	height: 100%;
-	object-fit: cover;
 	padding: 0;
 	border-radius: 0;
+}
+
+.bgMainPosterWrap {
 	z-index: 0;
+	display: block;
+	overflow: hidden;
+}
+
+.bgMainPoster,
+.bgMainVideo {
+	display: block;
+	object-fit: cover;
+}
+
+.bgMainVideo {
+	left: 0;
+	right: 0;
+	z-index: 0;
+	opacity: 0;
+	transition: opacity 0.8s ease;
+}
+
+.bgMainVideoVisible {
+	opacity: 1;
 }
 
 .bgGradientFilter {

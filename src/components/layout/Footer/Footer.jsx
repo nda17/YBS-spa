@@ -34,7 +34,7 @@ const Footer = () => {
 						<img
 							className='footerLogoIcon'
 							src={LogoSvg}
-							alt='Logo'
+							alt='YBS'
 							ref={logoRef}
 						/>
 					</a>

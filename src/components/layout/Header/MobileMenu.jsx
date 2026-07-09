@@ -23,7 +23,6 @@ const MobileMenu = props => {
 				{ sectionId: 'home', label: t('headerHome.home') },
 				{ sectionId: 'services', label: t('headerServices.services') },
 				{ sectionId: 'portfolio', label: t('headerPortfolio.portfolio') },
-				{ sectionId: 'calculate', label: t('headerCalculation.calculation') },
 				{ sectionId: 'contacts', label: t('headerContacts.contacts') }
 			]
 
@@ -35,7 +34,7 @@ const MobileMenu = props => {
 	return (
 		!isVisible && (
 			<article className='mobileMenu' ref={mobileMenuRef}>
-				<img className='mobileMenuLogo' src={LogoSvg} alt='Logo image' />
+				<img className='mobileMenuLogo' src={LogoSvg} alt='YBS' />
 				<div className='mobileMenuAnchorWrapper'>
 					{menuItems.map(item => (
 						<button

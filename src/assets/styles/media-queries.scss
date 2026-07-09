@@ -105,7 +105,6 @@
 	}
 
 	.mainTitleText {
-		width: 19ch !important;
 		font-size: 2.5rem !important;
 	}
 
@@ -229,7 +228,6 @@
 	}
 
 	.mainTitleText {
-		width: 18.5ch !important;
 		font-size: 2.9rem !important;
 		pointer-events: visible !important;
 	}
@@ -299,7 +297,6 @@
 
 	.sloganText {
 		font-size: 1.39rem !important;
-		white-space: nowrap !important;
 	}
 
 	.footerNav {
@@ -336,10 +333,6 @@
 }
 
 @media (min-width: 1200px) {
-	.mainTitleText {
-		width: 18.4ch !important;
-	}
-
 	.card .cover.item-a {
 		background-image: url('../../public/images/images-card2.webp') !important;
 		background-position: right !important;
@@ -406,10 +399,4 @@
 		background-position: left !important;
 	}
 
-}
-
-@media (min-width: 1400px) {
-	.mainTitleText {
-		width: 18.1ch !important;
-	}
 }

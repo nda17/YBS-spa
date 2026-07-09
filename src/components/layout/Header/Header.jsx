@@ -21,7 +21,6 @@ const Header = () => {
 		{ sectionId: 'home', label: t('headerHome.home') },
 		{ sectionId: 'services', label: t('headerServices.services') },
 		{ sectionId: 'portfolio', label: t('headerPortfolio.portfolio') },
-		{ sectionId: 'calculate', label: t('headerCalculation.calculation') },
 		{ sectionId: 'contacts', label: t('headerContacts.contacts') }
 	]
 
@@ -51,7 +50,7 @@ const Header = () => {
 						<img
 							className='headerLogoIcon'
 							src={LogoSvg}
-							alt='Logo'
+							alt='YBS'
 							ref={logoRef}
 						/>
 					</a>

@@ -1,18 +1,10 @@
 import { useTranslation } from 'react-i18next'
-import { useEffect, useRef, useState } from 'react'
+import { lazy, Suspense, useEffect, useRef, useState } from 'react'
 import MainVideoBackground from '../../screens/MainVideoBackground'
-import CardServices from './CardServices'
-import FormMain from './FormMain'
-import Contacts from './Contacts'
-import PortfolioModal from './PortfolioModal'
-import PortfolioSection from './PortfolioSection'
 import {
 	BENTO_ITEMS,
 	FAQ_ITEMS,
 	INTRO_ITEMS,
-	PORTFOLIO_FILTERS,
-	PORTFOLIO_ITEMS,
-	PORTFOLIO_VISIBLE_LIMIT,
 	PROCESS_ITEMS,
 	TEAM_STAT_TARGETS,
 	translateFaqItems,
@@ -21,18 +13,21 @@ import {
 import './Home.scss'
 import '../../../assets/styles/media-queries.scss'
 
+const CardServices = lazy(() => import('./CardServices'))
+const Contacts = lazy(() => import('./Contacts'))
+const PortfolioExperience = lazy(() => import('./PortfolioExperience'))
+
 const Home = () => {
 	const { t } = useTranslation()
-	const [isPortfolioExpanded, setIsPortfolioExpanded] = useState(false)
-	const [activePortfolioFilter, setActivePortfolioFilter] = useState('all')
-	const [selectedPortfolioItem, setSelectedPortfolioItem] = useState(null)
 	const [openFaqIndex, setOpenFaqIndex] = useState(0)
 	const [animatedStats, setAnimatedStats] = useState([0, 0, 0, 0])
+	const [shouldRenderDeferredSections, setShouldRenderDeferredSections] =
+		useState(false)
 	const sloganFirstRef = useRef(null)
 	const sloganSecondRef = useRef(null)
 	const sloganThirdRef = useRef(null)
 	const sloganFourthRef = useRef(null)
-	const sloganAuthorRef = useRef(null)
+	const deferredSectionsRef = useRef(null)
 	const parallaxRef = useRef(null)
 	const statsRef = useRef(null)
 
@@ -72,12 +67,6 @@ const Home = () => {
 				}
 			}, 10000)
 		}, 800)
-
-		addTimer(() => {
-			if (sloganAuthorRef.current) {
-				sloganAuthorRef.current.style.opacity = '1'
-			}
-		}, 2100)
 
 		return () => timers.forEach(timerId => clearTimeout(timerId))
 	}, [])
@@ -143,7 +132,70 @@ const Home = () => {
 		revealItems.forEach(item => observer.observe(item))
 
 		return () => observer.disconnect()
-	}, [activePortfolioFilter, isPortfolioExpanded])
+	}, [shouldRenderDeferredSections])
+
+	useEffect(() => {
+		if (shouldRenderDeferredSections) {
+			return
+		}
+
+		const deferredElement = deferredSectionsRef.current
+		let idleId = null
+		let timerId = null
+		let observer = null
+		const intentEvents = ['pointerdown', 'keydown', 'touchstart', 'scroll']
+		const renderDeferredSections = () => setShouldRenderDeferredSections(true)
+
+		if ('IntersectionObserver' in window && deferredElement) {
+			observer = new IntersectionObserver(
+				entries => {
+					if (entries.some(entry => entry.isIntersecting)) {
+						renderDeferredSections()
+					}
+				},
+				{
+					rootMargin: '900px 0px',
+					threshold: 0
+				}
+			)
+			observer.observe(deferredElement)
+		}
+
+		intentEvents.forEach(eventName => {
+			window.addEventListener(eventName, renderDeferredSections, {
+				once: true,
+				passive: true
+			})
+		})
+
+		const scheduleIdleRender = () => {
+			if ('requestIdleCallback' in window) {
+				idleId = window.requestIdleCallback(renderDeferredSections, {
+					timeout: 1800
+				})
+				return
+			}
+
+			timerId = window.setTimeout(renderDeferredSections, 800)
+		}
+
+		timerId = window.setTimeout(scheduleIdleRender, 1200)
+
+		return () => {
+			if (observer) {
+				observer.disconnect()
+			}
+			if (timerId !== null) {
+				window.clearTimeout(timerId)
+			}
+			if (idleId !== null && 'cancelIdleCallback' in window) {
+				window.cancelIdleCallback(idleId)
+			}
+			intentEvents.forEach(eventName => {
+				window.removeEventListener(eventName, renderDeferredSections)
+			})
+		}
+	}, [shouldRenderDeferredSections])
 
 	useEffect(() => {
 		const statsElement = statsRef.current
@@ -198,22 +250,6 @@ const Home = () => {
 		}
 	}, [])
 
-	useEffect(() => {
-		if (!selectedPortfolioItem) {
-			return
-		}
-
-		const handleKeyDown = event => {
-			if (event.key === 'Escape') {
-				setSelectedPortfolioItem(null)
-			}
-		}
-
-		window.addEventListener('keydown', handleKeyDown)
-
-		return () => window.removeEventListener('keydown', handleKeyDown)
-	}, [selectedPortfolioItem])
-
 	const introItems = translateLandingItems(INTRO_ITEMS, t)
 	const bentoItems = translateLandingItems(BENTO_ITEMS, t)
 	const processItems = translateLandingItems(PROCESS_ITEMS, t)
@@ -240,24 +276,6 @@ const Home = () => {
 		}
 	]
 	const faqItems = translateFaqItems(FAQ_ITEMS, t)
-	const filteredPortfolioItems =
-		activePortfolioFilter === 'all'
-			? PORTFOLIO_ITEMS
-			: PORTFOLIO_ITEMS.filter(item => item.category === activePortfolioFilter)
-	const visiblePortfolioItems = isPortfolioExpanded
-		? filteredPortfolioItems
-		: filteredPortfolioItems.slice(0, PORTFOLIO_VISIBLE_LIMIT)
-	const getPortfolioCategoryLabel = category => {
-		const currentCategory = PORTFOLIO_FILTERS.find(
-			filter => filter.key === category
-		)
-
-		return currentCategory ? t(currentCategory.labelKey) : ''
-	}
-	const handlePortfolioFilterChange = filterKey => {
-		setActivePortfolioFilter(filterKey)
-		setIsPortfolioExpanded(false)
-	}
 	const scrollToSection = sectionId => {
 		const targetSection = document.getElementById(sectionId)
 		if (targetSection) {
@@ -297,12 +315,12 @@ const Home = () => {
 				</div>
 			</article>
 			<article className='homePageSloganBlock'>
-				<h2 className='sloganWrapper'>
+				<blockquote className='sloganWrapper'>
 					<p className='sloganText'>{t('sloganText.text')}</p>
-					<p className='sloganAuthorText' ref={sloganAuthorRef}>
+					<p className='sloganAuthorText'>
 						Henry Ford
 					</p>
-				</h2>
+				</blockquote>
 			</article>
 			<section className='landingSection landingIntroSection'>
 				<div className='landingSectionHeader landingReveal'>
@@ -352,8 +370,13 @@ const Home = () => {
 			<section
 				className='landingSection landingServicesSection landingReveal'
 				id='services'
+				ref={deferredSectionsRef}
 			>
-				<CardServices />
+				{shouldRenderDeferredSections && (
+					<Suspense fallback={null}>
+						<CardServices />
+					</Suspense>
+				)}
 			</section>
 			<section className='landingSection landingProcessSection'>
 				<div className='landingSectionHeader landingReveal'>
@@ -416,17 +439,13 @@ const Home = () => {
 					<p>{t('landingParallaxText.text')}</p>
 				</div>
 			</section>
-			<PortfolioSection
-				activeFilter={activePortfolioFilter}
-				filteredItems={filteredPortfolioItems}
-				isExpanded={isPortfolioExpanded}
-				onFilterChange={handlePortfolioFilterChange}
-				onItemSelect={setSelectedPortfolioItem}
-				onToggleExpanded={() =>
-					setIsPortfolioExpanded(current => !current)
-				}
-				visibleItems={visiblePortfolioItems}
-			/>
+			<div id='portfolio'>
+				{shouldRenderDeferredSections && (
+					<Suspense fallback={null}>
+						<PortfolioExperience />
+					</Suspense>
+				)}
+			</div>
 			<section className='landingSection landingCtaSection'>
 				<div className='landingCtaBlock landingReveal'>
 					<div>
@@ -436,17 +455,11 @@ const Home = () => {
 						<p>{t('landingCtaText.text')}</p>
 					</div>
 					<div className='landingCtaActions'>
-						<button type='button' onClick={() => scrollToSection('calculate')}>
-							{t('landingCtaCalculate.text')}
-						</button>
 						<button type='button' onClick={() => scrollToSection('contacts')}>
 							{t('landingCtaContacts.text')}
 						</button>
 					</div>
 				</div>
-			</section>
-			<section className='landingSection landingCalculateSection' id='calculate'>
-				<FormMain />
 			</section>
 			<section className='landingSection landingFaqSection'>
 				<div className='landingSectionHeader landingReveal'>
@@ -484,13 +497,12 @@ const Home = () => {
 				</div>
 			</section>
 			<section className='landingSection landingContactsSection' id='contacts'>
-				<Contacts />
+				{shouldRenderDeferredSections && (
+					<Suspense fallback={null}>
+						<Contacts />
+					</Suspense>
+				)}
 			</section>
-			<PortfolioModal
-				item={selectedPortfolioItem}
-				getCategoryLabel={getPortfolioCategoryLabel}
-				onClose={() => setSelectedPortfolioItem(null)}
-			/>
 		</>
 	)
 }

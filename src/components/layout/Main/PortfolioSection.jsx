@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import LazyPortfolioVideo from './LazyPortfolioVideo'
-import { PORTFOLIO_FILTERS, PORTFOLIO_VISIBLE_LIMIT } from './homeData'
+import { PORTFOLIO_FILTERS, PORTFOLIO_VISIBLE_LIMIT } from './portfolioData'
 
 const PortfolioSection = ({
 	activeFilter,
@@ -22,7 +22,7 @@ const PortfolioSection = ({
 	}
 
 	return (
-		<section className='landingSection landingPortfolioSection' id='portfolio'>
+		<section className='landingSection landingPortfolioSection'>
 			<div className='landingSectionHeader landingReveal'>
 				<h2 className='landingSectionTitle animatedTitleFlicker'>
 					{t('landingPortfolioTitle.text')}

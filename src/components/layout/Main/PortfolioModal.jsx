@@ -2,6 +2,9 @@ import { useTranslation } from 'react-i18next'
 
 const PortfolioModal = ({ item, getCategoryLabel, onClose }) => {
 	const { t } = useTranslation()
+	const handleVideoLoadedMetadata = event => {
+		event.currentTarget.playbackRate = 0.65
+	}
 
 	if (!item) {
 		return null
@@ -47,6 +50,7 @@ const PortfolioModal = ({ item, getCategoryLabel, onClose }) => {
 							muted
 							playsInline
 							preload='metadata'
+							onLoadedMetadata={handleVideoLoadedMetadata}
 						/>
 					</div>
 					<div className='portfolioModalMobileFrame'>
@@ -59,6 +63,7 @@ const PortfolioModal = ({ item, getCategoryLabel, onClose }) => {
 							muted
 							playsInline
 							preload='metadata'
+							onLoadedMetadata={handleVideoLoadedMetadata}
 						/>
 					</div>
 				</div>

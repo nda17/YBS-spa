@@ -8,6 +8,7 @@ const COOKIE_MAX_AGE = 60 * 60 * 24 * 365
 
 function CookiePopup() {
 	const { t } = useTranslation()
+	const [shouldRender, setShouldRender] = useState(false)
 	const [isVisible, setIsVisible] = useState(false)
 
 	const acceptBtnClick = () => {
@@ -25,8 +26,29 @@ function CookiePopup() {
 			.split('; ')
 			.some(cookieItem => cookieItem.startsWith(`${COOKIE_NAME}=`))
 
-		setIsVisible(!isCookieAccepted)
+		if (isCookieAccepted) {
+			return
+		}
+
+		const showPopup = () => {
+			setShouldRender(true)
+			requestAnimationFrame(() => setIsVisible(true))
+		}
+
+		if ('requestIdleCallback' in window) {
+			const idleId = window.requestIdleCallback(showPopup, { timeout: 3000 })
+
+			return () => window.cancelIdleCallback(idleId)
+		}
+
+		const timerId = setTimeout(showPopup, 1800)
+
+		return () => clearTimeout(timerId)
 	}, [])
+
+	if (!shouldRender) {
+		return null
+	}
 
 	return (
 		<div
