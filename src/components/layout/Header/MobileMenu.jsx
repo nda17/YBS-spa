@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { useRef } from 'react'
+import { BsTelephoneOutboundFill, BsTelegram, BsWhatsapp } from 'react-icons/bs'
 import { useClickOutside } from '../../../hooks/useClickOutside'
 import ButtonsChangeLang from '../../ui/buttons/ButtonsChangeLang'
 import LogoSvg from '../../../public/images/YBS-white.svg'
@@ -22,9 +23,9 @@ const MobileMenu = props => {
 			: [
 				{ sectionId: 'home', label: t('headerHome.home') },
 				{ sectionId: 'services', label: t('headerServices.services') },
-				{ sectionId: 'portfolio', label: t('headerPortfolio.portfolio') },
-				{ sectionId: 'contacts', label: t('headerContacts.contacts') }
+				{ sectionId: 'portfolio', label: t('headerPortfolio.portfolio') }
 			]
+	const navigationItems = menuItems.filter(item => item.sectionId !== 'contacts')
 
 	const handleMenuClick = sectionId => {
 		scrollToSection(sectionId)
@@ -36,7 +37,7 @@ const MobileMenu = props => {
 			<article className='mobileMenu' ref={mobileMenuRef}>
 				<img className='mobileMenuLogo' src={LogoSvg} alt='YBS' />
 				<div className='mobileMenuAnchorWrapper'>
-					{menuItems.map(item => (
+					{navigationItems.map(item => (
 						<button
 							key={item.sectionId}
 							type='button'
@@ -46,6 +47,30 @@ const MobileMenu = props => {
 							{item.label}
 						</button>
 					))}
+				</div>
+				<div className='mobileMenuContactActions'>
+					<a className='mobileMenuContactLink' href='tel:+79990860186'>
+						<BsTelephoneOutboundFill aria-hidden='true' />
+						<span>+7-999-086-01-86</span>
+					</a>
+					<a
+						className='mobileMenuContactLink'
+						href='https://t.me/ybs_one'
+						target='_blank'
+						rel='noreferrer'
+					>
+						<BsTelegram aria-hidden='true' />
+						<span>Telegram</span>
+					</a>
+					<a
+						className='mobileMenuContactLink'
+						href='https://api.whatsapp.com/send/?phone=79990860186&text=%D0%A5%D0%BE%D1%87%D1%83+%D1%83+%D0%B2%D0%B0%D1%81+%D1%81%D0%B0%D0%B9%D1%82%21&type=phone_number&app_absent=0'
+						target='_blank'
+						rel='noreferrer'
+					>
+						<BsWhatsapp aria-hidden='true' />
+						<span>WhatsApp</span>
+					</a>
 				</div>
 				<ButtonsChangeLang />
 			</article>

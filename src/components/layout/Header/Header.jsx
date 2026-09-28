@@ -1,11 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { useEffect, useRef } from 'react'
 import LogoSvg from '../../../public/images/YBS-white.svg'
-import {
-	BsTelephoneOutboundFill,
-	BsWhatsapp,
-	BsTelegram
-} from 'react-icons/bs'
+import { BsWhatsapp, BsTelegram } from 'react-icons/bs'
 import HamburgerMenu from './HamburgerMenu'
 import MobileMenu from './MobileMenu'
 import ButtonsChangeLang from '../../ui/buttons/ButtonsChangeLang'
@@ -20,8 +16,7 @@ const Header = () => {
 	const navItems = [
 		{ sectionId: 'home', label: t('headerHome.home') },
 		{ sectionId: 'services', label: t('headerServices.services') },
-		{ sectionId: 'portfolio', label: t('headerPortfolio.portfolio') },
-		{ sectionId: 'contacts', label: t('headerContacts.contacts') }
+		{ sectionId: 'portfolio', label: t('headerPortfolio.portfolio') }
 	]
 
 	const scrollToSection = sectionId => {
@@ -69,20 +64,16 @@ const Header = () => {
 								</li>
 							))}
 						</ul>
+						<a className='headerPhoneLink' href='tel:+79990860186'>
+							+7 999 086-01-86
+						</a>
 						<div className='headerIconWrap'>
-							<a
-								href='tel:+79990860186'
-								className='headerIconLink'
-								target='_blank'
-								rel='noreferrer'
-							>
-								<BsTelephoneOutboundFill className='headerIconLinkContent iconPhone' />
-							</a>
 							<a
 								href='https://api.whatsapp.com/send/?phone=79990860186&text=%D0%A5%D0%BE%D1%87%D1%83+%D1%83+%D0%B2%D0%B0%D1%81+%D1%81%D0%B0%D0%B9%D1%82%21&type=phone_number&app_absent=0'
 								target='_blank'
 								rel='noreferrer'
 								className='headerIconLink'
+								aria-label='WhatsApp'
 							>
 								<BsWhatsapp className='headerIconLinkContent iconWhatsapp' />
 							</a>
@@ -91,6 +82,7 @@ const Header = () => {
 								target='_blank'
 								rel='noreferrer'
 								className='headerIconLink'
+								aria-label='Telegram'
 							>
 								<BsTelegram className='headerIconLinkContent iconTelegram' />
 							</a>

@@ -1,5 +1,4 @@
-import { GrTextAlignRight } from 'react-icons/gr'
-import { HiOutlineChevronDown } from 'react-icons/hi2'
+import { GrClose, GrTextAlignRight } from 'react-icons/gr'
 import './HamburgerMenu.scss'
 import '../../../assets/styles/media-queries.scss'
 
@@ -11,7 +10,7 @@ const HamburgerMenu = props => {
 				{isVisible ? (
 					<GrTextAlignRight className='GrTextAlignRight' />
 				) : (
-					<HiOutlineChevronDown className='HiOutlineChevronDown' />
+					<GrClose className='GrClose' />
 				)}
 			</span>
 		</div>

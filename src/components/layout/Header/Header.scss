@@ -152,4 +152,86 @@
 		scale: 1;
 	}
 }
+
+@media (min-width: 992px) {
+	header.header .headerNav {
+		height: 7.5rem !important;
+	}
+
+	header.header .headerWrap {
+		justify-content: center;
+	}
+
+	header.header .headerLogoWrap,
+	header.header .headerCompanyNameText {
+		display: none !important;
+	}
+
+	header.header .headerListLinkWrap {
+		display: flex !important;
+		flex-flow: row nowrap;
+		justify-content: center;
+		gap: clamp(1rem, 2vw, 2rem);
+		width: 100%;
+	}
+
+	header.header .headerLinkWrap {
+		margin-right: 0;
+	}
+
+	header.header .headerAnchorList {
+		gap: clamp(1rem, 1.8vw, 1.75rem);
+	}
+
+	header.header .headerAnchorButton {
+		font-size: 1.1rem;
+		white-space: nowrap;
+	}
+
+	.headerPhoneLink {
+		color: #ffffff;
+		font-size: clamp(1rem, 1.05vw, 1.2rem);
+		font-weight: 500;
+		white-space: nowrap;
+		transition: color 0.3s ease;
+
+		&:hover {
+			color: #f5deb3;
+		}
+	}
+
+	header.header .headerIconWrap {
+		gap: 1.5rem;
+		margin-right: 0;
+		height: auto;
+	}
+
+	header.header .headerIconLink {
+		display: flex;
+		margin-right: 0;
+	}
+
+	header.header .headerIconLinkContent {
+		width: 1.65rem;
+		height: 1.65rem;
+	}
+
+	.headerListLinkWrap .buttonChangeLangWrap {
+		position: static !important;
+		inset: auto !important;
+		align-items: center;
+		gap: 0.2rem;
+		margin: 0 !important;
+		padding: 0 !important;
+		flex: 0 0 auto;
+	}
+
+	.headerListLinkWrap .buttonChangeLang {
+		width: 2.6rem;
+		height: 1.35rem;
+		margin: 0 !important;
+		font-size: 0.8rem;
+		line-height: 1;
+	}
+}
 ////
